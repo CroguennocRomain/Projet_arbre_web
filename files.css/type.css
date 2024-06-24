@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #F2EFC5;
+}
+.header {
+    background-color: #06593C;
+    padding: 45px;
+    text-align: left;
+    position: relative;
+    
+}
+.header .btn {
+    color: #F2EFC5;
+    background-color: #06593C;
+    position: absolute;
+    top: 20px;
+    font-size: 1.5em;
+}
+.btn-accueil {
+    left: 110px; /* Écart entre 'Accueil' et la bordure gauche */
+}
+.btn-arbre {
+    left: 305px; /* 110px + 195px = 305px pour l'écart entre les deux boutons */
+}
+.btn-ajouter {
+    left: 525px; /* 110px + 195px = 305px pour l'écart entre les deux boutons */
+}
+.header .btn:hover {
+    background-color: #F2EFC5;
+    color: #06593C;
+}
+.header .btn-actual {
+    font-weight: bold; 
+}
+.footer {
+    background-color: #06593C;
+    color: #F2EFC5;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+}
+.footer-text {
+    display: flex;
+    justify-content: left;
+    gap: 50px; /* Espace entre les noms */
+}
+.footer-icon {
+    position: absolute;
+    right: 20px;
+    top: 93%;
+    color: #06593C; /* Couleur du fond du footer pour les lettres de l'icône */
+    background-color: #F2EFC5; /* Couleur du texte pour le fond de l'icône */
+    padding: 4px;
+    font-size: 1.3em;
+    border-radius: 10%;
+}
