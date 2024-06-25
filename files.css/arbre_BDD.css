@@ -52,7 +52,7 @@ body {
     background-color: #A0C097;
 }
 .table th, .table td {
-    border: 1px solid #198D6D;
+    border: 1px solid #0E0F0F;
 }
 .table tbody td:first-child {
     background-color: #198D6D;
