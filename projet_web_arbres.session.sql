@@ -1,0 +1,2 @@
+INSERT INTO arbre (longitude, latitude, haut_tot, haut_tronc, tronc_diam, id_user, id_secteur, id_stadedev, id_port, id_revetement, id_nomtech, id_feuillage)
+                VALUES (12.3, 12.3, 12.3, 12.3,12.3, 2, 2, 2, 2, 2, 2, 2);

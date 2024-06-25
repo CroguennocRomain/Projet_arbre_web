@@ -4,7 +4,7 @@
 ------------------------------------------------------------
 
 -- user
-INSERT INTO public.user (username, password) VALUES ('test', 'test');
+INSERT INTO public.users (username, password) VALUES ('test', 'test');
 
 -- clc_secteur
 INSERT INTO public.clc_secteur (secteur) VALUES ('Quai Gayant');
