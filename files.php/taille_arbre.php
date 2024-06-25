@@ -10,11 +10,11 @@
    <link href="../files.css/taille_arbre.css" rel="stylesheet">
  </head>
  <body>
-  <header class="header mb-4">
+  <header class="header">
     <div class="container-fluid px-0">
-      <div class="row mb-4">
+      <div class="row mb-4 header-row">
         <div class="col-md-1">
-          <i class="bi bi-arrow-left-square-fill"></i>
+        <a href="visual_arbre_BDD.php"><i class="bi bi-arrow-left-square-fill header-icon"></i></a>
         </div>
         <div class="col-md-1">
           <a href="accueil.php"><button class="btn btn-accueil">Accueil</button></a>

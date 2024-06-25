@@ -3,15 +3,18 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    overflow-x: hidden; /* Empêche le scroll horizontal */
     flex-direction: column;
     min-height: 100vh;
     background-color: #F2EFC5;
 }
 .header {
     background-color: #06593C;
+    text-align: center;
     
 }
 .header .btn {
+    margin-top : 2px;
     color: #F2EFC5;
     background-color: #06593C;
     font-size: 1.5em;
@@ -44,4 +47,23 @@ body {
     padding: 2px;
     font-size: 1.1em;
     border-radius: 10%;
+    display: inline-block; /* Assure que l'icône est en ligne, ce qui aide à contrôler les marges */
+    line-height: 0;
 }
+
+.header-row {
+    padding-top: 10px;
+    gap: 50px;
+}
+
+.header-icon {
+    color: #06593C; /* Couleur du fond du footer pour les lettres de l'icône */
+    background-color: #F2EFC5; /* Couleur du texte pour le fond de l'icône */
+    font-size: 2em;
+    border-radius: 10%;
+    margin-top : 10px;
+    padding: 3px;
+    display: inline-block; /* Assure que l'icône est en ligne, ce qui aide à contrôler les marges */
+    line-height: 0; /* Assure que la hauteur de ligne correspond à la taille de l'icône */
+}
+
