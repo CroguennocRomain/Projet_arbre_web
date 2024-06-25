@@ -47,16 +47,31 @@ function ajouter_arbre($requestMethod, float $longitude, float $latitude, float 
                 // Table clc_secteur
 
                 $request = "
-                INSERT INTO clc_secteur(secteur) 
-                VALUES (:secteur)
-                RETURNING id_secteur;
+                SELECT id_secteur FROM clc_secteur  
+                WHERE secteur = :secteur
                 ";
                 $statement = $db->prepare($request);
                 $statement->bindParam(':secteur', $clc_secteur);
                 $statement->execute();
-                
+
                 $id_secteur = $statement->fetch(PDO::FETCH_NUM)[0];
 
+                echo $id_secteur;
+
+                // Si la valeur n'existe pas, l'insérer et récupérer l'ID
+                if (empty($id_secteur)) {
+                    echo 'YES';
+                    $request = "
+                    INSERT INTO clc_secteur(secteur) 
+                    VALUES (:secteur)
+                    RETURNING id_secteur;
+                    ";
+                    $statement = $db->prepare($request);
+                    $statement->bindParam(':secteur', $clc_secteur);
+                    $statement->execute();
+
+                    $id_secteur = $statement->fetch(PDO::FETCH_NUM)[0];
+                }
                 
                 // Table fk_stadedev
 
@@ -155,7 +170,7 @@ function ajouter_arbre($requestMethod, float $longitude, float $latitude, float 
                 echo "arbre_ajouté";
 
             } catch (\Throwable $th) {
-                echo 'arbre_non_ajouté';
+                //echo 'arbre_non_ajouté';
                 //echo ("Insertion failed: " . $e->getMessage());
             }
             exit();
