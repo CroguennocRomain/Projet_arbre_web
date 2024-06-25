@@ -9,11 +9,21 @@
    <link href="../files.css/ajout_arbre.css" rel="stylesheet">
  </head>
  <body>
-  <header class="header mb-4">
-    <a href="accueil.php"><button class="btn btn-accueil">Accueil</button></a>
-    <a href="visual_arbre_BDD.php"><button class="btn btn-arbre">Mes arbres</button></a>
-    <a href="ajout_arbre.php"><button class="btn btn-ajouter btn-actual">Ajouter</button></a>
-  </header>
+ <header class="header">
+    <div class="container-fluid px-0">
+      <div class="row mb-4 header-row">
+        <div class="col-md-1">
+          <a href="accueil.php"><button class="btn btn-accueil">Accueil</button></a>
+        </div>
+        <div class="col-md-2">
+          <a href="visual_arbre_BDD.php"><button class="btn btn-arbre">Mes arbres</button></a>
+        </div>
+        <div class="col-md-1">
+          <a href="ajout_arbre.php"><button class="btn btn-ajouter ">Ajouter</button></a>
+        </div>
+      </div>
+    </div>  
+    </header>
   
   <div class="container-fluid px-5">
     <div class="row mb-5">
@@ -169,7 +179,7 @@
   </div>
   
 
-    <footer class="footer">
+  <footer class="footer">
       <div class="container-fluid px-0">
         <div class="row">
           <div class="col-md-11">
