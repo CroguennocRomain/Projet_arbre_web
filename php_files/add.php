@@ -2,7 +2,7 @@
 session_start();
 
 
-require_once 'DB.php';
+require_once 'database.php';
 
 class User
 {

@@ -1,7 +1,7 @@
 'use strict';
 
 $('#btn_add_tree').click(() => {
-    ajaxRequest('GET', '../files.php/request.php/arbres', displayArbres);
+    ajaxRequest('GET', '../php_files/request.php/arbres', displayArbres);
 });
 
 
@@ -28,7 +28,7 @@ let fk_revetement = $('#fk_revetement').val();
 
 ajaxRequest(
     'POST',
-    '../files.php/test_request.php/ajouter_arbre',
+    '../php_files/test_request.php/ajouter_arbre',
     ajouter_arbre,
     'haut_tot='+haut_tot+'&haut_tronc='+haut_tronc+'&tronc_diam='+tronc_diam+'&fk_nomtech='+fk_nomtech+'&feuillage='+feuillage+'&fk_stadedev='+fk_stadedev+'&latitude='+latitude+'&longitude='+longitude+'&clc_secteur='+clc_secteur+'&fk_port='+fk_port+'&fk_revetement='+fk_revetement
 );
@@ -38,7 +38,7 @@ function ajouter_arbre(data)
 {
   switch (data){
       case 'arbre_ajouté':
-          window.location.href = "accueil.html";
+          window.location.href = "../html_files/accueil.html";
           break;
       case 'arbre_non_ajouté':
           $('#alert-erreur-connexion').toggleClass('d-none');
