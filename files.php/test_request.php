@@ -2,7 +2,8 @@
 #ini_set('display_errors',1);
 #error_reporting(E_ALL);
 
-require_once 'add.php';
+#require_once 'add.php';
+require_once 'database.php';
 
 
 $requestMethod = $_SERVER['REQUEST_METHOD'];
@@ -39,12 +40,13 @@ function ajouter_arbre()
                 $fk_nomtech = $_POST['fk_nomtech'];
                 try {
                     $db = dbConnect();
-                    $request = "INSERT INTO fk_nomtech (nomtech) VALUES ('lAAA')";
+                    $request = "INSERT INTO fk_nomtech (nomtech) VALUES ('lAAlkdaA')";
                     
                     
                     $statement = $db->prepare($request);
                     #$statement->bindParam(':nomtech', $fk_nomtech);
                     $statement->execute();
+                    echo "arbre_ajouté";
                     
                 } catch (\Throwable $th) {
                     error_log("Insertion failed: " . $e->getMessage());
@@ -52,7 +54,7 @@ function ajouter_arbre()
                 }
             }else {
                 //header('HTTP/1.1 400 Bad Request');
-                echo 'non_ajouté';
+                echo 'arbre_non_ajouté';
             }
             exit();
     }
