@@ -59,3 +59,39 @@ body {
     font-size: 1.1em;
     border-radius: 10%;
 }
+.content-area {
+    background-color: #FFFFFF;
+    color: #06593C;
+    padding: 20px;
+    font-size: 1.2em;
+}
+.action-button {
+    background-color: #198D6D;
+    color: #F2EFC5;
+    border: 2px solid #198D6D;
+    border-radius: 10px; 
+    font-size: 2em;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+}
+.custom-textbox {
+    background-color: #198D6D; 
+    color: #F2EFC5; 
+  }
+.formulaire {
+    background-color: #A0C097; 
+    padding: 20px; 
+}
+.btn-submit {
+    background-color: #06593C;
+    color: #F2EFC5;
+    border-radius: 10px; 
+    font-size: 2em;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+}
+.bi-check-all {
+    font-size: 1.2em;
+}

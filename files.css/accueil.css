@@ -1,4 +1,5 @@
 body {
+    font-family: 'Kaisei Tokumin', serif;
     margin: 0;
     padding: 0;
     display: flex;
@@ -8,7 +9,7 @@ body {
 }
 .header {
     background-color: #06593C;
-    padding: 10px;
+    padding: 45px;
     text-align: center;
     position: relative;
     
@@ -16,19 +17,9 @@ body {
 .header .btn {
     color: #F2EFC5;
     background-color: #06593C;
-    top: 10px;
-    font-size: 2.5em;
-}
-.btn-arbre {
-    color: #F2EFC5;
-    background-color: #198D6D;
-    font-size: 2.5em;
-    text-align: right;
-}
-.btn-ajouter {
-    color: #F2EFC5;
-    background-color: #198D6D;
-    text-align: right;
+    position: absolute;
+    top: 3px;
+    font-size: 3em;
 }
 .header .btn:hover {
     background-color: #F2EFC5;
@@ -47,39 +38,23 @@ body {
 .footer-text {
     display: flex;
     justify-content: left;
-    gap: 50px; 
+    gap: 50px; /* Espace entre les noms */
 }
 .footer-icon {
-    position: absolute;
-
-    right: 20px;
     color: #06593C; 
     background-color: #F2EFC5; 
-    padding: 4px;
-    font-size: 1.3em;
+    padding: 2px;
+    font-size: 1.1em;
     border-radius: 10%;
 }
 
-
-.content-wrapper {
-    display: flex;
-    margin-left: 65px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
 .content-area {
     background-color: #FFFFFF;
     color: #06593C;
-    width: 75%; /* 3/4 de la page */
     padding: 20px;
     font-size: 1.2em;
 }
-.button-area {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-left: 20px;
-}
+
 .action-button {
     background-color: #198D6D;
     color: #F2EFC5;
@@ -87,16 +62,6 @@ body {
     border-radius: 10px; 
     font-size: 5em;
     font-weight: bold;
-    display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 20px; 
-}
-.action-button:hover {
-    background-color: #F2EFC5;
-    color: #198D6D;
-}
-.image {
-    width: 80%; /* 3/4 de la page */
-    height : 20em   
 }

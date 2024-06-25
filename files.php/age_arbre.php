@@ -2,10 +2,11 @@
 <html lang="fr">
  <head>
    <meta charset="utf-8">
-   <title> Authentification </title>
+   <title> Age_arbre </title>
    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
-   <link href="../file.css" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;700&display=swap" rel="stylesheet">
+   <link href="../files.css/accueil.css" rel="stylesheet">
  </head>
  <body>
     <header class="header">

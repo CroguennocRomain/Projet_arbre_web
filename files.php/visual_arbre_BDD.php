@@ -2,17 +2,18 @@
 <html lang="fr">
  <head>
    <meta charset="utf-8">
-   <title> Ajout_arbre </title>
+   <title> Visualisation_arbre_BDD </title>
    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
-   <link href="../file.css" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;700&display=swap" rel="stylesheet">
+   <link href="../files.css/accueil.css" rel="stylesheet">
  </head>
  <body>
-    <header class="header">
-      <button class="btn btn-accueil btn-actual">Accueil</button>
-      <button class="btn btn-arbre">Mes arbres</button>
-      <button class="btn btn-ajouter">Ajouter</button>
-    </header>
+ <header class="header mb-4">
+    <a href="accueil.php"><button class="btn btn-accueil">Accueil</button></a>
+    <a href="visual_arbre_BDD.php"><button class="btn btn-arbre btn-actual">Mes arbres</button></a>
+    <a href="ajout_arbre.php"><button class="btn btn-ajouter">Ajouter</button></a>
+  </header>
 
     <footer class="footer">
       <div class="footer-text">
