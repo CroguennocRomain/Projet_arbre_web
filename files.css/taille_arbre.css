@@ -1,0 +1,47 @@
+body {
+    font-family: 'Kaisei Tokumin', serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #F2EFC5;
+}
+.header {
+    background-color: #06593C;
+    
+}
+.header .btn {
+    color: #F2EFC5;
+    background-color: #06593C;
+    font-size: 1.5em;
+}
+.header .btn:hover {
+    background-color: #F2EFC5;
+    color: #06593C;
+}
+.header .btn-actual {
+    font-weight: bold; 
+}
+.footer {
+    background-color: #06593C;
+    color: #F2EFC5;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 20px;
+    text-align: center;
+    margin-top: auto;
+}
+.footer-text {
+    display: flex;
+    justify-content: left;
+    gap: 50px; /* Espace entre les noms */
+}
+.footer-icon {
+    color: #06593C; /* Couleur du fond du footer pour les lettres de l'icône */
+    background-color: #F2EFC5; /* Couleur du texte pour le fond de l'icône */
+    padding: 2px;
+    font-size: 1.1em;
+    border-radius: 10%;
+}

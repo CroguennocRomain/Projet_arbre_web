@@ -6,22 +6,32 @@
    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;700&display=swap" rel="stylesheet">
-   <link href="../files.css/accueil.css" rel="stylesheet">
+   <link href="../files.css/type.css" rel="stylesheet">
  </head>
  <body>
- <header class="header mb-4">
-    <a href="accueil.php"><button class="btn btn-accueil">Accueil</button></a>
-    <a href="visual_arbre_BDD.php"><button class="btn btn-arbre btn-actual">Mes arbres</button></a>
-    <a href="ajout_arbre.php"><button class="btn btn-ajouter">Ajouter</button></a>
-  </header>
+  <header class="header mb-4">
+      <a href="accueil.php"><button class="btn btn-accueil">Accueil</button></a>
+      <a href="visual_arbre_BDD.php"><button class="btn btn-arbre btn-actual">Mes arbres</button></a>
+      <a href="ajout_arbre.php"><button class="btn btn-ajouter">Ajouter</button></a>
+    </header>
 
     <footer class="footer">
-      <div class="footer-text">
-          <span>Emma Naulet</span>
-          <span>Ryan Collobert</span>
-          <span>Romain Croguennoc</span>
+      <div class="container-fluid px-0">
+        <div class="row">
+          <div class="col-md-11">
+            <div class="footer-text">
+              <span>Emma Naulet</span>
+              <span>Ryan Collobert</span>
+              <span>Romain Croguennoc</span>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <div class="footer-links">
+              <i class="bi bi-linkedin footer-icon"></i>
+            </div>
+          </div>
+        </div>
       </div>
-      <i class="bi bi-linkedin footer-icon"></i>
     </footer>
 
     <script src="script.js"></script>
