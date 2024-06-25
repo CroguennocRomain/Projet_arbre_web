@@ -28,8 +28,8 @@ let fk_revetement = $('#fk_revetement').val();
 
 ajaxRequest(
     'POST',
-    '../php/request.php/ajouter_arbre',
+    '../php/test_request.php/ajouter_arbre',
     ajouter_arbre,
-    'haut_tot='+haut_tot+'&haut_tronc='+haut_tronc+'&tronc_diam='+tronc_diam+'&fk_nomtech='+fk_nomtech+'&feuillage='+feuillage+'&mdp_conf='+mdp_conf
+    'haut_tot='+haut_tot+'&haut_tronc='+haut_tronc+'&tronc_diam='+tronc_diam+'&fk_nomtech='+fk_nomtech+'&feuillage='+feuillage+'&fk_stadedev='+fk_stadedev+'&latitude='+latitude+'&longitude='+longitude+'&clc_secteur='+clc_secteur+'&fk_port='+fk_port+'&fk_revetement='+fk_revetement
 );
 })

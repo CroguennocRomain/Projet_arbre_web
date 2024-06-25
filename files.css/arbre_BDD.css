@@ -44,15 +44,14 @@ body {
     margin-bottom: 20px;
     margin-right: 20px;
 }
-.table thead th {
-    background-color: #198D6D;
-    color: #F2EFC5;
-}
+
 .table tbody td {
     background-color: #A0C097;
 }
 .table th, .table td {
-    border: 1px solid #198D6D;
+    background-color: #198D6D;
+    color: #F2EFC5;
+    border: 1px solid #0E0F0F;
 }
 .table tbody td:first-child {
     background-color: #198D6D;
