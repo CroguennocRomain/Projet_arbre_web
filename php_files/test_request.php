@@ -14,7 +14,7 @@ $requestRessource = array_shift($request);
 switch ($requestRessource)
 {
     case 'ajouter_arbre':
-        ajouter_arbre();
+        ajouter_arbre($requestMethod);
         break;
     case 'afficher_arbre':
         afficher_arbre($requestMethod);
@@ -22,13 +22,11 @@ switch ($requestRessource)
 }
 
 
-function ajouter_arbre()
+function ajouter_arbre($requestMethod)
 {
-    global $requestMethod;
     switch ($requestMethod)
     {
         case 'POST':
-            
             if (!empty($_POST['haut_tot']) && !empty($_POST['haut_tronc']) && !empty($_POST['tronc_diam']) && !empty($_POST['fk_nomtech']) && !empty($_POST['feuillage']) && !empty($_POST['fk_stadedev']) && !empty($_POST['latitude']) && !empty($_POST['longitude']) && !empty($_POST['clc_secteur']) && !empty($_POST['fk_port']) && !empty($_POST['fk_revetement'])){
                 header('Content-Type: text/plain; charset=utf-8');
                 header('Cache-control: no-store, no-cache, must-revalidate');
