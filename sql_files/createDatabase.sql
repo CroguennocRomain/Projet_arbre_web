@@ -2,7 +2,14 @@
 --        Script Postgre 
 ------------------------------------------------------------
 
-
+DROP TABLE IF EXISTS user CASCADE;
+DROP TABLE IF EXISTS clc_secteur CASCADE;
+DROP TABLE IF EXISTS fk_stadedev CASCADE;
+DROP TABLE IF EXISTS fk_port CASCADE;
+DROP TABLE IF EXISTS fk_revetement CASCADE;
+DROP TABLE IF EXISTS fk_nomtech CASCADE;
+DROP TABLE IF EXISTS feuillage CASCADE;
+DROP TABLE IF EXISTS arbre CASCADE;
 
 ------------------------------------------------------------
 -- Table: user
