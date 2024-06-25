@@ -195,7 +195,7 @@ function add_database_csv($requestMethod){
             $db = dbConnect();
 
             // Lire le fichier CSV
-            $file = fopen('path/to/your/data.csv', 'r');
+            $file = fopen('../py_files/Data_Arbre.csv', 'r');
             if ($file === false) {
                 echo "Erreur lors de l'ouverture du fichier CSV.";
                 exit();
