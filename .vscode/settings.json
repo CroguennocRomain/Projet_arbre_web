@@ -9,6 +9,16 @@
             "name": "projet_web_arbres",
             "database": "projet_web_arbres",
             "username": "postgres"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "askForPassword": true,
+            "driver": "PostgreSQL",
+            "name": "arbres",
+            "database": "projet_web_arbres",
+            "username": "postgres"
         }
     ]
 }
