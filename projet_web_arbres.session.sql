@@ -1,2 +1,3 @@
-INSERT INTO arbre (longitude, latitude, haut_tot, haut_tronc, tronc_diam, id_user, id_secteur, id_stadedev, id_port, id_revetement, id_nomtech, id_feuillage)
-                VALUES (12.3, 12.3, 12.3, 12.3,12.3, 2, 2, 2, 2, 2, 2, 2);
+INSERT INTO public.users (username, password) VALUES ('test1', 'test');
+INSERT INTO public.users (username, password) VALUES ('test2', 'test');
+INSERT INTO public.users (username, password) VALUES ('test3', 'test');

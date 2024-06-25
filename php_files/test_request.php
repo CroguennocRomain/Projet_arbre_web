@@ -56,11 +56,8 @@ function ajouter_arbre($requestMethod, float $longitude, float $latitude, float 
 
                 $id_secteur = $statement->fetch(PDO::FETCH_NUM)[0];
 
-                echo $id_secteur;
-
                 // Si la valeur n'existe pas, l'insérer et récupérer l'ID
                 if (empty($id_secteur)) {
-                    echo 'YES';
                     $request = "
                     INSERT INTO clc_secteur(secteur) 
                     VALUES (:secteur)
@@ -76,71 +73,137 @@ function ajouter_arbre($requestMethod, float $longitude, float $latitude, float 
                 // Table fk_stadedev
 
                 $request = "
-                INSERT INTO fk_stadedev(stadedev) 
-                VALUES (:stadedev)
-                RETURNING id_stadedev;
+                SELECT id_stadedev FROM fk_stadedev  
+                WHERE stadedev = :stadedev
                 ";
                 $statement = $db->prepare($request);
                 $statement->bindParam(':stadedev', $fk_stadedev);
                 $statement->execute();
-                
+
                 $id_stadedev = $statement->fetch(PDO::FETCH_NUM)[0];
 
+                // Si la valeur n'existe pas, l'insérer et récupérer l'ID
+                if (empty($id_stadedev)) {
+                    $request = "
+                    INSERT INTO fk_stadedev(stadedev) 
+                    VALUES (:stadedev)
+                    RETURNING id_stadedev;
+                    ";
+                    $statement = $db->prepare($request);
+                    $statement->bindParam(':stadedev', $fk_stadedev);
+                    $statement->execute();
+                    
+                    $id_stadedev = $statement->fetch(PDO::FETCH_NUM)[0];
+                }
+                
 
                 // Table fk_port
 
                 $request = "
-                INSERT INTO fk_port(port) 
-                VALUES (:port)
-                RETURNING id_port;
+                SELECT id_port FROM fk_port  
+                WHERE port = :port
                 ";
                 $statement = $db->prepare($request);
                 $statement->bindParam(':port', $fk_port);
                 $statement->execute();
-                
+
                 $id_port = $statement->fetch(PDO::FETCH_NUM)[0];
+
+                // Si la valeur n'existe pas, l'insérer et récupérer l'ID
+                if (empty($id_port)) {
+                    $request = "
+                    INSERT INTO fk_port(port) 
+                    VALUES (:port)
+                    RETURNING id_port;
+                    ";
+                    $statement = $db->prepare($request);
+                    $statement->bindParam(':port', $fk_port);
+                    $statement->execute();
+                    
+                    $id_port = $statement->fetch(PDO::FETCH_NUM)[0];
+                }
 
 
                 // Table fk_revetement
 
                 $request = "
-                INSERT INTO fk_revetement(revetement) 
-                VALUES (:revetement)
-                RETURNING id_revetement;
+                SELECT id_revetement FROM fk_revetement  
+                WHERE revetement = :revetement
                 ";
                 $statement = $db->prepare($request);
                 $statement->bindParam(':revetement', $fk_revetement);
                 $statement->execute();
-                
+
                 $id_revetement = $statement->fetch(PDO::FETCH_NUM)[0];
 
+                // Si la valeur n'existe pas, l'insérer et récupérer l'ID
+                if (empty($id_revetement)) {
+                    $request = "
+                    INSERT INTO fk_revetement(revetement) 
+                    VALUES (:revetement)
+                    RETURNING id_revetement;
+                    ";
+                    $statement = $db->prepare($request);
+                    $statement->bindParam(':revetement', $fk_revetement);
+                    $statement->execute();
+                    
+                    $id_revetement = $statement->fetch(PDO::FETCH_NUM)[0];
+                }
 
+        
                 // Table fk_nomtech
 
                 $request = "
-                INSERT INTO fk_nomtech(nomtech) 
-                VALUES (:nomtech)
-                RETURNING id_nomtech;
+                SELECT id_nomtech FROM fk_nomtech  
+                WHERE nomtech = :nomtech
                 ";
                 $statement = $db->prepare($request);
                 $statement->bindParam(':nomtech', $fk_nomtech);
                 $statement->execute();
-                
+
                 $id_nomtech = $statement->fetch(PDO::FETCH_NUM)[0];
+
+                // Si la valeur n'existe pas, l'insérer et récupérer l'ID
+                if (empty($id_nomtech)) {
+                    $request = "
+                    INSERT INTO fk_nomtech(nomtech) 
+                    VALUES (:nomtech)
+                    RETURNING id_nomtech;
+                    ";
+                    $statement = $db->prepare($request);
+                    $statement->bindParam(':nomtech', $fk_nomtech);
+                    $statement->execute();
+                    
+                    $id_nomtech = $statement->fetch(PDO::FETCH_NUM)[0];
+                }
 
 
                 // Table feuillage
 
                 $request = "
-                INSERT INTO feuillage(feuillage) 
-                VALUES (:feuillage)
-                RETURNING id_feuillage;
+                SELECT id_feuillage FROM feuillage  
+                WHERE feuillage = :feuillage
                 ";
                 $statement = $db->prepare($request);
                 $statement->bindParam(':feuillage', $feuillage);
                 $statement->execute();
-                
+
                 $id_feuillage = $statement->fetch(PDO::FETCH_NUM)[0];
+
+                // Si la valeur n'existe pas, l'insérer et récupérer l'ID
+                if (empty($id_feuillage)) {
+                    $request = "
+                    INSERT INTO feuillage(feuillage) 
+                    VALUES (:feuillage)
+                    RETURNING id_feuillage;
+                    ";
+                    $statement = $db->prepare($request);
+                    $statement->bindParam(':feuillage', $feuillage);
+                    $statement->execute();
+                    
+                    $id_feuillage = $statement->fetch(PDO::FETCH_NUM)[0];
+                }
+                
 
                 // Table arbre
                 $request = "
