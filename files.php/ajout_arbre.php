@@ -170,12 +170,16 @@
           </div>
         </div>
         <div class="row mb">
-          <button type="submit" class="btn btn-submit ml-auto mr-3">Valider <i class="bi bi-check-all"></i>
+          <button id="btn_add_tree" type="submit" class="btn btn-submit ml-auto mr-3">Valider <i class="bi bi-check-all"></i>
           </button>
         </div>
         
       </form>
     </div>
+  </div>
+
+  <div class="test">
+    
   </div>
   
 
