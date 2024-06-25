@@ -110,7 +110,7 @@
           <div class="container action-buttons ">
             <div class="row">
               <div class="col-md-6">
-                <div class="selection-container">
+                <div class="selection-container custom-bg-color ">
                   <label for="line-number">Sélectionner un arbre :</label>
                   <input type="text" id="line-number" placeholder="Entrez le numéro de ligne">
                 </div>
