@@ -206,10 +206,11 @@ function ajouter_arbre($requestMethod, float $longitude, float $latitude, float 
                 
 
                 // Table arbre
+
                 $request = "
-                INSERT INTO arbre (longitude, latitude, haut_tot, haut_tronc, tronc_diam, id_user, id_secteur, id_stadedev, id_port, id_revetement, id_nomtech, id_feuillage)
-                VALUES (:longitude, :latitude, :haut_tot, :haut_tronc, :tronc_diam, :id_user, :id_secteur, :id_stadedev, :id_port, :id_revetement, :id_nomtech, :id_feuillage)";
-                
+                SELECT id FROM arbre  
+                WHERE (longitude = :longitude AND latitude = :latitude AND haut_tot = :haut_tot AND haut_tronc = :haut_tronc AND tronc_diam = :tronc_diam AND id_user = :id_user AND id_secteur = :id_secteur AND id_stadedev = :id_stadedev AND id_port = :id_port AND id_revetement = :id_revetement AND id_nomtech = :id_nomtech AND id_feuillage = :id_feuillage)
+                ";
                 $statement = $db->prepare($request);
                 $statement->bindParam(':longitude', $longitude);
                 $statement->bindParam(':latitude', $latitude);
@@ -223,20 +224,45 @@ function ajouter_arbre($requestMethod, float $longitude, float $latitude, float 
                 $statement->bindParam(':id_revetement', $id_revetement);
                 $statement->bindParam(':id_nomtech', $id_nomtech);
                 $statement->bindParam(':id_feuillage', $id_feuillage);
-                
                 $statement->execute();
-                
-                header('Content-Type: text/plain; charset=utf-8');
-                header('Cache-control: no-store, no-cache, must-revalidate');
-                header('Pragma: no-cache');
-                header('HTTP/1.1 200 OK');
-                echo "arbre_ajouté";
 
+                $id = $statement->fetch(PDO::FETCH_NUM)[0];
+
+                // Si la valeur n'existe pas, l'insérer et récupérer l'ID
+                if (empty($id)) {
+                    $request = "
+                    INSERT INTO arbre (longitude, latitude, haut_tot, haut_tronc, tronc_diam, id_user, id_secteur, id_stadedev, id_port, id_revetement, id_nomtech, id_feuillage)
+                    VALUES (:longitude, :latitude, :haut_tot, :haut_tronc, :tronc_diam, :id_user, :id_secteur, :id_stadedev, :id_port, :id_revetement, :id_nomtech, :id_feuillage)";
+                    
+                    $statement = $db->prepare($request);
+                    $statement->bindParam(':longitude', $longitude);
+                    $statement->bindParam(':latitude', $latitude);
+                    $statement->bindParam(':haut_tot', $haut_tot);
+                    $statement->bindParam(':haut_tronc', $haut_tronc);
+                    $statement->bindParam(':tronc_diam', $tronc_diam);
+                    $statement->bindParam(':id_user', $id_user);
+                    $statement->bindParam(':id_secteur', $id_secteur);
+                    $statement->bindParam(':id_stadedev', $id_stadedev);
+                    $statement->bindParam(':id_port', $id_port);
+                    $statement->bindParam(':id_revetement', $id_revetement);
+                    $statement->bindParam(':id_nomtech', $id_nomtech);
+                    $statement->bindParam(':id_feuillage', $id_feuillage);
+                    
+                    $statement->execute();
+
+                    header('Content-Type: text/plain; charset=utf-8');
+                    header('Cache-control: no-store, no-cache, must-revalidate');
+                    header('Pragma: no-cache');
+                    header('HTTP/1.1 200 OK');
+                    //echo json_encode("arbre_ajouté");
+                }else{
+                    echo json_encode("arbre_non_ajouté");
+                }
+                
             } catch (\Throwable $th) {
-                //echo 'arbre_non_ajouté';
+                echo json_encode('arbre_non_ajouté');
                 //echo ("Insertion failed: " . $e->getMessage());
             }
-            exit();
     }
 }
 
@@ -259,7 +285,7 @@ function ajouter_un_arbre($requestMethod)
         ajouter_arbre($requestMethod, $longitude, $latitude, $haut_tot, $haut_tronc, $tronc_diam, $clc_secteur, $fk_stadedev, $fk_port, $fk_revetement, $fk_nomtech, $feuillage);
     }else {
         //header('HTTP/1.1 400 Bad Request');
-        echo 'arbre_non_ajouté';
+        echo json_encode('arbre_non_ajouté');
     }
     exit();        
     
@@ -270,8 +296,8 @@ function add_database_csv($requestMethod){
     {
         case 'POST':
         try {
-            $db = dbConnect();
-
+            
+            
             // Lire le fichier CSV
             $file = fopen('../py_files/Data_Arbre.csv', 'r');
             if ($file === false) {
@@ -281,17 +307,18 @@ function add_database_csv($requestMethod){
 
             // Ignorer la première ligne (en-têtes)
             fgetcsv($file);
-
+            $i = 1;
             // Traiter chaque ligne du fichier CSV
             while (($row = fgetcsv($file)) !== false) {
                 // Extraire les données pertinentes
                 list($longitude, $latitude, $clc_quartier, $clc_secteur, $haut_tot, $haut_tronc, $tronc_diam, $fk_arb_etat, $fk_stadedev, $fk_port, $fk_pied, $fk_situation, $fk_revetement, $age_estim, $fk_prec_estim, $clc_nbr_diag, $fk_nomtech, $villeca, $feuillage, $remarquable) = $row;
-
                 ajouter_arbre($requestMethod, $longitude, $latitude, $haut_tot, $haut_tronc, $tronc_diam, $clc_secteur, $fk_stadedev, $fk_port, $fk_revetement, $fk_nomtech, $feuillage);
+                echo $i.' ';
+                $i = $i +1;
             }
 
         } catch (\Throwable $th) {
-            echo 'arbre_non_ajouté';
+            echo json_encode('arbre_non_ajouté');
             //echo ("Insertion failed: " . $e->getMessage());
         }
         exit();
