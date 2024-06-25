@@ -1,0 +1,124 @@
+body {
+    font-family: 'Kaisei Tokumin', serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Empêche le scroll horizontal */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #F2EFC5;
+}
+
+.header {
+    background-color: #06593C;
+    padding: 45px;
+    text-align: left;
+    position: relative;
+    
+}
+.header .btn {
+    color: #F2EFC5;
+    background-color: #06593C;
+    position: absolute;
+    top: 20px;
+    font-size: 1.5em;
+}
+.btn-accueil {
+    left: 110px; /* Écart entre 'Accueil' et la bordure gauche */
+}
+.btn-arbre {
+    left: 305px; /* 110px + 195px = 305px pour l'écart entre les deux boutons */
+}
+.btn-ajouter {
+    left: 525px; /* 110px + 195px = 305px pour l'écart entre les deux boutons */
+}
+.header .btn:hover {
+    background-color: #F2EFC5;
+    color: #06593C;
+}
+.header .btn-actual {
+    font-weight: bold; 
+}
+
+.table-container {
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+.table thead th {
+    background-color: #198D6D;
+    color: #F2EFC5;
+}
+.table tbody td {
+    background-color: #A0C097;
+}
+.table th, .table td {
+    border: 1px solid #198D6D;
+}
+.table tbody td:first-child {
+    background-color: #198D6D;
+    color: #F2EFC5; /* Optionnel : couleur du texte */
+}
+
+.filter-button {
+    background-color: #198D6D;
+    color: #F2EFC5;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+
+.map-container {
+    margin-bottom: 20px;
+}
+.action-buttons button {
+    background-color: #347a48;
+    color: #F2EFC5;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.selection-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.selection-container input {
+    margin-left: 10px;
+    padding: 5px;
+    flex: 1;
+}
+
+
+
+
+.footer {
+  background-color: #06593C;
+  color: #F2EFC5;
+  padding: 8px 20px; /* Ajustez le padding pour rendre le footer plus compact */
+  text-align: center;
+  margin-top: auto;
+  font-size: 14px; /* Ajustez la taille du texte si nécessaire */
+}
+
+.footer-text {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-text span {
+  margin: 0 10px;
+  padding: 5px 0;
+}
+
+.footer-links {
+  text-align: right;
+}
+
+.footer-icon {
+  font-size: 20px;
+}
