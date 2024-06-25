@@ -38,7 +38,7 @@ function ajouter_arbre(data)
 {
   switch (data){
       case 'arbre_ajouté':
-          window.location.href = "../html_files/accueil.html";
+          //window.location.href = "../html_files/accueil.html";
           break;
       case 'arbre_non_ajouté':
           $('#alert-erreur-connexion').toggleClass('d-none');
