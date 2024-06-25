@@ -45,3 +45,12 @@ function ajouter_arbre(data)
           break;
   }
 }
+
+$('#bouton_ajout_csv').on("click", () => {
+    
+    ajaxRequest(
+        'POST',
+        '../php_files/test_request.php/add_database_csv',
+        ajouter_arbre,
+    );
+})

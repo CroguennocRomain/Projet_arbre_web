@@ -16,16 +16,21 @@ switch ($requestRessource)
     case 'ajouter_arbre':
         ajouter_un_arbre($requestMethod);
         break;
+    case 'add_database_csv':
+        add_database_csv($requestMethod);
+        break;
     case 'afficher_arbre':
         afficher_arbre($requestMethod);
         break;
 }
-function ajouter_arbre($requestMethod, $longitude, $latitude, $haut_tot, $haut_tronc, $tronc_diam, $clc_secteur, $fk_stadedev, $fk_port, $fk_revetement, $fk_nomtech, $feuillage)
+function ajouter_arbre($requestMethod, float $longitude, float $latitude, float $haut_tot, float $haut_tronc, float $tronc_diam, string $clc_secteur, string $fk_stadedev, string $fk_port, string $fk_revetement, string $fk_nomtech, string $feuillage)
 {
     switch ($requestMethod)
     {
         case 'POST':
             try {
+                $db = dbConnect();
+                
                 // Table users
                 /*
                 $request = "
@@ -160,7 +165,6 @@ function ajouter_arbre($requestMethod, $longitude, $latitude, $haut_tot, $haut_t
 function ajouter_un_arbre($requestMethod)
 {
     if (!empty($_POST['haut_tot']) && !empty($_POST['haut_tronc']) && !empty($_POST['tronc_diam']) && !empty($_POST['fk_nomtech']) && !empty($_POST['feuillage']) && !empty($_POST['fk_stadedev']) && !empty($_POST['latitude']) && !empty($_POST['longitude']) && !empty($_POST['clc_secteur']) && !empty($_POST['fk_port']) && !empty($_POST['fk_revetement'])){
-        $db = dbConnect();
                     
         $latitude = floatval($_POST['latitude']);
         $longitude = floatval($_POST['longitude']);
