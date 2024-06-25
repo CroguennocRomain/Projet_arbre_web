@@ -101,13 +101,13 @@ CREATE TABLE public.arbre(
 	id_feuillage    INT  NOT NULL  ,
 	CONSTRAINT arbre_PK PRIMARY KEY (id)
 
-	,CONSTRAINT arbre_user_FK FOREIGN KEY (id_user) REFERENCES public.user(id)
-	,CONSTRAINT arbre_clc_secteur0_FK FOREIGN KEY (id_secteur) REFERENCES public.clc_secteur(id_secteur)
-	,CONSTRAINT arbre_fk_stadedev1_FK FOREIGN KEY (id_stadedev) REFERENCES public.fk_stadedev(id_stadedev)
-	,CONSTRAINT arbre_fk_port2_FK FOREIGN KEY (id_port) REFERENCES public.fk_port(id_port)
-	,CONSTRAINT arbre_fk_revetement3_FK FOREIGN KEY (id_revetement) REFERENCES public.fk_revetement(id_revetement)
-	,CONSTRAINT arbre_fk_nomtech4_FK FOREIGN KEY (id_nomtech) REFERENCES public.fk_nomtech(id_nomtech)
-	,CONSTRAINT arbre_feuillage5_FK FOREIGN KEY (id_feuillage) REFERENCES public.feuillage(id_feuillage)
+	,CONSTRAINT arbre_user_FK FOREIGN KEY (id_user) REFERENCES public.user(id) ON DELETE CASCADE
+	,CONSTRAINT arbre_clc_secteur0_FK FOREIGN KEY (id_secteur) REFERENCES public.clc_secteur(id_secteur) ON DELETE CASCADE
+	,CONSTRAINT arbre_fk_stadedev1_FK FOREIGN KEY (id_stadedev) REFERENCES public.fk_stadedev(id_stadedev) ON DELETE CASCADE
+	,CONSTRAINT arbre_fk_port2_FK FOREIGN KEY (id_port) REFERENCES public.fk_port(id_port) ON DELETE CASCADE
+	,CONSTRAINT arbre_fk_revetement3_FK FOREIGN KEY (id_revetement) REFERENCES public.fk_revetement(id_revetement) ON DELETE CASCADE
+	,CONSTRAINT arbre_fk_nomtech4_FK FOREIGN KEY (id_nomtech) REFERENCES public.fk_nomtech(id_nomtech) ON DELETE CASCADE
+	,CONSTRAINT arbre_feuillage5_FK FOREIGN KEY (id_feuillage) REFERENCES public.feuillage(id_feuillage) ON DELETE CASCADE
 )WITHOUT OIDS;
 
 
