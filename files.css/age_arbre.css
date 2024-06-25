@@ -27,58 +27,23 @@ body {
     font-weight: bold; 
 }
 
-.ajout {
-    padding-top: 40px;
-    padding-left: 20px;
+
+.title {
+    justify-content: center;
+    padding-top: 20px;
 }
-.label {
-    padding-left: 20px;
-}
-.selection-container {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-.selection-container input {
-    margin-left: 10px;
-    padding: 5px;
-    flex: 1;
-}
-.selection-container label {
-    font-weight: bold;
-    color:#F2EFC5;
-}
-.custom-bg-color {
-    background-color: #198D6D;
-    color: white;
+.title-2 {
+    padding-left: 40px;
 }
 
-.plc-btn {
-    padding-top: 10px;
-    padding-left: 15px;
-}
-.btn{
-    background-color: #2d6a4f; /* Green background for button */
-    color: white;
-    border: none;
+.full-height-row {
+    text-align: center; 
+    height: 50vh;
 }
 
-.title h3 {
-    background-color: #2d6a4f; /* Green background for headers */
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-}
-.cluster {
-    background-color: #b7e4c7; /* Light green background for clusters */
-    padding: 20px;
-    margin-bottom: 20px;
-}
-.cluster img {
-    max-width: 100%;
+
+.case {
+    background-color: #06593C;
 }
 
 
