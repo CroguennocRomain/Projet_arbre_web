@@ -103,3 +103,7 @@ line-height: 0; /* Assure que la hauteur de ligne correspond à la taille de l'i
 .bi-check-all {
     font-size: 1.2em;
 }
+
+.imp_data {
+    padding-top: 10px;
+}
