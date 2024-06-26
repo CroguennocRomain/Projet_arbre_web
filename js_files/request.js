@@ -26,12 +26,17 @@ let clc_secteur = $('#clc_secteur').val();
 let fk_port = $('#fk_port').val();
 let fk_revetement = $('#fk_revetement').val();
 
-ajaxRequest(
-    'POST',
-    '../php_files/test_request.php/ajouter_arbre',
-    ajouter_arbre,
-    'haut_tot='+haut_tot+'&haut_tronc='+haut_tronc+'&tronc_diam='+tronc_diam+'&fk_nomtech='+fk_nomtech+'&feuillage='+feuillage+'&fk_stadedev='+fk_stadedev+'&latitude='+latitude+'&longitude='+longitude+'&clc_secteur='+clc_secteur+'&fk_port='+fk_port+'&fk_revetement='+fk_revetement
-);
+
+if((!isNaN(parseFloat(haut_tot)) && isFinite(haut_tot)) && (!isNaN(parseFloat(haut_tronc)) && isFinite(haut_tronc)) && (!isNaN(parseFloat(tronc_diam)) && isFinite(tronc_diam)) && (!isNaN(parseFloat(latitude)) && isFinite(latitude)) && (!isNaN(parseFloat(longitude)) && isFinite(longitude))){
+    console.log('YUI');
+    ajaxRequest(
+        'POST',
+        '../php_files/test_request.php/ajouter_arbre',
+        ajouter_arbre,
+        'haut_tot='+haut_tot+'&haut_tronc='+haut_tronc+'&tronc_diam='+tronc_diam+'&fk_nomtech='+fk_nomtech+'&feuillage='+feuillage+'&fk_stadedev='+fk_stadedev+'&latitude='+latitude+'&longitude='+longitude+'&clc_secteur='+clc_secteur+'&fk_port='+fk_port+'&fk_revetement='+fk_revetement
+    );
+}
+
 })
 
 function ajouter_arbre(data)
