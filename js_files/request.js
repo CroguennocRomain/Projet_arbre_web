@@ -65,3 +65,7 @@ $('#bouton_ajout_csv').on("click", () => {
 })
 
 function cluster_pred(data){}
+
+// Requête afficher arbres dans tableau
+let url = window.location.pathname;
+console.log(url); 

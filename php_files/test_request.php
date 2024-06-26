@@ -407,7 +407,7 @@ function cluster_pred($requestMethod)
             }
             exit();
     }
-}
+}*/
 
 function afficher_arbre($requestMethod){
     switch ($requestMethod)
@@ -454,4 +454,3 @@ function afficher_arbre($requestMethod){
             exit();
     }
 }
-*/
