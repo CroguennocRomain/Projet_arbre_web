@@ -182,16 +182,24 @@ function afficher_all_arbres(data){
 
 function afficher_all_variables(data) {
     data = JSON.parse(data);
+    console.log(data);
+    var nom_colonne = ['fk_nomtech','feuillage','fk_stadedev','clc_secteur','fk_port','fk_revetement']
 
-    var selectElement = document.getElementById('fk_nomtech');
-    var html = '';
-
-    data.forEach((value) => {
-        html += '<option value="' + value + '">' + value + '</option>';
+    // Parcourir chaque colonne dans les données
+    Object.keys(data).forEach((colonne) => {
+        console.log(nom_colonne[colonne]);
+        var selectElement = document.getElementById(nom_colonne[colonne]); // Utiliser la clé comme ID
+        var html = '';
+        
+        // Parcourir chaque valeur dans la colonne
+        data[colonne].forEach((value) => {
+            console.log(value);
+            html += '<option value="' + value + '">' + value + '</option>';
+        });
+        console.log(html);
+        // Mettre à jour le contenu HTML de l'élément select
+        selectElement.innerHTML = html;
     });
-
-    // Insérer les options générées dans le select
-    selectElement.innerHTML = html;
 }
 
 
