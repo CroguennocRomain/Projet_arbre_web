@@ -1,5 +1,4 @@
 import sys
-import os
 import json
 
 import numpy as np
@@ -13,12 +12,8 @@ import pickle
 
 
 def predire_age(values, method):
-
-    base_path = os.path.dirname(os.path.abspath(__file__))
-    ord_path = os.path.join(base_path, 'OrdinalEncoder', 'ordinal_encoder2.pkl')
-
     # Charger l'encodeur depuis le fichier
-    with open(ord_path, 'rb') as file:
+    with open('OrdinalEncoder/ordinal_encoder2.pkl', 'rb') as file:
         encoder = pickle.load(file)
 
     # Colonnes utilisées lors de l'entraînement du OrdinalEncoder
@@ -27,9 +22,9 @@ def predire_age(values, method):
     # Ajouter valeurs entrées dans un dictionnaire
     data_input = {}
     if len(values) == 5:
-        data_input['haut_tot'] = values[0]
-        data_input['haut_tronc'] = values[1]
-        data_input['tronc_diam'] = values[2]
+        data_input['haut_tot'] = float(values[0])
+        data_input['haut_tronc'] = float(values[1])
+        data_input['tronc_diam'] = float(values[2])
         data_input['fk_stadedev'] = values[3]
         data_input['fk_nomtech'] = values[4]
     else:
@@ -38,24 +33,21 @@ def predire_age(values, method):
     # Convertir le dictionnaire en DataFrame
     df = pd.DataFrame([data_input])
 
-    base_path = os.path.dirname(os.path.abspath(__file__))
-    data_path = os.path.join(base_path, 'Data_Arbre.csv')
+    data_arbre = pd.read_csv('Data_Arbre.csv')
+    # Ajouter les colonnes manquantes avec des valeurs par défaut
+    for colonne in data_arbre.columns:
+        if colonne not in df.columns:
+            df[colonne] = data_arbre[colonne][0]
 
-    data_arbre = pd.read_csv(data_path)
-    # Ajouter les colonnes manquantes avec des valeurs NaN
-    for col in encoder_cols:
-        if col not in df.columns:
-            df[col] = data_arbre[col][0]
+    # Réorganiser les colonnes pour correspondre à l'ordre des colonnes originales
+    new_data_df = df[data_arbre.columns]
 
-    # Réorganiser les colonnes selon l'ordre des colonnes utilisées lors de l'entraînement
-    df = df[encoder_cols]
+    # Sélectionner les colonnes de la nouvelle ligne de données
+    categorical_columns = [colonne for colonne in new_data_df if new_data_df[colonne].dtype == 'object']
+    # Appliquer l'encodeur sur les colonnes sélectionnées de la nouvelle ligne de données
+    new_data_df[categorical_columns] = encoder.transform(new_data_df[categorical_columns])
 
-    # Remplir les valeurs manquantes avec une valeur par défaut
-    df.fillna('missing_value', inplace=True)
-
-    # Encoder les colonnes textuelles en numériques
-    df[encoder_cols] = encoder.transform(df[encoder_cols])
-
+    df = new_data_df
     df['age_group'] = 0
 
     # Ajouter colonnes pour normalisation
@@ -72,10 +64,7 @@ def predire_age(values, method):
                  ]
     df = df[norm_cols]
 
-    base_path = os.path.dirname(os.path.abspath(__file__))
-    scal_path = os.path.join(base_path, 'Scaler', 'scaler2.pkl')
-
-    with open(scal_path, "rb") as f:
+    with open("Scaler/scaler2.pkl", "rb") as f:
         scaler = pickle.load(f)
     df_norm = scaler.transform(df)
     df_norm = pd.DataFrame(df_norm, columns=norm_cols)
@@ -83,36 +72,24 @@ def predire_age(values, method):
     # Mettre notre instance à prédire sous le bon format
     arbre = np.array([[float(df_norm['haut_tot'][0]), float(df_norm['haut_tronc'][0]), float(df_norm['tronc_diam'][0]),
                        float(df_norm['fk_stadedev'][0]), float(df_norm['fk_nomtech'][0])]])
-
-
+    X = df_norm[['haut_tot', 'haut_tronc', 'tronc_diam', 'fk_stadedev', 'fk_nomtech']]
 
     # Sélection du modèle d'apprentissage
-
-    base_path = os.path.dirname(os.path.abspath(__file__))
-    model0_path = os.path.join(base_path, 'models', 'age_SGD.pkl')
-    base_path = os.path.dirname(os.path.abspath(__file__))
-    model1_path = os.path.join(base_path, 'models', 'age_neigh.pkl')
-    base_path = os.path.dirname(os.path.abspath(__file__))
-    model2_path = os.path.join(base_path, 'models', 'age_SVM.pkl')
-    base_path = os.path.dirname(os.path.abspath(__file__))
-    model3_path = os.path.join(base_path, 'models', 'age_tree.pkl')
-
-
     if method == '0':
-        with open(model0_path, "rb") as f:
+        with open("models/age_SGD.pkl", "rb") as f:
             model = pickle.load(f)
     elif method == '1':
-        with open(model1_path, "rb") as f:
+        with open("models/age_neigh.pkl", "rb") as f:
             model = pickle.load(f)
     elif method == '2':
-        with open(model2_path, "rb") as f:
+        with open("models/age_SVM.pkl", "rb") as f:
             model = pickle.load(f)
     elif method == '3':
-        with open(model3_path, "rb") as f:
+        with open("models/age_tree.pkl", "rb") as f:
             model = pickle.load(f)
 
     # Proba de chaque classe
-    classes = model.predict_proba(arbre)
+    classes = model.predict_proba(X)
 
     # Créer structure json
     json_data = {}
@@ -124,12 +101,9 @@ def predire_age(values, method):
     json_data['51-100'] = classes[0][5]
     json_data['101-200'] = classes[0][6]
 
-    base_path = os.path.dirname(os.path.abspath(__file__))
-    json_path = os.path.join(base_path, 'JSON', 'script2_result.json')
-
-    with open(json_path, 'w') as json_file:
+    with open('JSON/script2_result.json', 'w') as json_file:
         json.dump(json_data, json_file)
-    
+
     # Renvoie les données en format json
     return json.dumps(json_data)
 
