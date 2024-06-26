@@ -57,10 +57,12 @@ $('#bouton_ajout_csv').on("click", () => {
 
 $('#bouton_cluster_pred').on("click", () => {
     let id = $('#ligne_value').val();
+
     ajaxRequest(
         'GET',
         '../php_files/test_request.php/cluster_pred',
-        cluster_pred,'id='+id
+        cluster_pred,
+        'id='+id
     );
 })
 $('#bouton_age_pred').on("click", () => {
@@ -87,7 +89,7 @@ $('#bouton_tempete_pred').on("click", () => {
 })
 
 function cluster_pred(data){
-    console.log('yo')
+    console.log(data)
     $('#alert-erreur-connexion').toggleClass('d-none')
 }
 function age_pred(data){

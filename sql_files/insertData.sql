@@ -561,8 +561,3 @@ INSERT INTO public.fk_nomtech (nomtech) VALUES
 INSERT INTO public.feuillage (feuillage) VALUES
     ('Feuillu'),
     ('Conifère');
-
--- arbre
-INSERT INTO public.arbre (longitude, latitude, haut_tot, haut_tronc, tronc_diam, id_user, id_secteur, id_stadedev, id_port, id_revetement, id_nomtech, id_feuillage)
-VALUES
-    (2.345, 48.8566, 15.2, 10.5, 0.8, 1, 10, 4, 3, 1, 25, 1);

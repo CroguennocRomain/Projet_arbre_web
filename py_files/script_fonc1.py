@@ -1,4 +1,5 @@
 import sys
+import os
 import json
 import numpy as np
 import pandas as pd
@@ -12,8 +13,12 @@ def main():
         print('Usage: python script_fonc1.py <haut_tot> <haut_tronc> <fk_stadedev> <fk_nomtech> <feuillage> ----> Exemple: python script_fonc1.py 15.1 2.1 "Adulte" "PINNIGnig" "Conifère"')
         sys.exit(1)
 
+
+    base_path = os.path.dirname(os.path.abspath(__file__))
+    pkl_path = os.path.join(base_path, 'OrdinalEncoder', 'ordinal_encoder1.pkl')
+
     # Charger l'encodeur depuis le fichier
-    with open('OrdinalEncoder/ordinal_encoder1.pkl', 'rb') as file:
+    with open(pkl_path, 'rb') as file:
         encoder = pickle.load(file)
 
     # Nouvelle ligne de données à encoder
