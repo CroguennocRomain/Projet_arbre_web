@@ -421,19 +421,31 @@ function age_pred($requestMethod)
         try {
             $db = dbConnect();
             $request = "
-                SELECT a.haut_tot, a.haut_tronc, a.tronc_diam, s.stadedev, n.nomtech, 
+                SELECT a.haut_tot, a.haut_tronc, a.tronc_diam, s.stadedev, n.nomtech 
                 FROM arbre a
                 JOIN fk_stadedev s on s.id_stadedev = a.id_stadedev
                 JOIN fk_nomtech n on n.id_nomtech = a.id_nomtech
                 WHERE a.id = :id
                 ";
-                
-                $statement = $db->prepare($request);
-                $statement->bindParam(':id', $id);
-                $statement->execute();
+            $statement = $db->prepare($request);
+            $statement->bindParam(':id', $id, PDO::PARAM_INT);
+             
+            $statement->execute();
+
+            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+            // Commande python script2
+            for ($i = 0; $i < 4; $i++) {
+                //$command = "../../venv/myenv/bin/python3.11 ../py_files/script_fonc2.py ".floatval($result[0]['haut_tot'])." ".floatval($result[0]['haut_tronc'])." ".floatval($result[0]['tronc_diam'])." ".strval($result[0]['stadedev'])." ".strval($result[0]['nomtech']." ".intval($i));
+                $command = '../../venv/myenv/bin/python3.11 ../py_files/script_fonc2.py 15.1 2.1 2.5 "Adulte" "PINNIGnig" 3';
+            }
+            
+            // Exécuter la commande
+            $output = shell_exec($command);
+            echo $output;
 
         } catch (\Throwable $th) {
-            echo 'cluster_non_prédit';
+            //echo 'cluster_non_prédit';
             //echo ("Insertion failed: " . $e->getMessage());
         }
         exit();
@@ -449,7 +461,7 @@ function tempete_pred($requestMethod)
         try {
             $db = dbConnect();
             $request = "
-                SELECT a.haut_tot, a.haut_tronc, a.latitude, a.longitude, s.stadedev, c.secteur, 
+                SELECT a.haut_tot, a.haut_tronc, a.latitude, a.longitude, s.stadedev, c.secteur
                 FROM arbre a
                 JOIN fk_stadedev s on s.id_stadedev = a.id_stadedev
                 JOIN clc_secteur c on c.id_secteur = a.id_secteur
