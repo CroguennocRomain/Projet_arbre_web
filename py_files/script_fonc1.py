@@ -15,10 +15,10 @@ def main():
 
 
     base_path = os.path.dirname(os.path.abspath(__file__))
-    pkl_path = os.path.join(base_path, 'OrdinalEncoder', 'ordinal_encoder1.pkl')
+    ord_path = os.path.join(base_path, 'OrdinalEncoder', 'ordinal_encoder1.pkl')
 
     # Charger l'encodeur depuis le fichier
-    with open(pkl_path, 'rb') as file:
+    with open(ord_path, 'rb') as file:
         encoder = pickle.load(file)
 
     # Nouvelle ligne de données à encoder
@@ -34,8 +34,11 @@ def main():
     # Convertir en DataFrame
     new_data_df = pd.DataFrame(new_data)
 
+    base_path = os.path.dirname(os.path.abspath(__file__))
+    data_path = os.path.join(base_path, 'Data_Arbre.csv')
+
     # Charger les données originales pour obtenir la structure complète
-    data = pd.read_csv('Data_Arbre.csv')
+    data = pd.read_csv(data_path)
 
     # Ajouter les colonnes manquantes avec des valeurs par défaut
     for colonne in data.columns:
@@ -51,14 +54,20 @@ def main():
     # Appliquer l'encodeur sur les colonnes sélectionnées de la nouvelle ligne de données
     new_data_df[categorical_columns] = encoder.transform(new_data_df[categorical_columns])
 
+    base_path = os.path.dirname(os.path.abspath(__file__))
+    scal_path = os.path.join(base_path, 'Scaler', 'scaler1.pkl')
+
     # Charger le scaler depuis le fichier (pour normaliser)
-    with open("Scaler/scaler1.pkl", "rb") as file:
+    with open(scal_path, "rb") as file:
         scaler = pickle.load(file)
     new_data_df = scaler.transform(new_data_df)
     new_data_df = pd.DataFrame(new_data_df, columns=data.columns)
 
+    base_path = os.path.dirname(os.path.abspath(__file__))
+    centroids_path = os.path.join(base_path, 'centroids.csv')
+
     # Charger les centroids
-    centroids_data = pd.read_csv('centroids.csv')
+    centroids_data = pd.read_csv(centroids_path)
 
     # Les colonnes utilisées pour les centroids
     features = [f'feature_{i}' for i in range(centroids_data.shape[1])]
@@ -75,7 +84,11 @@ def main():
     print(f'La nouvelle ligne appartient au cluster {closest_centroid}')
 
     # Renvoyer un fichier JSON contenant le cluster auquel appartient la nouvelle ligne
-    with open('JSON/script1_result.json', 'w') as f:
+    
+    base_path = os.path.dirname(os.path.abspath(__file__))
+    json_path = os.path.join(base_path, 'JSON', 'script1_result.json')
+
+    with open(json_path, 'w') as f:
         json.dump(int(closest_centroid), f)
 
     # renvoyer un fichier JSON contenant le cluster auquel apartient la nouvelle ligne
