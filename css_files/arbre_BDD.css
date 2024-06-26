@@ -117,38 +117,36 @@ thead{ /* Scroll du tableau */
     flex: 1;
 }
 
-
-
-
 .footer {
-  background-color: #06593C;
-  color: #F2EFC5;
-  padding: 8px 20px; /* Ajustez le padding pour rendre le footer plus compact */
-  text-align: center;
-  margin-top: auto;
-  font-size: 14px; /* Ajustez la taille du texte si nécessaire */
+    background-color: #06593C;
+    color: #F2EFC5;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 20px;
+    text-align: center;
+    margin-top: auto;
 }
-
 .footer-text {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: left;
+    gap: 50px; /* Espace entre les noms */
 }
-
-.footer-text span {
-  margin: 0 10px;
-  padding: 5px 0;
-}
-
-.footer-links {
-  text-align: right;
-}
-
 .footer-icon {
-  font-size: 20px;
+    color: #06593C; /* Couleur du fond du footer pour les lettres de l'icône */
+    background-color: #F2EFC5; /* Couleur du texte pour le fond de l'icône */
+    padding: 2px;
+    font-size: 1.1em;
+    border-radius: 10%;
+    display: inline-block; /* Assure que l'icône est en ligne, ce qui aide à contrôler les marges */
+    line-height: 0;
 }
 
 .custom-bg-color {
     background-color: #198D6D; /* Remplacez par la couleur de votre choix */
     color:#F2EFC5
 }   
+
+span{
+    color:#F2EFC5;
+}
