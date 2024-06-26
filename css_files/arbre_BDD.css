@@ -52,7 +52,7 @@ body {
 
 .table-scroll{  /* Scroll du tableau */
     overflow-y: auto;
-    max-height: 500px;
+    max-height: 320px;
 }
 
 .table thead th { /* Scroll du tableau */
