@@ -55,16 +55,51 @@ $('#bouton_ajout_csv').on("click", () => {
     );
 })
 
-$('#bouton_ajout_csv').on("click", () => {
-    
+$('#bouton_cluster_pred').on("click", () => {
+    let id = $('#ligne_value').val();
     ajaxRequest(
         'GET',
         '../php_files/test_request.php/cluster_pred',
         cluster_pred,'id='+id
     );
 })
+$('#bouton_age_pred').on("click", () => {
+    console.log('yo');
+    let id = $('#ligne_value').val();
 
-function cluster_pred(data){}
+    ajaxRequest(
+        'GET',
+        '../php_files/test_request.php/age_pred',
+        age_pred,
+        'id='+id
+    );
+})
+$('#bouton_tempete_pred').on("click", () => {
+    console.log('yo');
+    let id = $('#ligne_value').val();
+
+    ajaxRequest(
+        'GET',
+        '../php_files/test_request.php/tempete_pred',
+        tempete_pred,
+        'id='+id
+    );
+})
+
+function cluster_pred(data){
+    console.log('yo')
+    $('#alert-erreur-connexion').toggleClass('d-none')
+}
+function age_pred(data){
+    console.log('yo')
+    $('#alert-erreur-connexion').toggleClass('d-none')
+}
+
+function tempete_pred(data){
+    console.log('yo')
+    $('#alert-erreur-connexion').toggleClass('d-none')
+}
+
 
 
 // Requête afficher arbres dans tableau
