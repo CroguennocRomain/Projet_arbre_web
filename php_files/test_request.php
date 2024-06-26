@@ -25,6 +25,9 @@ switch ($requestRessource)
     case 'afficher_arbres':
         afficher_arbres($requestMethod);
         break;
+    case 'age_pred':
+        age_pred($requestMethod);
+
 }
 function ajouter_arbre($requestMethod, float $longitude, float $latitude, float $haut_tot, float $haut_tronc, float $tronc_diam, string $clc_secteur, string $fk_stadedev, string $fk_port, string $fk_revetement, string $fk_nomtech, string $feuillage)
 {
@@ -394,5 +397,35 @@ function afficher_arbres($requestMethod){
                 echo ('PAS OK' . $e->getMessage());
             }
             exit();
+    }
+}
+*/
+function age_pred($requestMethod)
+{
+    $id = intval($_GET['id']);
+    switch ($requestMethod)
+    {
+        case 'GET':
+        try {
+            $db = dbConnect();
+            $request = "
+                SELECT a.haut_tot, a.haut_tronc, s.stadedev, n.nomtech, f.feuillage, 
+                FROM arbre a
+                JOIN fk_stadedev s on s.id_stadedev = a.id_stadedev
+                JOIN fk_nomtech n on n.id_nomtech = a.id_nomtech
+                JOIN feuillage f on f.feuillage = a.feuillage
+                WHERE a.id = :id
+                ";
+                
+                $statement = $db->prepare($request);
+                $statement->bindParam(':id', $id);
+                $statement->execute();
+
+                $haut_tot = $statement->fetch(PDO::FETCH_NUM)[0];
+        } catch (\Throwable $th) {
+            echo 'cluster_non_prédit';
+            //echo ("Insertion failed: " . $e->getMessage());
+        }
+        exit();
     }
 }

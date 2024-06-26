@@ -44,6 +44,10 @@ body {
     margin-bottom: 20px;
     margin-right: 20px;
 }
+.table {
+    overflow-y: auto; /* Activation du défilement vertical */
+    border-collapse: collapse; /* Fusionner les bordures de cellules */
+}
 
 .table tbody td {
     background-color: #A0C097;

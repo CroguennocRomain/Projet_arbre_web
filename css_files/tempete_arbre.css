@@ -3,44 +3,46 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    overflow-x: hidden; /* Empêche le scroll horizontal */
+    overflow-x: hidden;
     flex-direction: column;
     min-height: 100vh;
     background-color: #F2EFC5;
 }
+
 .header {
     background-color: #06593C;
     text-align: center;
-    
 }
+
 .header .btn {
-    margin-top : 2px;
+    margin-top: 2px;
     color: #F2EFC5;
     background-color: #06593C;
     font-size: 1.5em;
 }
+
 .header .btn:hover {
     background-color: #F2EFC5;
     color: #06593C;
 }
-.header .btn-actual {
-    font-weight: bold; 
-}
 
+.header .btn-actual {
+    font-weight: bold;
+}
 
 .title {
     justify-content: center;
     padding-top: 20px;
-    margin-bottom: 40px; 
-    
+    margin-bottom: 40px;
 }
-
 
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px; /* Espace entre les cases */
     margin-bottom: 40px; /* Espace entre les dernières cases et le footer */
+    width: 80%; /* Ajuster la largeur de la grille */
+    margin: auto; /* Centrer la grille horizontalement */
 }
 
 .grid-item-wrapper {
@@ -49,13 +51,17 @@ body {
     align-items: center; /* Centrer les titres des cases */
 }
 
+.grid-item-wrapper-full {
+    grid-column: span 2; /* Occupe les deux colonnes pour centrer */
+}
+
 .grid-item {
-    background-color: white; /* Fond blanc */
-    border: 2.5px solid black; /* Contour noir */
+    background-color: white;
+    border: 2.5px solid black;
     border-radius: 10px;
     box-shadow: 5px 13px 19px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    min-height: 260px; /* Augmenter la hauteur des cases */
+    min-height: 260px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -66,9 +72,9 @@ body {
     margin: 0;
     padding: 10px;
     background-color: #198D6D;
-    color: #F2EFC5; /* Texte en blanc pour contraste */
+    color: #F2EFC5;
     box-sizing: border-box;
-    text-align: center; /* Centrer le texte du titre */
+    text-align: center;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px; 
 }
@@ -90,18 +96,20 @@ body {
     text-align: center;
     margin-top: auto;
 }
+
 .footer-text {
     display: flex;
     justify-content: left;
     gap: 50px; /* Espace entre les noms */
 }
+
 .footer-icon {
-    color: #06593C; /* Couleur du fond du footer pour les lettres de l'icône */
-    background-color: #F2EFC5; /* Couleur du texte pour le fond de l'icône */
+    color: #06593C;
+    background-color: #F2EFC5;
     padding: 2px;
     font-size: 1.1em;
     border-radius: 10%;
-    display: inline-block; /* Assure que l'icône est en ligne, ce qui aide à contrôler les marges */
+    display: inline-block;
     line-height: 0;
 }
 
@@ -111,12 +119,12 @@ body {
 }
 
 .header-icon {
-    color: #06593C; /* Couleur du fond du footer pour les lettres de l'icône */
-    background-color: #F2EFC5; /* Couleur du texte pour le fond de l'icône */
+    color: #06593C;
+    background-color: #F2EFC5;
     font-size: 2em;
     border-radius: 10%;
-    margin-top : 10px;
+    margin-top: 10px;
     padding: 3px;
-    display: inline-block; /* Assure que l'icône est en ligne, ce qui aide à contrôler les marges */
-    line-height: 0; /* Assure que la hauteur de ligne correspond à la taille de l'icône */
+    display: inline-block;
+    line-height: 0;
 }
