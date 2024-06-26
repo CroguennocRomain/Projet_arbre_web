@@ -120,9 +120,6 @@ if (segments[3] == 'visual_arbre_BDD.html'){
 function afficher_all_arbres(data){
     data = JSON.parse(data);
 
-    console.log(data)
-    console.log(data[0]['haut_tot']);   //recup haut_tot de l'arbre d'id 1
-
     const tableBody = document.getElementById('table-body');
     let html = '';
 

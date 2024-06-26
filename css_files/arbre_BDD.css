@@ -108,7 +108,6 @@ thead{ /* Scroll du tableau */
     margin-bottom: 20px;
 }
 
-
 .map-container {
     margin-bottom: 20px;
 }
@@ -165,4 +164,8 @@ thead{ /* Scroll du tableau */
 }
 span{
     color:#F2EFC5;
+}
+
+#mes_arbres{
+    margin-bottom: 3rem;
 }
