@@ -66,3 +66,7 @@ body {
     display: inline-block; /* Assure que l'icône est en ligne, ce qui aide à contrôler les marges */
     line-height: 0; /* Assure que la hauteur de ligne correspond à la taille de l'icône */
 }
+
+span{
+    color:#F2EFC5;
+}

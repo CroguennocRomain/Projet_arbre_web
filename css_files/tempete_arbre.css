@@ -128,3 +128,7 @@ body {
     display: inline-block;
     line-height: 0;
 }
+
+span{
+    color:#F2EFC5;
+}
