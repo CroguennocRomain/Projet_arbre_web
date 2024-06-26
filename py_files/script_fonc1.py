@@ -13,7 +13,6 @@ def main():
         print('Usage: python script_fonc1.py <haut_tot> <haut_tronc> <fk_stadedev> <fk_nomtech> <feuillage> ----> Exemple: python script_fonc1.py 15.1 2.1 "Adulte" "PINNIGnig" "Conifère"')
         sys.exit(1)
 
-
     base_path = os.path.dirname(os.path.abspath(__file__))
     ord_path = os.path.join(base_path, 'OrdinalEncoder', 'ordinal_encoder1.pkl')
 

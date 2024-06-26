@@ -360,58 +360,14 @@ function cluster_pred($requestMethod)
             $result = $statement->fetchAll(PDO::FETCH_ASSOC);
             
             // Commande python script1
-            //$command = escapeshellcmd("python3 ../py_files/script_fonc1.py $result[0]['haut_tot'] $result[0]['haut_tronc'] $result[0]['stadedev'] $result[0]['nomtech'] $result[0]['feuillage']");
-            //$command = 'python3 ../py_files/script_fonc1.py 15.1 2.1 "Adulte" "PINNIGnig" "Conifère"';
-            /*$command = 'python3 ../py_files/script_fonc1.py ' .
-           escapeshellarg(15.1) . ' ' .
-           escapeshellarg(2.1) . ' ' .
-           escapeshellarg("Adulte") . ' ' .
-           escapeshellarg("PINNIGnig") . ' ' .
-           escapeshellarg("Conifère");
-
-
+            $command = "../../venv/myenv/bin/python3.11 ../py_files/script_fonc1.py ".floatval($result[0]['haut_tot'])." ".floatval($result[0]['haut_tronc'])." ".strval($result[0]['stadedev'])." ".strval($result[0]['nomtech'])." ".strval($result[0]['feuillage']);
+            
             // Exécuter la commande
             $output = shell_exec($command);
-            
-            echo $output;*/
-
-            $descriptorspec = array(
-                0 => array("pipe", "r"),  // stdin is a pipe that the child will read from
-                1 => array("pipe", "w"),  // stdout is a pipe that the child will write to
-                2 => array("pipe", "w")   // stderr is a pipe that the child will write to
-            );
-            
-            $command = [
-                '/usr/bin/python3.11',
-                '../py_files/script_fonc1.py',
-                '15.1',
-                '2.1',
-                'Adulte',
-                'PINNIGnig',
-                'Conifère'
-            ];
-            
-            $process = proc_open($command, $descriptorspec, $pipes);
-            
-            if (is_resource($process)) {
-                // Lire la sortie de la commande
-                $output = stream_get_contents($pipes[1]);
-                fclose($pipes[1]);
-                $error = stream_get_contents($pipes[2]);
-                fclose($pipes[2]);
-                proc_close($process);
-            
-                if (!empty($error)) {
-                    echo "Erreur : $error";
-                } else {
-                    echo $output;
-                }
-            } else {
-                echo "Erreur lors de l'exécution de la commande.";
-            }
+            echo $output;
 
         } catch (\Throwable $th) {
-            //echo 'cluster_non_prédit';
+            echo 'cluster_non_prédit';
             //echo ("Insertion failed: " . $e->getMessage());
         }
         exit();
