@@ -27,8 +27,10 @@ switch ($requestRessource)
         break;
     case 'age_pred':
         age_pred($requestMethod);
+        break;
     case 'tempete_pred':
         tempete_pred($requestMethod);
+        break;
 
 }
 function ajouter_arbre($requestMethod, float $longitude, float $latitude, float $haut_tot, float $haut_tronc, float $tronc_diam, string $clc_secteur, string $fk_stadedev, string $fk_port, string $fk_revetement, string $fk_nomtech, string $feuillage)

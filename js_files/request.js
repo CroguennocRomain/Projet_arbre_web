@@ -86,7 +86,20 @@ $('#bouton_tempete_pred').on("click", () => {
     );
 })
 
-function cluster_pred(data){}
+function cluster_pred(data){
+    console.log('yo')
+    $('#alert-erreur-connexion').toggleClass('d-none')
+}
+function age_pred(data){
+    console.log('yo')
+    $('#alert-erreur-connexion').toggleClass('d-none')
+}
+
+function tempete_pred(data){
+    console.log('yo')
+    $('#alert-erreur-connexion').toggleClass('d-none')
+}
+
 
 
 // Requête afficher arbres dans tableau
@@ -100,7 +113,7 @@ if (segments[3] == 'visual_arbre_BDD.html'){
         '../php_files/test_request.php/afficher_arbres',
         afficher_all_arbres
     );
-})
+}
 
 function afficher_all_arbres(data){
     data = JSON.parse(data);
@@ -132,17 +145,4 @@ function afficher_all_arbres(data){
     // Insérer les lignes générées dans le corps du tableau
     tableBody.innerHTML = html;
 
-}
-function cluster_pred(data){
-    console.log('yo')
-    $('#alert-erreur-connexion').toggleClass('d-none')
-}
-function age_pred(data){
-    console.log('yo')
-    $('#alert-erreur-connexion').toggleClass('d-none')
-}
-
-function tempete_pred(data){
-    console.log('yo')
-    $('#alert-erreur-connexion').toggleClass('d-none')
 }
