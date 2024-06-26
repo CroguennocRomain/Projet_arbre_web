@@ -11,35 +11,52 @@ body {
 
 .header {
     background-color: #06593C;
-    padding: 45px;
-    text-align: left;
-    position: relative;
-    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 100px;
+    height: 100px;
 }
+
 .header .btn {
     color: #F2EFC5;
     background-color: #06593C;
-    position: absolute;
-    top: 20px;
+    margin-top: 2px;
     font-size: 1.5em;
+    margin-right: 20px;
+    padding: 10px 20px;
+    width: 150px; /* Ajustez cette valeur selon vos besoins */
+    text-align: center; /* Pour centrer le texte à l'intérieur du bouton */
 }
-.btn-accueil {
-    left: 110px; /* Écart entre 'Accueil' et la bordure gauche */
-}
-.btn-arbre {
-    left: 305px; /* 110px + 195px = 305px pour l'écart entre les deux boutons */
-}
-.btn-ajouter {
-    left: 525px; /* 110px + 195px = 305px pour l'écart entre les deux boutons */
-}
+
 .header .btn:hover {
     background-color: #F2EFC5;
     color: #06593C;
 }
-.header .btn-actual {
-    font-weight: bold; 
+.btn-arbre{
+    white-space: nowrap;
 }
 
+.header .btn-actual {
+    font-weight: bold;
+}
+
+.header-row {
+    padding-top: 10px;
+    gap: 50px;
+}
+
+.header-icon {
+    color: #06593C;
+    background-color: #F2EFC5;
+    font-size: 2em;
+    border-radius: 10%;
+    margin-top: 10px;
+    padding: 3px;
+    display: inline-block;
+    line-height: 0;
+}
+/*------------------------------------------*/
 .table-container {
     margin-bottom: 20px;
     margin-right: 20px;
@@ -111,12 +128,17 @@ thead{ /* Scroll du tableau */
     padding-left: 10px;
     text-align: center;
 }
+
 .selection-container input {
     margin-left: 10px;
     padding: 5px;
     flex: 1;
 }
-
+.custom-bg-color {
+    background-color: #198D6D; /* Remplacez par la couleur de votre choix */
+    color:#F2EFC5
+}   
+/*------------------------------------------*/
 .footer {
     background-color: #06593C;
     color: #F2EFC5;
@@ -141,12 +163,6 @@ thead{ /* Scroll du tableau */
     display: inline-block; /* Assure que l'icône est en ligne, ce qui aide à contrôler les marges */
     line-height: 0;
 }
-
-.custom-bg-color {
-    background-color: #198D6D; /* Remplacez par la couleur de votre choix */
-    color:#F2EFC5
-}   
-
 span{
     color:#F2EFC5;
 }
