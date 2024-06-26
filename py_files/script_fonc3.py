@@ -1,5 +1,6 @@
 import pandas as pd
 import sys
+import os
 import pickle
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OrdinalEncoder
@@ -15,8 +16,11 @@ def predire_tempete(method):
     # Configure pandas pour éviter les avertissements sur le downcasting futur
     pd.set_option('future.no_silent_downcasting', True)
 
+    base_path = os.path.dirname(os.path.abspath(__file__))
+    data_path = os.path.join(base_path, 'Data_Arbre.csv')
+
     # Lecture des données depuis un fichier CSV
-    data = pd.read_csv('Data_Arbre.csv')
+    data = pd.read_csv(data_path)
 
     # Si la méthode est '0' et que le nombre d'arguments est correct
     if method == '0' and len(sys.argv) == 8:
@@ -41,22 +45,31 @@ def predire_tempete(method):
         # Réordonner les colonnes pour correspondre à l'ordre du jeu de données original
         new_data_df = new_data_df[data.columns]
 
+        base_path = os.path.dirname(os.path.abspath(__file__))
+        ord_path = os.path.join(base_path, 'OrdinalEncoder', 'ordinal_encoder3.pkl')
+
         # Encoder les colonnes catégorielles de la nouvelle ligne de données
         categorical_columns = [colonne for colonne in new_data_df if new_data_df[colonne].dtype == 'object']
-        with open('OrdinalEncoder/ordinal_encoder3.pkl', 'rb') as file:
+        with open(ord_path, 'rb') as file:
             encoder = pickle.load(file)
         new_data_df[categorical_columns] = encoder.transform(new_data_df[categorical_columns])
 
+        base_path = os.path.dirname(os.path.abspath(__file__))
+        scal_path = os.path.join(base_path, 'Scaler', 'scaler3.pkl')
+
         # Charger le scaler depuis le fichier (pour normaliser)
-        with open("Scaler/scaler3.pkl", "rb") as file:
+        with open(scal_path, "rb") as file:
             scaler = pickle.load(file)
         new_data_df = scaler.transform(new_data_df)
         new_data_df = pd.DataFrame(new_data_df, columns=data.columns)
 
         # Sélectionner les colonnes nécessaires pour le modèle
         X = new_data_df[["haut_tronc", "latitude", "longitude", 'fk_stadedev', 'haut_tot', 'clc_secteur']]
+        
+        base_path = os.path.dirname(os.path.abspath(__file__))
+        model0_path = os.path.join(base_path, 'models', 'rf_model.pkl')
 
-        model_filename = 'models/rf_model.pkl'
+        model_filename = model0_path
 
     # Si la méthode est '1' et que le nombre d'arguments est correct
     elif method == '1' and len(sys.argv) == 6:
@@ -90,7 +103,10 @@ def predire_tempete(method):
         # Sélectionner les colonnes nécessaires pour le modèle
         X = new_data_df[["latitude", "longitude", "clc_secteur", 'fk_port']]
 
-        model_filename = 'models/knn_model.pkl'
+        base_path = os.path.dirname(os.path.abspath(__file__))
+        model1_path = os.path.join(base_path, 'models', 'knn_model.pkl')
+
+        model_filename = model1_path
 
     # Si la méthode est '2' et que le nombre d'arguments est correct
     elif method == '2' and len(sys.argv) == 4:
@@ -122,7 +138,10 @@ def predire_tempete(method):
         # Sélectionner les colonnes nécessaires pour le modèle
         X = new_data_df[['haut_tot', 'fk_revetement']]
 
-        model_filename = 'models/svm_model.pkl'
+        base_path = os.path.dirname(os.path.abspath(__file__))
+        model2_path = os.path.join(base_path, 'models', 'svm_model.pkl')
+
+        model_filename = model2_path
     else:
         raise ValueError("Invalid method or number of arguments")
 
@@ -136,7 +155,10 @@ def predire_tempete(method):
     res = y_pred.tolist()
     json_data = json.dumps(res)
 
-    with open('JSON/script3_result.json', 'w') as f:
+    base_path = os.path.dirname(os.path.abspath(__file__))
+    json_path = os.path.join(base_path, 'JSON', 'script3_result.json')
+
+    with open(json_path, 'w') as f:
         json.dump(res, f)
 
     return json_data
