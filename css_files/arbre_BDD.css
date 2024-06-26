@@ -91,7 +91,6 @@ thead{ /* Scroll du tableau */
     margin-bottom: 20px;
 }
 
-
 .map-container {
     margin-bottom: 20px;
 }
@@ -152,3 +151,8 @@ thead{ /* Scroll du tableau */
     background-color: #198D6D; /* Remplacez par la couleur de votre choix */
     color:#F2EFC5
 }   
+
+
+#mes_arbres{
+    margin-bottom: 3rem;
+}

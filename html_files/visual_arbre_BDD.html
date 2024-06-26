@@ -12,6 +12,7 @@
    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
    <script src="../js_files/ajax.js" defer></script>
    <script src="../js_files/request.js" defer></script>
+   <script src="../js_files/filtres.js" defer></script>
   </head>
   <body>
     <header class="header mb-4">
@@ -21,11 +22,85 @@
     </header>
     <div class="row"> 
       <div class="col text-center">
-        <h2>Mes arbres<h2>
+        <h2 id="mes_arbres">Mes arbres<h2>
       </div>
     </div>
     <div class="container-fluid px-5 table-container">
-      <button class="filter-button">Filtrage</button>
+
+      <!-- FILTRAGE -->
+      <div class="filters">
+        <label>
+            Latitude:
+            <input type="text" id="filter-latitude">
+        </label>
+        <label>
+            Longitude:
+            <input type="text" id="filter-longitude">
+        </label>
+
+        <label>
+          Secteur:
+          <input type="text" id="filter-secteur">
+        </label>
+
+        <label>
+          Hauteur totale:
+          <input type="text" id="filter-haut_tot">
+        </label>
+
+        <label>
+          Hauteur tronc:
+          <input type="text" id="filter-haut_tronc">
+        </label>
+
+        <label>
+          Revêtement:
+          <select id="filter-revetement">
+            <option value="tous">Tous</option>
+            <option value="oui">Oui</option>
+            <option value="non">Non</option>
+        </select>
+        </label>
+
+        <label>
+          Diamètre tronc:
+          <input type="text" id="filter-diametre">
+        </label>
+
+        <label>
+          Stade de développement:
+            <select id="filter-stadedev">
+                <option value="tous">Tous</option>
+                <option value="jeune">Jeune</option>
+                <option value="adulte">Adulte</option>
+                <option value="vieux">Vieux</option>
+                <option value="senescent">Senescent</option>
+            </select>
+        </label>
+
+        <label>
+          Nom:
+          <input type="text" id="filter-nom">
+        </label>
+
+        <label>
+          Port:
+          <input type="text" id="filter-port">
+        </label>
+
+        <label>
+          Feuillage:
+          <select id="filter-feuillage">
+            <option value="tous">Tous</option>
+            <option value="feuillu">Feuillu</option>
+            <option value="conifere">Conifère</option>
+        </select>
+        </label>
+        </br>
+        <button class="filter-button" onclick="applyFilters()">Appliquer les filtres</button>
+    </div>
+
+
       <div class="table-scroll">
       <table class="table table-bordered">
         <thead>
