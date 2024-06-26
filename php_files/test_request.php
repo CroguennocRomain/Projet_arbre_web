@@ -345,21 +345,31 @@ function cluster_pred($requestMethod)
         try {
             $db = dbConnect();
             $request = "
-                SELECT a.haut_tot, a.haut_tronc, s.stadedev, n.nomtech, f.feuillage, 
+                SELECT a.haut_tot, a.haut_tronc, s.stadedev, n.nomtech, f.feuillage 
                 FROM arbre a
                 JOIN fk_stadedev s on s.id_stadedev = a.id_stadedev
                 JOIN fk_nomtech n on n.id_nomtech = a.id_nomtech
-                JOIN feuillage f on f.feuillage = a.feuillage
+                JOIN feuillage f on f.id_feuillage = a.id_feuillage
                 WHERE a.id = :id
                 ";
-                
-                $statement = $db->prepare($request);
-                $statement->bindParam(':id', $id);
-                $statement->execute();
+            $statement = $db->prepare($request);
+            $statement->bindParam(':id', $id, PDO::PARAM_INT);
+             
+            $statement->execute();
 
-                $haut_tot = $statement->fetch(PDO::FETCH_NUM)[0];
+            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+            
+            // Commande python script1
+            //$command = escapeshellcmd("python3 ../py_files/script_fonc1.py $result[0]['haut_tot'] $result[0]['haut_tronc'] $result[0]['stadedev'] $result[0]['nomtech'] $result[0]['feuillage']");
+            $command = escapeshellcmd("python3 ../py_files/script_fonc1.py 15.1 2.1 'Adulte' 'PINNIGnig' 'Conifère'");
+
+            // Exécuter la commande
+            $output = shell_exec($command);
+            
+            echo $output;
+
         } catch (\Throwable $th) {
-            echo 'cluster_non_prédit';
+            //echo 'cluster_non_prédit';
             //echo ("Insertion failed: " . $e->getMessage());
         }
         exit();
