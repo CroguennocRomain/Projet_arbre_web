@@ -67,6 +67,19 @@ $('#bouton_cluster_pred').on("click", () => {
     );
 })
 
+$('#bouton_age_pred').on("click", () => {
+    console.log('yo');
+    let id = $('#ligne_value').val();
+
+    ajaxRequest(
+        'GET',
+        '../php_files/test_request.php/age_pred',
+        age_pred,
+        'id='+id
+    );
+})
+
+
 function cluster_pred(data){
     console.log('yo')
     $('#alert-erreur-connexion').toggleClass('d-none')
@@ -75,3 +88,9 @@ function cluster_pred(data){
 // Requête afficher arbres dans tableau
 let url = window.location.pathname;
 console.log(url); 
+
+
+function age_pred(data){
+    console.log('yo')
+    $('#alert-erreur-connexion').toggleClass('d-none')
+}
