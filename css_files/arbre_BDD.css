@@ -98,7 +98,9 @@ thead{ /* Scroll du tableau */
     background-color: #198D6D;
     color: #F2EFC5; /* Optionnel : couleur du texte */
 }
-
+.table tbody td {
+    color: #0E0F0F;
+}
 .filter-button {
     background-color: #198D6D;
     color: #F2EFC5;
