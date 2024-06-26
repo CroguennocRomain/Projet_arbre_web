@@ -561,7 +561,7 @@ function afficher_all_variable($requestMethod){
                 $all_variables[] = array_column($result, 'stadedev');
 
                 // Sélectionner toutes les valeurs de stadedev
-                $request = "SELECT secteur FROM fk_secteur";  
+                $request = "SELECT secteur FROM clc_secteur";  
                 $statement = $db->prepare($request);
                 $statement->execute();
                 $result = $statement->fetchAll(PDO::FETCH_ASSOC);
@@ -588,7 +588,7 @@ function afficher_all_variable($requestMethod){
                 echo json_encode($all_variables);
 
         } catch (\Throwable $th) {
-            echo 'cluster_non_prédit';
+            //echo 'cluster_non_prédit';
             //echo ("Insertion failed: " . $e->getMessage());
         }
         exit();
