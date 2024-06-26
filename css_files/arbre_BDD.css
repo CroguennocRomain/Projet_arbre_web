@@ -33,9 +33,7 @@ body {
     background-color: #F2EFC5;
     color: #06593C;
 }
-.btn-arbre{
-    white-space: nowrap;
-}
+
 
 .header .btn-actual {
     font-weight: bold;
@@ -138,7 +136,10 @@ thead{ /* Scroll du tableau */
 .custom-bg-color {
     background-color: #198D6D; /* Remplacez par la couleur de votre choix */
     color:#F2EFC5
-}   
+}
+.btn-arbre{
+    white-space: nowrap;
+}
 /*------------------------------------------*/
 .footer {
     background-color: #06593C;

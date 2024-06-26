@@ -29,7 +29,23 @@ body {
 .header .btn-actual {
     font-weight: bold;
 }
+.header-row {
+    padding-top: 10px;
+    gap: 50px;
+}
 
+.header-icon {
+    color: #06593C;
+    background-color: #F2EFC5;
+    font-size: 2em;
+    border-radius: 10%;
+    margin-top: 10px;
+    padding: 3px;
+    display: inline-block;
+    line-height: 0;
+}
+
+/*------------------------------------------*/
 .title {
     justify-content: center;
     padding-top: 20px;
@@ -85,7 +101,7 @@ body {
     font-size: 30px;
     font-weight: bold;
 }
-
+/*------------------------------------------*/
 .footer {
     background-color: #06593C;
     color: #F2EFC5;
@@ -112,23 +128,6 @@ body {
     display: inline-block;
     line-height: 0;
 }
-
-.header-row {
-    padding-top: 10px;
-    gap: 50px;
-}
-
-.header-icon {
-    color: #06593C;
-    background-color: #F2EFC5;
-    font-size: 2em;
-    border-radius: 10%;
-    margin-top: 10px;
-    padding: 3px;
-    display: inline-block;
-    line-height: 0;
-}
-
 span{
     color:#F2EFC5;
 }

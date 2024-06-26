@@ -26,7 +26,7 @@ body {
 .header .btn-actual {
     font-weight: bold; 
 }
-
+/*------------------------------------------*/
 .ajout {
     padding-top: 40px;
     padding-left: 20px;
@@ -80,7 +80,7 @@ body {
 .cluster img {
     max-width: 100%;
 }
-
+/*------------------------------------------*/
 
 .footer {
     background-color: #06593C;
