@@ -142,4 +142,4 @@ for i in range(1, i_last_arg):
 
 
 age = predire_age(features, sys.argv[i_last_arg])
-print(age)
+#print(age)

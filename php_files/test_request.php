@@ -31,6 +31,9 @@ switch ($requestRessource)
     case 'tempete_pred':
         tempete_pred($requestMethod);
         break;
+    case 'afficher_all_variable':
+        afficher_all_variable($requestMethod);
+        break;
 
 }
 function ajouter_arbre($requestMethod, float $longitude, float $latitude, float $haut_tot, float $haut_tronc, float $tronc_diam, string $clc_secteur, string $fk_stadedev, string $fk_port, string $fk_revetement, string $fk_nomtech, string $feuillage)
@@ -434,15 +437,37 @@ function age_pred($requestMethod)
 
             $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
+            $tab_max_range = [];
+            $tab_max_range[] = $id;
             // Commande python script2
             for ($i = 0; $i < 4; $i++) {
-                //$command = "../../venv/myenv/bin/python3.11 ../py_files/script_fonc2.py ".floatval($result[0]['haut_tot'])." ".floatval($result[0]['haut_tronc'])." ".floatval($result[0]['tronc_diam'])." ".strval($result[0]['stadedev'])." ".strval($result[0]['nomtech']." ".intval($i));
-                $command = '../../venv/myenv/bin/python3.11 ../py_files/script_fonc2.py 15.1 2.1 2.5 "Adulte" "PINNIGnig" 3';
+                $command = "../../venv/myenv/bin/python3.11 ../py_files/script_fonc2.py ".floatval($result[0]['haut_tot'])." ".floatval($result[0]['haut_tronc'])." ".floatval($result[0]['tronc_diam'])." ".strval($result[0]['stadedev'])." ".strval($result[0]['nomtech']." ".intval($i));
+                
+                // Exécuter la commande
+                $output = shell_exec($command);
+
+                $jsonString = get_first_line_json_file('../py_files/JSON/script2_result.json');
+
+                // Décoder le JSON en un tableau associatif
+                $data = json_decode($jsonString, true);
+
+                // Initialiser les variables pour suivre l'écart avec le plus haut pourcentage
+                $maxPercentage = -1;
+                $maxRange = '';
+
+                // Parcourir le tableau pour trouver l'écart avec le plus haut pourcentage
+                foreach ($data as $range => $percentage) {
+                    if ($percentage > $maxPercentage) {
+                        $maxPercentage = $percentage;
+                        $maxRange = $range;
+                    }
+                }
+
+                $tab_max_range[] =$maxRange;
+   
             }
+            echo json_encode($tab_max_range);
             
-            // Exécuter la commande
-            $output = shell_exec($command);
-            echo $output;
 
         } catch (\Throwable $th) {
             //echo 'cluster_non_prédit';
@@ -471,6 +496,96 @@ function tempete_pred($requestMethod)
                 $statement = $db->prepare($request);
                 $statement->bindParam(':id', $id);
                 $statement->execute();
+
+        } catch (\Throwable $th) {
+            echo 'cluster_non_prédit';
+            //echo ("Insertion failed: " . $e->getMessage());
+        }
+        exit();
+    }
+}
+
+function get_first_line_json_file($path_file)
+{
+    // Ouvrir le fichier en mode lecture
+    $file = fopen($path_file, 'r');
+
+    // Vérifier si le fichier a été ouvert correctement
+    if ($file) {
+        // Lire la première ligne du fichier
+        $firstLine = fgets($file);
+
+        // Fermer le fichier après la lecture
+        fclose($file);
+
+        // Afficher la première ligne
+        //echo $firstLine;
+        return $firstLine;
+    } else {
+        // Gérer l'erreur si le fichier n'a pas pu être ouvert
+        echo 'Impossible d\'ouvrir le fichier.';
+    }
+}
+
+function afficher_all_variable($requestMethod){
+    switch ($requestMethod)
+    {
+        case 'GET':
+        try {
+            $all_variables = []; // Initialisation du tableau à deux dimensions
+
+                $db = dbConnect();
+                
+                // Sélectionner toutes les valeurs de nomtech
+                $request = "SELECT nomtech FROM fk_nomtech";  
+                $statement = $db->prepare($request);
+                $statement->execute();
+                $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+                
+                $all_variables[] = array_column($result, 'nomtech');
+
+                // Sélectionner toutes les valeurs de stadedev
+                $request = "SELECT feuillage FROM feuillage";  
+                $statement = $db->prepare($request);
+                $statement->execute();
+                $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+                
+                $all_variables[] = array_column($result, 'feuillage');
+
+                // Sélectionner toutes les valeurs de stadedev
+                $request = "SELECT stadedev FROM fk_stadedev";  
+                $statement = $db->prepare($request);
+                $statement->execute();
+                $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+                
+                $all_variables[] = array_column($result, 'stadedev');
+
+                // Sélectionner toutes les valeurs de stadedev
+                $request = "SELECT secteur FROM fk_secteur";  
+                $statement = $db->prepare($request);
+                $statement->execute();
+                $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+                
+                $all_variables[] = array_column($result, 'secteur');
+
+                // Sélectionner toutes les valeurs de stadedev
+                $request = "SELECT port FROM fk_port";  
+                $statement = $db->prepare($request);
+                $statement->execute();
+                $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+                
+                $all_variables[] = array_column($result, 'port');
+
+                // Sélectionner toutes les valeurs de stadedev
+                $request = "SELECT revetement FROM fk_revetement";  
+                $statement = $db->prepare($request);
+                $statement->execute();
+                $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+                
+                $all_variables[] = array_column($result, 'revetement');
+
+                // Retourner les données encodées en JSON
+                echo json_encode($all_variables);
 
         } catch (\Throwable $th) {
             echo 'cluster_non_prédit';
