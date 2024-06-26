@@ -399,7 +399,7 @@ function afficher_arbres($requestMethod){
             exit();
     }
 }
-*/
+
 function age_pred($requestMethod)
 {
     $id = intval($_GET['id']);
