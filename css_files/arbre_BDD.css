@@ -43,10 +43,30 @@ body {
 .table-container {
     margin-bottom: 20px;
     margin-right: 20px;
+    position: relative;
 }
 .table {
     overflow-y: auto; /* Activation du défilement vertical */
     border-collapse: collapse; /* Fusionner les bordures de cellules */
+}
+
+.table-scroll{  /* Scroll du tableau */
+    overflow-y: auto;
+    max-height: 500px;
+}
+
+.table thead th { /* Scroll du tableau */
+    position: sticky; /* Fixer les en-têtes */
+    top: 0; /* Aligner en haut du conteneur parent */
+    z-index: 1; /* Assurer que les en-têtes restent au-dessus du contenu */
+}
+
+.table thead { /* Scroll du tableau */
+    z-index: 2; /* Assurer que les en-têtes restent au-dessus du contenu */
+}
+
+thead{ /* Scroll du tableau */
+    position: sticky;
 }
 
 .table tbody td {
