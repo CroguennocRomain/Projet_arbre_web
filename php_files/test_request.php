@@ -254,7 +254,7 @@ function ajouter_arbre($requestMethod, float $longitude, float $latitude, float 
                     header('Cache-control: no-store, no-cache, must-revalidate');
                     header('Pragma: no-cache');
                     header('HTTP/1.1 200 OK');
-                    //echo json_encode("arbre_ajouté");
+                    echo "arbre_ajouté";
                 }else{
                     echo json_encode("arbre_non_ajouté");
                 }
