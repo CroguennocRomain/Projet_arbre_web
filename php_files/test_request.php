@@ -31,6 +31,9 @@ switch ($requestRessource)
     case 'tempete_pred':
         tempete_pred($requestMethod);
         break;
+    case 'afficher_all_variable':
+        afficher_all_variable($requestMethod);
+        break;
 
 }
 function ajouter_arbre($requestMethod, float $longitude, float $latitude, float $haut_tot, float $haut_tronc, float $tronc_diam, string $clc_secteur, string $fk_stadedev, string $fk_port, string $fk_revetement, string $fk_nomtech, string $feuillage)
@@ -360,58 +363,14 @@ function cluster_pred($requestMethod)
             $result = $statement->fetchAll(PDO::FETCH_ASSOC);
             
             // Commande python script1
-            //$command = escapeshellcmd("python3 ../py_files/script_fonc1.py $result[0]['haut_tot'] $result[0]['haut_tronc'] $result[0]['stadedev'] $result[0]['nomtech'] $result[0]['feuillage']");
-            //$command = 'python3 ../py_files/script_fonc1.py 15.1 2.1 "Adulte" "PINNIGnig" "Conifère"';
-            /*$command = 'python3 ../py_files/script_fonc1.py ' .
-           escapeshellarg(15.1) . ' ' .
-           escapeshellarg(2.1) . ' ' .
-           escapeshellarg("Adulte") . ' ' .
-           escapeshellarg("PINNIGnig") . ' ' .
-           escapeshellarg("Conifère");
-
-
+            $command = "../../venv/myenv/bin/python3.11 ../py_files/script_fonc1.py ".floatval($result[0]['haut_tot'])." ".floatval($result[0]['haut_tronc'])." ".strval($result[0]['stadedev'])." ".strval($result[0]['nomtech'])." ".strval($result[0]['feuillage']);
+            
             // Exécuter la commande
             $output = shell_exec($command);
-            
-            echo $output;*/
-
-            $descriptorspec = array(
-                0 => array("pipe", "r"),  // stdin is a pipe that the child will read from
-                1 => array("pipe", "w"),  // stdout is a pipe that the child will write to
-                2 => array("pipe", "w")   // stderr is a pipe that the child will write to
-            );
-            
-            $command = [
-                '/usr/bin/python3.11',
-                '../py_files/script_fonc1.py',
-                '15.1',
-                '2.1',
-                'Adulte',
-                'PINNIGnig',
-                'Conifère'
-            ];
-            
-            $process = proc_open($command, $descriptorspec, $pipes);
-            
-            if (is_resource($process)) {
-                // Lire la sortie de la commande
-                $output = stream_get_contents($pipes[1]);
-                fclose($pipes[1]);
-                $error = stream_get_contents($pipes[2]);
-                fclose($pipes[2]);
-                proc_close($process);
-            
-                if (!empty($error)) {
-                    echo "Erreur : $error";
-                } else {
-                    echo $output;
-                }
-            } else {
-                echo "Erreur lors de l'exécution de la commande.";
-            }
+            echo $output;
 
         } catch (\Throwable $th) {
-            //echo 'cluster_non_prédit';
+            echo 'cluster_non_prédit';
             //echo ("Insertion failed: " . $e->getMessage());
         }
         exit();
@@ -465,19 +424,53 @@ function age_pred($requestMethod)
         try {
             $db = dbConnect();
             $request = "
-                SELECT a.haut_tot, a.haut_tronc, a.tronc_diam, s.stadedev, n.nomtech, 
+                SELECT a.haut_tot, a.haut_tronc, a.tronc_diam, s.stadedev, n.nomtech 
                 FROM arbre a
                 JOIN fk_stadedev s on s.id_stadedev = a.id_stadedev
                 JOIN fk_nomtech n on n.id_nomtech = a.id_nomtech
                 WHERE a.id = :id
                 ";
+            $statement = $db->prepare($request);
+            $statement->bindParam(':id', $id, PDO::PARAM_INT);
+             
+            $statement->execute();
+
+            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+            $tab_max_range = [];
+            $tab_max_range[] = $id;
+            // Commande python script2
+            for ($i = 0; $i < 4; $i++) {
+                $command = "../../venv/myenv/bin/python3.11 ../py_files/script_fonc2.py ".floatval($result[0]['haut_tot'])." ".floatval($result[0]['haut_tronc'])." ".floatval($result[0]['tronc_diam'])." ".strval($result[0]['stadedev'])." ".strval($result[0]['nomtech']." ".intval($i));
                 
-                $statement = $db->prepare($request);
-                $statement->bindParam(':id', $id);
-                $statement->execute();
+                // Exécuter la commande
+                $output = shell_exec($command);
+
+                $jsonString = get_first_line_json_file('../py_files/JSON/script2_result.json');
+
+                // Décoder le JSON en un tableau associatif
+                $data = json_decode($jsonString, true);
+
+                // Initialiser les variables pour suivre l'écart avec le plus haut pourcentage
+                $maxPercentage = -1;
+                $maxRange = '';
+
+                // Parcourir le tableau pour trouver l'écart avec le plus haut pourcentage
+                foreach ($data as $range => $percentage) {
+                    if ($percentage > $maxPercentage) {
+                        $maxPercentage = $percentage;
+                        $maxRange = $range;
+                    }
+                }
+
+                $tab_max_range[] =$maxRange;
+   
+            }
+            echo json_encode($tab_max_range);
+            
 
         } catch (\Throwable $th) {
-            echo 'cluster_non_prédit';
+            //echo 'cluster_non_prédit';
             //echo ("Insertion failed: " . $e->getMessage());
         }
         exit();
@@ -493,7 +486,7 @@ function tempete_pred($requestMethod)
         try {
             $db = dbConnect();
             $request = "
-                SELECT a.haut_tot, a.haut_tronc, a.latitude, a.longitude, s.stadedev, c.secteur, 
+                SELECT a.haut_tot, a.haut_tronc, a.latitude, a.longitude, s.stadedev, c.secteur
                 FROM arbre a
                 JOIN fk_stadedev s on s.id_stadedev = a.id_stadedev
                 JOIN clc_secteur c on c.id_secteur = a.id_secteur
@@ -503,6 +496,96 @@ function tempete_pred($requestMethod)
                 $statement = $db->prepare($request);
                 $statement->bindParam(':id', $id);
                 $statement->execute();
+
+        } catch (\Throwable $th) {
+            echo 'cluster_non_prédit';
+            //echo ("Insertion failed: " . $e->getMessage());
+        }
+        exit();
+    }
+}
+
+function get_first_line_json_file($path_file)
+{
+    // Ouvrir le fichier en mode lecture
+    $file = fopen($path_file, 'r');
+
+    // Vérifier si le fichier a été ouvert correctement
+    if ($file) {
+        // Lire la première ligne du fichier
+        $firstLine = fgets($file);
+
+        // Fermer le fichier après la lecture
+        fclose($file);
+
+        // Afficher la première ligne
+        //echo $firstLine;
+        return $firstLine;
+    } else {
+        // Gérer l'erreur si le fichier n'a pas pu être ouvert
+        echo 'Impossible d\'ouvrir le fichier.';
+    }
+}
+
+function afficher_all_variable($requestMethod){
+    switch ($requestMethod)
+    {
+        case 'GET':
+        try {
+            $all_variables = []; // Initialisation du tableau à deux dimensions
+
+                $db = dbConnect();
+                
+                // Sélectionner toutes les valeurs de nomtech
+                $request = "SELECT nomtech FROM fk_nomtech";  
+                $statement = $db->prepare($request);
+                $statement->execute();
+                $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+                
+                $all_variables[] = array_column($result, 'nomtech');
+
+                // Sélectionner toutes les valeurs de stadedev
+                $request = "SELECT feuillage FROM feuillage";  
+                $statement = $db->prepare($request);
+                $statement->execute();
+                $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+                
+                $all_variables[] = array_column($result, 'feuillage');
+
+                // Sélectionner toutes les valeurs de stadedev
+                $request = "SELECT stadedev FROM fk_stadedev";  
+                $statement = $db->prepare($request);
+                $statement->execute();
+                $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+                
+                $all_variables[] = array_column($result, 'stadedev');
+
+                // Sélectionner toutes les valeurs de stadedev
+                $request = "SELECT secteur FROM fk_secteur";  
+                $statement = $db->prepare($request);
+                $statement->execute();
+                $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+                
+                $all_variables[] = array_column($result, 'secteur');
+
+                // Sélectionner toutes les valeurs de stadedev
+                $request = "SELECT port FROM fk_port";  
+                $statement = $db->prepare($request);
+                $statement->execute();
+                $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+                
+                $all_variables[] = array_column($result, 'port');
+
+                // Sélectionner toutes les valeurs de stadedev
+                $request = "SELECT revetement FROM fk_revetement";  
+                $statement = $db->prepare($request);
+                $statement->execute();
+                $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+                
+                $all_variables[] = array_column($result, 'revetement');
+
+                // Retourner les données encodées en JSON
+                echo json_encode($all_variables);
 
         } catch (\Throwable $th) {
             echo 'cluster_non_prédit';

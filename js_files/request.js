@@ -66,7 +66,6 @@ $('#bouton_cluster_pred').on("click", () => {
     );
 })
 $('#bouton_age_pred').on("click", () => {
-    console.log('yo');
     let id = $('#ligne_value').val();
 
     ajaxRequest(
@@ -77,7 +76,6 @@ $('#bouton_age_pred').on("click", () => {
     );
 })
 $('#bouton_tempete_pred').on("click", () => {
-    console.log('yo');
     let id = $('#ligne_value').val();
 
     ajaxRequest(
@@ -89,18 +87,22 @@ $('#bouton_tempete_pred').on("click", () => {
 })
 
 function cluster_pred(data){
-    console.log(data)
-    $('#alert-erreur-connexion').toggleClass('d-none')
+    console.log(data);
+    $('#alert-erreur-connexion').toggleClass('d-none');
 }
 function age_pred(data){
-    console.log('yo')
-    $('#alert-erreur-connexion').toggleClass('d-none')
+    data = JSON.parse(data);
+    console.log(data);
+    // Construire l'URL avec les données en tant que paramètres de requête GET
+    var queryString = "?data=" + encodeURIComponent(JSON.stringify(data));
+    window.location.href = "age_arbre.html" + queryString;
 }
 
 function tempete_pred(data){
-    console.log('yo')
-    $('#alert-erreur-connexion').toggleClass('d-none')
+    console.log(data);
+    $('#alert-erreur-connexion').toggleClass('d-none');
 }
+
 
 
 
@@ -109,13 +111,45 @@ function tempete_pred(data){
 let url = window.location.pathname;
 let segments = url.split("/");
 //quand on est sur la page visualisation
-if (segments[3] == 'visual_arbre_BDD.html'){
+if (segments[3] == 'visual_arbre_BDD.html')
+{
     ajaxRequest(
         'GET',
         '../php_files/test_request.php/afficher_arbres',
         afficher_all_arbres
     );
 }
+if (segments[3] == 'age_arbre.html')
+{
+    var dataString = getQueryVariable('data');
+    if (dataString) {
+        var data = JSON.parse(dataString);
+        
+        // Manipuler les éléments dans la page
+        var id_arbre = document.getElementById('id_arbre');
+        id_arbre.innerHTML += data[0];
+        var model_0 = document.getElementById('model_0');
+        model_0.innerHTML += data[1];
+        var model_1 = document.getElementById('model_1');
+        model_1.innerHTML += data[2];
+        var model_2 = document.getElementById('model_2');
+        model_2.innerHTML += data[3];
+        var model_3 = document.getElementById('model_3');
+        model_3.innerHTML += data[4];
+        
+        // Ajouter d'autres manipulations si nécessaire
+    }
+}
+if (segments[3] == 'ajout_arbre.html')
+{
+    ajaxRequest(
+        'GET',
+        '../php_files/test_request.php/afficher_all_variable',
+        afficher_all_variables
+    );
+}
+
+console.log(segments[3]);
 
 function afficher_all_arbres(data){
     data = JSON.parse(data);
@@ -144,4 +178,34 @@ function afficher_all_arbres(data){
     // Insérer les lignes générées dans le corps du tableau
     tableBody.innerHTML = html;
 
+}
+
+function afficher_all_variables(data) {
+    data = JSON.parse(data);
+
+    var selectElement = document.getElementById('fk_nomtech');
+    var html = '';
+
+    data.forEach((value) => {
+        html += '<option value="' + value + '">' + value + '</option>';
+    });
+
+    // Insérer les options générées dans le select
+    selectElement.innerHTML = html;
+}
+
+
+
+
+// Fonction pour récupérer les paramètres de requête GET depuis l'URL
+function getQueryVariable(variable) {
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split("=");
+        if (pair[0] === variable) {
+            return decodeURIComponent(pair[1]);
+        }
+    }
+    return null;
 }
