@@ -38,7 +38,7 @@ function ajouter_arbre(data)
 {
   switch (data){
       case 'arbre_ajouté':
-          window.location.href = "../html_files/accueil.html";
+          window.location.href = "../html_files/visual_arbre_BDD.html";
           break;
       case 'arbre_non_ajouté':
           $('#alert-erreur-connexion').toggleClass('d-none');
@@ -60,7 +60,7 @@ $('#bouton_ajout_csv').on("click", () => {
     ajaxRequest(
         'GET',
         '../php_files/test_request.php/cluster_pred',
-        cluster_pred,
+        cluster_pred,'id='+id
     );
 })
 

@@ -19,6 +19,9 @@ switch ($requestRessource)
     case 'add_database_csv':
         add_database_csv($requestMethod);
         break;
+    case 'cluster_pred':
+        cluster_pred($requestMethod);
+        break;
     case 'afficher_arbre':
         afficher_arbre($requestMethod);
         break;
@@ -256,11 +259,11 @@ function ajouter_arbre($requestMethod, float $longitude, float $latitude, float 
                     header('HTTP/1.1 200 OK');
                     echo "arbre_ajouté";
                 }else{
-                    echo json_encode("arbre_non_ajouté");
+                    echo "arbre_non_ajouté";
                 }
                 
             } catch (\Throwable $th) {
-                echo json_encode('arbre_non_ajouté');
+                echo 'arbre_non_ajouté';
                 //echo ("Insertion failed: " . $e->getMessage());
             }
     }
@@ -285,13 +288,14 @@ function ajouter_un_arbre($requestMethod)
         ajouter_arbre($requestMethod, $longitude, $latitude, $haut_tot, $haut_tronc, $tronc_diam, $clc_secteur, $fk_stadedev, $fk_port, $fk_revetement, $fk_nomtech, $feuillage);
     }else {
         //header('HTTP/1.1 400 Bad Request');
-        echo json_encode('arbre_non_ajouté');
+        echo 'arbre_non_ajouté';
     }
     exit();        
     
 }
 
-function add_database_csv($requestMethod){
+function add_database_csv($requestMethod)
+{
     switch ($requestMethod)
     {
         case 'POST':
@@ -301,7 +305,7 @@ function add_database_csv($requestMethod){
             // Lire le fichier CSV
             $file = fopen('../py_files/Data_Arbre.csv', 'r');
             if ($file === false) {
-                echo "Erreur lors de l'ouverture du fichier CSV.";
+                echo "arbre_non_ajouté";
                 exit();
             }
 
@@ -318,14 +322,54 @@ function add_database_csv($requestMethod){
             }
 
         } catch (\Throwable $th) {
-            echo json_encode('arbre_non_ajouté');
+            echo 'arbre_non_ajouté';
             //echo ("Insertion failed: " . $e->getMessage());
         }
         exit();
     }
 }
 
+function cluster_pred($requestMethod)
+{
+    $id = intval($_GET['id']);
+    switch ($requestMethod)
+    {
+        case 'GET':
+        try {
+            $db = dbConnect();
+            $request = "
+                SELECT a.haut_tot, a.haut_tronc, s.stadedev, n.nomtech, f.feuillage, 
+                FROM arbre a
+                JOIN fk_stadedev s on s.id_stadedev = a.id_stadedev
+                JOIN fk_nomtech n on n.id_nomtech = a.id_nomtech
+                JOIN feuillage f on f.feuillage = a.feuillage
+                WHERE a.id = :id
+                ";
+                /*SELECT m.id_morceau,
+                   m.nom_morceau,
+                   m.duree_morceau,
+                   m.lien,
+                   m.explicit,
+                   m.id_album,
+                   al.cover_album,
+                   ar.nom_artiste
+            FROM recemment_ecoutes re
+            JOIN morceau m on m.id_morceau = re.id_morceau
+            JOIN album al on al.id_album = m.id_album
+            JOIN artiste ar on ar.id_artiste = al.id_artiste
+            WHERE re.id_utilisateur = :id_utilisateur*/
+                $statement = $db->prepare($request);
+                $statement->bindParam(':id', $id);
+                $statement->execute();
 
+                $haut_tot = $statement->fetch(PDO::FETCH_NUM)[0];
+        } catch (\Throwable $th) {
+            echo 'cluster_non_prédit';
+            //echo ("Insertion failed: " . $e->getMessage());
+        }
+        exit();
+    }
+}
 
 
 
