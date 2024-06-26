@@ -27,6 +27,8 @@ switch ($requestRessource)
         break;
     case 'age_pred':
         age_pred($requestMethod);
+    case 'tempete_pred':
+        tempete_pred($requestMethod);
 
 }
 function ajouter_arbre($requestMethod, float $longitude, float $latitude, float $haut_tot, float $haut_tronc, float $tronc_diam, string $clc_secteur, string $fk_stadedev, string $fk_port, string $fk_revetement, string $fk_nomtech, string $feuillage)
@@ -418,11 +420,10 @@ function age_pred($requestMethod)
         try {
             $db = dbConnect();
             $request = "
-                SELECT a.haut_tot, a.haut_tronc, s.stadedev, n.nomtech, f.feuillage, 
+                SELECT a.haut_tot, a.haut_tronc, a.tronc_diam, s.stadedev, n.nomtech, 
                 FROM arbre a
                 JOIN fk_stadedev s on s.id_stadedev = a.id_stadedev
                 JOIN fk_nomtech n on n.id_nomtech = a.id_nomtech
-                JOIN feuillage f on f.feuillage = a.feuillage
                 WHERE a.id = :id
                 ";
                 
@@ -430,7 +431,34 @@ function age_pred($requestMethod)
                 $statement->bindParam(':id', $id);
                 $statement->execute();
 
-                $haut_tot = $statement->fetch(PDO::FETCH_NUM)[0];
+        } catch (\Throwable $th) {
+            echo 'cluster_non_prédit';
+            //echo ("Insertion failed: " . $e->getMessage());
+        }
+        exit();
+    }
+}
+
+function tempete_pred($requestMethod)
+{
+    $id = intval($_GET['id']);
+    switch ($requestMethod)
+    {
+        case 'GET':
+        try {
+            $db = dbConnect();
+            $request = "
+                SELECT a.haut_tot, a.haut_tronc, a.latitude, a.longitude, s.stadedev, c.secteur, 
+                FROM arbre a
+                JOIN fk_stadedev s on s.id_stadedev = a.id_stadedev
+                JOIN clc_secteur c on c.id_secteur = a.id_secteur
+                WHERE a.id = :id
+                ";
+                
+                $statement = $db->prepare($request);
+                $statement->bindParam(':id', $id);
+                $statement->execute();
+
         } catch (\Throwable $th) {
             echo 'cluster_non_prédit';
             //echo ("Insertion failed: " . $e->getMessage());
