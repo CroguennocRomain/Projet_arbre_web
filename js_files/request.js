@@ -66,7 +66,6 @@ $('#bouton_cluster_pred').on("click", () => {
     );
 })
 $('#bouton_age_pred').on("click", () => {
-    console.log('yo');
     let id = $('#ligne_value').val();
 
     ajaxRequest(
@@ -77,7 +76,6 @@ $('#bouton_age_pred').on("click", () => {
     );
 })
 $('#bouton_tempete_pred').on("click", () => {
-    console.log('yo');
     let id = $('#ligne_value').val();
 
     ajaxRequest(
@@ -93,14 +91,15 @@ function cluster_pred(data){
     $('#alert-erreur-connexion').toggleClass('d-none')
 }
 function age_pred(data){
-    console.log('yo')
+    console.log(data)
     $('#alert-erreur-connexion').toggleClass('d-none')
 }
 
 function tempete_pred(data){
-    console.log('yo')
+    console.log(data)
     $('#alert-erreur-connexion').toggleClass('d-none')
 }
+
 
 
 
