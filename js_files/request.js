@@ -56,17 +56,13 @@ $('#bouton_ajout_csv').on("click", () => {
 })
 
 $('#bouton_cluster_pred').on("click", () => {
-    console.log('yo');
     let id = $('#ligne_value').val();
-
     ajaxRequest(
         'GET',
         '../php_files/test_request.php/cluster_pred',
-        cluster_pred,
-        'id='+id
+        cluster_pred,'id='+id
     );
 })
-
 $('#bouton_age_pred').on("click", () => {
     console.log('yo');
     let id = $('#ligne_value').val();
@@ -78,7 +74,6 @@ $('#bouton_age_pred').on("click", () => {
         'id='+id
     );
 })
-
 $('#bouton_tempete_pred').on("click", () => {
     console.log('yo');
     let id = $('#ligne_value').val();
@@ -91,16 +86,57 @@ $('#bouton_tempete_pred').on("click", () => {
     );
 })
 
+function cluster_pred(data){}
+
+
+// Requête afficher arbres dans tableau
+
+let url = window.location.pathname;
+let segments = url.split("/");
+//quand on est sur la page visualisation
+if (segments[3] == 'visual_arbre_BDD.html'){
+    ajaxRequest(
+        'GET',
+        '../php_files/test_request.php/afficher_arbres',
+        afficher_all_arbres
+    );
+})
+
+function afficher_all_arbres(data){
+    data = JSON.parse(data);
+
+    console.log(data)
+    console.log(data[0]['haut_tot']);   //recup haut_tot de l'arbre d'id 1
+
+    const tableBody = document.getElementById('table-body');
+    let html = '';
+
+    // Parcourir les données et construire les lignes du tableau
+    data.forEach((arbre) => {
+        html += `<tr>
+                    <td>${arbre.id}</td>
+                    <td>${arbre.latitude}</td>
+                    <td>${arbre.longitude}</td>
+                    <td>${arbre.secteur}</td>
+                    <td>${arbre.haut_tot}</td>
+                    <td>${arbre.haut_tronc}</td>
+                    <td>${arbre.revetement}</td>
+                    <td>${arbre.tronc_diam}</td>
+                    <td>${arbre.stadedev}</td>
+                    <td>${arbre.nomtech}</td>
+                    <td>${arbre.port}</td>
+                    <td>${arbre.feuillage}</td>
+                </tr>`;
+    });
+
+    // Insérer les lignes générées dans le corps du tableau
+    tableBody.innerHTML = html;
+
+}
 function cluster_pred(data){
     console.log('yo')
     $('#alert-erreur-connexion').toggleClass('d-none')
 }
-
-// Requête afficher arbres dans tableau
-let url = window.location.pathname;
-console.log(url); 
-
-
 function age_pred(data){
     console.log('yo')
     $('#alert-erreur-connexion').toggleClass('d-none')

@@ -22,8 +22,8 @@ switch ($requestRessource)
     case 'cluster_pred':
         cluster_pred($requestMethod);
         break;
-    case 'afficher_arbre':
-        afficher_arbre($requestMethod);
+    case 'afficher_arbres':
+        afficher_arbres($requestMethod);
         break;
     case 'age_pred':
         age_pred($requestMethod);
@@ -364,53 +364,44 @@ function cluster_pred($requestMethod)
     }
 }
 
-/*
-function afficher_arbre($requestMethod){
+
+function afficher_arbres($requestMethod){
     switch ($requestMethod)
     {
         case 'GET':
             
             try {
                 $db = dbConnect();
-
-                // Table arbre
                 $request = "
-                INSERT INTO arbre (longitude, latitude, haut_tot, haut_tronc, tronc_diam, id_user, id_secteur, id_stadedev, id_port, id_revetement, id_nomtech, id_feuillage)
-                VALUES ((float)'12.3', (float)'12.3', (float)'6', (float)'6', (float)'6', (int)'2', (int)'2', (int)'2', (int)'2', (int)'2', (int)'2', (int)'2')";
+                SELECT * FROM arbre a
+                JOIN clc_secteur s ON a.id_secteur = s.id_secteur
+                JOIN fk_stadedev dev ON a.id_stadedev = dev.id_stadedev
+                JOIN fk_port p ON a.id_port = p.id_port
+                JOIN fk_revetement r ON a.id_revetement = r.id_revetement
+                JOIN fk_nomtech n ON a.id_nomtech = n.id_nomtech
+                JOIN feuillage f ON a.id_feuillage = f.id_feuillage
+                ";
+                
+                //$request = "SELECT * FROM arbre";
                 
                 $statement = $db->prepare($request);
-                
-                $statement->bindParam(':longitude', (float)'12.3');
-                $statement->bindParam(':latitude', (float)'6');
-                $statement->bindParam(':haut_tot', (float)'3');
-                $statement->bindParam(':haut_tronc', (float)'42');
-                $statement->bindParam(':tronc_diam', (float)'35');
-                $statement->bindParam(':id_user', (int)'2');
-                $statement->bindParam(':id_secteur', (int)'2');
-                $statement->bindParam(':id_stadedev', (int)'2');
-                $statement->bindParam(':id_port', (int)'2');
-                $statement->bindParam(':id_revetement', (int)'2');
-                $statement->bindParam(':id_nomtech', (int)'2');
-                $statement->bindParam(':id_feuillage', (int)'2');
-                echo 'YES';
                 $statement->execute();
-                echo 'NO';
+                
                 header('Content-Type: text/plain; charset=utf-8');
                 header('Cache-control: no-store, no-cache, must-revalidate');
                 header('Pragma: no-cache');
                 header('HTTP/1.1 200 OK');
-                echo "arbre_ajouté";
 
-                
+                $arbres = $statement->fetchAll(PDO::FETCH_ASSOC);
+                echo json_encode($arbres);  //retourne tous les arbres en format json
                 
             } catch (\Throwable $th) {
-                //echo 'arbre_non_ajouté';
-                echo ("Insertion failed: " . $e->getMessage());
+                echo ('PAS OK' . $e->getMessage());
             }
             exit();
     }
 }
-*/
+
 function age_pred($requestMethod)
 {
     $id = intval($_GET['id']);
