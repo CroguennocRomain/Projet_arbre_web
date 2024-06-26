@@ -55,13 +55,23 @@ $('#bouton_ajout_csv').on("click", () => {
     );
 })
 
-$('#bouton_ajout_csv').on("click", () => {
-    
+$('#bouton_cluster_pred').on("click", () => {
+    console.log('yo');
+    let id = $('#ligne_value').val();
+
     ajaxRequest(
         'GET',
         '../php_files/test_request.php/cluster_pred',
-        cluster_pred,'id='+id
+        cluster_pred,
+        'id='+id
     );
 })
 
-function cluster_pred(data){}
+function cluster_pred(data){
+    console.log('yo')
+    $('#alert-erreur-connexion').toggleClass('d-none')
+}
+
+// Requête afficher arbres dans tableau
+let url = window.location.pathname;
+console.log(url); 

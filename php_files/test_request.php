@@ -345,19 +345,7 @@ function cluster_pred($requestMethod)
                 JOIN feuillage f on f.feuillage = a.feuillage
                 WHERE a.id = :id
                 ";
-                /*SELECT m.id_morceau,
-                   m.nom_morceau,
-                   m.duree_morceau,
-                   m.lien,
-                   m.explicit,
-                   m.id_album,
-                   al.cover_album,
-                   ar.nom_artiste
-            FROM recemment_ecoutes re
-            JOIN morceau m on m.id_morceau = re.id_morceau
-            JOIN album al on al.id_album = m.id_album
-            JOIN artiste ar on ar.id_artiste = al.id_artiste
-            WHERE re.id_utilisateur = :id_utilisateur*/
+                
                 $statement = $db->prepare($request);
                 $statement->bindParam(':id', $id);
                 $statement->execute();
@@ -371,44 +359,7 @@ function cluster_pred($requestMethod)
     }
 }
 
-
-
-/*function ajouter_arbre($requestMethod)
-{
-    switch ($requestMethod)
-    {
-        case 'POST':
-            if (!empty($_POST['haut_tot']) && !empty($_POST['haut_tronc']) && !empty($_POST['tronc_diam']) && !empty($_POST['fk_nomtech']) && !empty($_POST['feuillage']) && !empty($_POST['fk_stadedev']) && !empty($_POST['latitude']) && !empty($_POST['longitude']) && !empty($_POST['clc_secteur']) && !empty($_POST['fk_port']) && !empty($_POST['fk_revetement'])){
-                header('Content-Type: text/plain; charset=utf-8');
-                header('Cache-control: no-store, no-cache, must-revalidate');
-                header('Pragma: no-cache');
-                header('HTTP/1.1 200 OK');
-                #User::addUser($_POST['haut_tot'], $_POST['haut_tronc'], $_POST['tronc_diam'], $_POST['fk_nomtech'], $_POST['feuillage'], $_POST['fk_stadedev'], $_POST['latitude'], $_POST['longitude'], $_POST['clc_secteur'], $_POST['fk_port'], $_POST['fk_revetement']);
-                #echo 'ajouté';
-                
-                $fk_nomtech = $_POST['fk_nomtech'];
-                try {
-                    $db = dbConnect();
-                    $request = "INSERT INTO fk_nomtech (nomtech) VALUES ('lAAlkdaA')";
-                    
-                    
-                    $statement = $db->prepare($request);
-                    #$statement->bindParam(':nomtech', $fk_nomtech);
-                    $statement->execute();
-                    echo "arbre_ajouté";
-                    
-                } catch (\Throwable $th) {
-                    error_log("Insertion failed: " . $e->getMessage());
-                    echo json_encode(['status' => 'error', 'message' => 'Data insertion failed']);
-                }
-            }else {
-                //header('HTTP/1.1 400 Bad Request');
-                echo 'arbre_non_ajouté';
-            }
-            exit();
-    }
-}
-
+/*
 function afficher_arbre($requestMethod){
     switch ($requestMethod)
     {
@@ -454,4 +405,3 @@ function afficher_arbre($requestMethod){
             exit();
     }
 }
-*/
