@@ -485,6 +485,10 @@ function age_pred($requestMethod)
 
             $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
+            if(empty($result)){
+                $id = 0;
+            }
+
             $tab_max_range = [];
             $tab_max_range[] = $id;
             // Commande python script2
@@ -549,6 +553,10 @@ function tempete_pred($requestMethod)
             $statement->execute();
 
             $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+            if(empty($result)){
+                $id = 0;
+            }
 
             $tab_max_range = [];
             $tab_max_range[] = $id;
