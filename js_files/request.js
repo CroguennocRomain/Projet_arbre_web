@@ -28,7 +28,6 @@ let fk_revetement = $('#fk_revetement').val();
 
 
 if((!isNaN(parseFloat(haut_tot)) && isFinite(haut_tot)) && (!isNaN(parseFloat(haut_tronc)) && isFinite(haut_tronc)) && (!isNaN(parseFloat(tronc_diam)) && isFinite(tronc_diam)) && (!isNaN(parseFloat(latitude)) && isFinite(latitude)) && (!isNaN(parseFloat(longitude)) && isFinite(longitude))){
-    console.log('YUI');
     ajaxRequest(
         'POST',
         '../php_files/test_request.php/ajouter_arbre',
@@ -63,7 +62,7 @@ $('#bouton_ajout_csv').on("click", () => {
 $('#bouton_cluster_pred').on("click", () => {
     let id = $('#ligne_value').val();
 
-    if(!(id === null || id === undefined || id.trim() === '')){
+    if(!(id === null || id === undefined || id.trim() === '') && (!isNaN(parseFloat(id)) && isFinite(id))){
         ajaxRequest(
             'GET',
             '../php_files/test_request.php/cluster_pred',
@@ -75,7 +74,7 @@ $('#bouton_cluster_pred').on("click", () => {
 $('#bouton_age_pred').on("click", () => {
     let id = $('#ligne_value').val();
 
-    if(!(id === null || id === undefined || id.trim() === '')){
+    if(!(id === null || id === undefined || id.trim() === '') && (!isNaN(parseFloat(id)) && isFinite(id))){
         ajaxRequest(
             'GET',
             '../php_files/test_request.php/age_pred',
@@ -87,7 +86,7 @@ $('#bouton_age_pred').on("click", () => {
 $('#bouton_tempete_pred').on("click", () => {
     let id = $('#ligne_value').val();
 
-    if(!(id === null || id === undefined || id.trim() === '')){
+    if(!(id === null || id === undefined || id.trim() === '') && (!isNaN(parseFloat(id)) && isFinite(id))){
         ajaxRequest(
             'GET',
             '../php_files/test_request.php/tempete_pred',
@@ -119,17 +118,21 @@ function cluster_pred(data){
 function age_pred(data){
     data = JSON.parse(data);
     console.log(data);
-    // Construire l'URL avec les données en tant que paramètres de requête GET
-    var queryString = "?data=" + encodeURIComponent(JSON.stringify(data));
-    window.location.href = "age_arbre.html" + queryString;
+    if(data[0] != 0){
+        // Construire l'URL avec les données en tant que paramètres de requête GET
+        var queryString = "?data=" + encodeURIComponent(JSON.stringify(data));
+        window.location.href = "age_arbre.html" + queryString;
+    }
 }
 
 function tempete_pred(data){
     data = JSON.parse(data);
     console.log(data);
-    // Construire l'URL avec les données en tant que paramètres de requête GET
-    var queryString = "?data=" + encodeURIComponent(JSON.stringify(data));
-    window.location.href = "tempete_arbre.html" + queryString;
+    if(data[0] != 0){
+        // Construire l'URL avec les données en tant que paramètres de requête GET
+        var queryString = "?data=" + encodeURIComponent(JSON.stringify(data));
+        window.location.href = "tempete_arbre.html" + queryString;
+    }
 }
 
 function login(data){
