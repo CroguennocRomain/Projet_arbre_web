@@ -520,8 +520,8 @@ function tempete_pred($requestMethod)
             $tab_max_range[] =$bool_value;
 
             //méthode 1:
-            //$command = "../../venv/myenv/bin/python3.11 ../py_files/script_fonc3.py ".floatval($result[0]['latitude'])." ".floatval($result[0]['longitude'])." "."'".strval($result[0]['secteur'])."'"." "."'".strval($result[0]['port'])."'"." ".intval(1);
-            $command = '../../venv/myenv/bin/python3.11 ../py_files/script_fonc3.py 49 3 "Quai Gayant" "réduit relâché" 1';
+            $command = "../../venv/myenv/bin/python3.11 ../py_files/script_fonc3.py ".floatval($result[0]['latitude'])." ".floatval($result[0]['longitude'])." "."'".strval($result[0]['secteur'])."'"." "."'".strval($result[0]['port'])."'"." ".intval(1);
+            //$command = '../../venv/myenv/bin/python3.11 ../py_files/script_fonc3.py 49 3 "Quai Gayant" "réduit relâché" 1';
             $output = shell_exec($command);
             echo $output;
 
