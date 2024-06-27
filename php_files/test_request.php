@@ -399,21 +399,67 @@ function afficher_arbres($requestMethod){
                 JOIN feuillage f ON a.id_feuillage = f.id_feuillage
                 ";
                 
-                //$request = "SELECT * FROM arbre";
                 
                 $statement = $db->prepare($request);
                 $statement->execute();
                 
-                header('Content-Type: text/plain; charset=utf-8');
-                header('Cache-control: no-store, no-cache, must-revalidate');
-                header('Pragma: no-cache');
-                header('HTTP/1.1 200 OK');
+                //header('Content-Type: text/plain; charset=utf-8');
+                //header('Cache-control: no-store, no-cache, must-revalidate');
+                //header('Pragma: no-cache');
+                //header('HTTP/1.1 200 OK');
 
                 $arbres = $statement->fetchAll(PDO::FETCH_ASSOC);
-                echo json_encode($arbres);  //retourne tous les arbres en format json
+                //echo $arbres;
+                $arbres_json = json_encode($arbres); //retourne tous les arbres en format json
+                echo $arbres_json;  
+
+                // csv file
+                $csvFileName = '../arbres.csv';
+                $csvFile = fopen($csvFileName, 'w');
                 
+
+                $header = array(
+                    'id',
+                    'latitude',
+                    'longitude',
+                    'clc_secteur',
+                    'haut_tot',
+                    'haut_tronc',
+                    'fk_revetement',
+                    'tronc_diam',
+                    'stade_dev',
+                    'fk_nomtech',
+                    'fk_port',
+                    'feuillage'
+                );
+
+                fputcsv($csvFile, $header);
+                
+                //echo $arbres[0]['haut_tot'];
+                foreach ($arbres as $arbre) {
+
+                    $row = array(
+                        $arbre['id'],
+                        $arbre['latitude'],
+                        $arbre['longitude'],
+                        $arbre['secteur'],
+                        $arbre['haut_tot'],
+                        $arbre['haut_tronc'],
+                        $arbre['revetement'],
+                        $arbre['tronc_diam'],
+                        $arbre['stade_dev'],
+                        $arbre['nomtech'],
+                        $arbre['port'],
+                        $arbre['feuillage']
+                    );
+                    fputcsv($csvFile, $row);
+                }
+                
+                fclose($csvFile);
+                
+
             } catch (\Throwable $th) {
-                echo ('PAS OK' . $e->getMessage());
+                echo ('Erreur :' . $th->getMessage());
             }
             exit();
     }
@@ -440,6 +486,10 @@ function age_pred($requestMethod)
             $statement->execute();
 
             $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+            if(empty($result)){
+                $id = 0;
+            }
 
             $tab_max_range = [];
             $tab_max_range[] = $id;
@@ -505,6 +555,10 @@ function tempete_pred($requestMethod)
             $statement->execute();
 
             $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+            if(empty($result)){
+                $id = 0;
+            }
 
             $tab_max_range = [];
             $tab_max_range[] = $id;
