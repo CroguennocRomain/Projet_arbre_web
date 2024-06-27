@@ -1,0 +1,5 @@
+id,latitude,longitude,haut_tot,haut_tronc,stade_dev,fk_nomtech,feuillage,cluster
+1,13,24,1,1,,ABI,Feuillu,5
+2,11,14,113,110,,ABI,Feuillu,5
+3,9,17,43,20,,FAGSYL,Conifère,5
+4,12,100,20,10,,ACEPLAPUR,Conifère,5

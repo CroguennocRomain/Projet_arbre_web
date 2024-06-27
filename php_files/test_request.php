@@ -38,7 +38,6 @@ switch ($requestRessource)
     case 'login':
         login($requestMethod);
         break;
-
 }
 function ajouter_arbre($requestMethod, float $longitude, float $latitude, float $haut_tot, float $haut_tronc, float $tronc_diam, string $clc_secteur, string $fk_stadedev, string $fk_port, string $fk_revetement, string $fk_nomtech, string $feuillage)
 {
@@ -351,28 +350,86 @@ function cluster_pred($requestMethod)
         case 'GET':
         try {
             $db = dbConnect();
+            
+
             $request = "
-                SELECT a.haut_tot, a.haut_tronc, s.stadedev, n.nomtech, f.feuillage 
+                SELECT a.haut_tot, a.haut_tronc, a.id, a.latitude, a.longitude, s.stadedev, n.nomtech, f.feuillage 
                 FROM arbre a
                 JOIN fk_stadedev s on s.id_stadedev = a.id_stadedev
                 JOIN fk_nomtech n on n.id_nomtech = a.id_nomtech
                 JOIN feuillage f on f.id_feuillage = a.id_feuillage
-                WHERE a.id = :id
                 ";
-            $statement = $db->prepare($request);
-            $statement->bindParam(':id', $id, PDO::PARAM_INT);
-             
+            $statement = $db->prepare($request);             
             $statement->execute();
-
+            
             $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+            $csvFileName = '../clusters.csv';
+            $csvFile = fopen($csvFileName, 'w');
             
-            // Commande python script1
-            $command = "../../venv/myenv/bin/python3.11 ../py_files/script_fonc1.py ".floatval($result[0]['haut_tot'])." ".floatval($result[0]['haut_tronc'])." ".strval($result[0]['stadedev'])." ".strval($result[0]['nomtech'])." ".strval($result[0]['feuillage']);
-            
-            // Exécuter la commande
-            $output = shell_exec($command);
-            echo $output;
 
+            $header = array(
+                'id',
+                'latitude',
+                'longitude',
+                'haut_tot',
+                'haut_tronc',
+                'stade_dev',
+                'fk_nomtech',
+                'feuillage',
+                'cluster'
+            );
+
+            fputcsv($csvFile, $header);
+           
+            foreach($result as $i){
+                // Commande python script1
+                $command = "../../venv/myenv/bin/python3.11 ../py_files/script_fonc1.py ".floatval($result[$i]['haut_tot'])." ".floatval($result[$i]['haut_tronc'])." ".strval($result[$i]['stadedev'])." ".strval($result[$i]['nomtech'])." ".strval($result[$i]['feuillage']);
+                $output = shell_exec($command);
+                $jsonString = get_first_line_json_file('../py_files/JSON/script1_result.json');
+                
+                // Décoder le JSON en un tableau associatif
+                $cluster = json_decode($jsonString, true);
+                $row = array(
+                    $i['id'],
+                    $i['latitude'],
+                    $i['longitude'],
+                    $i['haut_tot'],
+                    $i['haut_tronc'],
+                    $i['stade_dev'],
+                    $i['nomtech'],
+                    $i['feuillage'],
+                    $cluster
+                );
+                fputcsv($csvFile, $row);
+            }
+            
+            fclose($csvFile);
+            
+            $request = "
+            SELECT a.haut_tot, a.haut_tronc, s.stadedev, n.nomtech, f.feuillage 
+            FROM arbre a
+            JOIN fk_stadedev s on s.id_stadedev = a.id_stadedev
+            JOIN fk_nomtech n on n.id_nomtech = a.id_nomtech
+            JOIN feuillage f on f.id_feuillage = a.id_feuillage
+            WHERE a.id=:id
+            ";
+            $statement = $db->prepare($request);   
+            $statement -> bindParam(':id',$id,PDO::PARAM_INT);
+            $statement->execute();
+            
+            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+            $tab_max_range = [];
+            $tab_max_range[] = $id;
+            
+            $command = "../../venv/myenv/bin/python3.11 ../py_files/script_fonc1.py ".floatval($result[0]['haut_tot'])." ".floatval($result[0]['haut_tronc'])." ".strval($result[0]['stadedev'])." ".strval($result[0]['nomtech'])." ".strval($result[0]['feuillage']);
+            $output = shell_exec($command);
+            $jsonString = get_first_line_json_file('../py_files/JSON/script1_result.json');
+            $cluster = json_decode($jsonString, true);
+            $tab_max_range[] = $cluster;
+
+            echo json_encode($tab_max_range);
+
+                
         } catch (\Throwable $th) {
             echo 'cluster_non_prédit';
             //echo ("Insertion failed: " . $e->getMessage());
@@ -726,9 +783,5 @@ function login($requestMethod){
     }
     echo "identifiants incorrects";
     exit();
-
-        
-    
-    
-    
 }
+
