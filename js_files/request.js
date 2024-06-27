@@ -228,9 +228,9 @@ if (segments[3] == 'tempete_arbre.html')
             
             // Manipuler les éléments dans la page
             var id_arbre = document.getElementById('id_arbre_1');
-            id_arbre.innerHTML += data[0]+' a';
+            id_arbre.innerHTML += data[0];
             var id_arbre = document.getElementById('id_arbre_2');
-            id_arbre.innerHTML += data[0]+' a';
+            id_arbre.innerHTML += data[0];
             var model_0 = document.getElementById('model_0');
             model_0.innerHTML += data[1];
             /*var model_1 = document.getElementById('model_1');

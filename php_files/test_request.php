@@ -326,7 +326,7 @@ function add_database_csv($requestMethod)
             fgetcsv($file);
             $i = 1;
             // Traiter chaque ligne du fichier CSV
-            for($i = 0; $i < 500; $i++){
+            for($i = 0; $i < 10; $i++){
                 if (($row = fgetcsv($file)) !== false) {
                     // Extraire les données pertinentes
                     list($longitude, $latitude, $clc_quartier, $clc_secteur, $haut_tot, $haut_tronc, $tronc_diam, $fk_arb_etat, $fk_stadedev, $fk_port, $fk_pied, $fk_situation, $fk_revetement, $age_estim, $fk_prec_estim, $clc_nbr_diag, $fk_nomtech, $villeca, $feuillage, $remarquable) = $row;
