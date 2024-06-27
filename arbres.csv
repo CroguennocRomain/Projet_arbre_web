@@ -1,1 +1,5 @@
-
+id,latitude,longitude,clc_secteur,haut_tot,haut_tronc,fk_revetement,tronc_diam,stade_dev,fk_nomtech,fk_port,feuillage
+1,49,3,"Quai Gayant",10,2,Non,300,,ABI,"semi libre",Feuillu
+2,1,1,"Quai Gayant",1,1,Non,1,,ABI,"semi libre",Feuillu
+3,1,1,"Quai Gayant",1,11,Non,1,,ABI,"semi libre",Feuillu
+4,3,3,"Quai Gayant",3,3,Non,3,,ABI,"semi libre",Feuillu
