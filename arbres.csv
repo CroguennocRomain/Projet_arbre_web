@@ -1,5 +1,1001 @@
 id,latitude,longitude,clc_secteur,haut_tot,haut_tronc,fk_revetement,tronc_diam,stade_dev,fk_nomtech,fk_port,feuillage
-1,13,24,"Quai Gayant",1,1,Non,1,,ABI,"semi libre",Feuillu
-2,11,14,"Quai Gayant",113,110,Non,10,,ABI,"semi libre",Feuillu
-3,9,17,"Boulevard Victor Hugo",43,20,Non,2,,FAGSYL,"tête de chat relaché",Conifère
-4,12,100,"Boulevard Victor Hugo",20,10,Oui,1,,ACEPLAPUR,architecturé,Conifère
+1,49.840500205123,3.2932636093639,"Quai Gayant",6,2,Non,37,,QUERUB,"semi libre",Feuillu
+2,49.861408713361,3.273379794709,"Stade Cepy",13,1,Non,160,,PINNIGnig,"semi libre",Conifère
+3,49.844513106607,3.2890678246635,"Rue Villebois Mareuil",12,3,Non,116,,ACEPSE,"semi libre",Feuillu
+4,49.86177771715,3.302386877651,"Square des Marronniers",16,3,Non,150,,ACEPLA,"semi libre",Feuillu
+5,49.858446202457,3.304047240893,"Avenue Buffon",5,2,Non,170,,SALBAB,réduit,Feuillu
+6,49.860928158752,3.3055374576904,"Rue Laplace",8,3,Oui,103,,ACEPLA,"réduit relâché",Feuillu
+7,49.837897171031,3.2712644773158,"Rue de Paris",6,3,Non,100,,TILCOR,réduit,Feuillu
+8,49.837590022083,3.2705420227986,"Rue de Paris",9,4,Non,135,,TILCOR,"réduit relâché",Feuillu
+9,49.837513824511,3.2703639865278,"Rue de Paris",9,4,Non,121,,TILCOR,"réduit relâché",Feuillu
+10,49.837363346687,3.2699987322142,"Rue de Paris",9,2,Non,107,,TILCOR,"réduit relâché",Feuillu
+11,49.836771490886,3.2686778980916,"Rue de Paris",9,2,Non,110,,TILCOR,"réduit relâché",Feuillu
+12,49.836690672182,3.2684891765031,"Rue de Paris",9,5,Non,115,,TILCOR,"réduit relâché",Feuillu
+13,49.836615871042,3.2683265978609,"Rue de Paris",9,5,Non,103,,TILCOR,"réduit relâché",Feuillu
+14,49.834851064603,3.2644474579549,"Rue de Paris",10,4,Non,160,,TILCOR,"réduit relâché",Feuillu
+15,49.834695106339,3.2640814768952,"Rue de Paris",10,4,Non,140,,TILCOR,"réduit relâché",Feuillu
+16,49.834610573697,3.2639034150128,"Rue de Paris",10,4,Non,160,,TILCOR,"réduit relâché",Feuillu
+17,49.834519396617,3.2637198067184,"Rue de Paris",10,5,Non,163,,TILCOR,"réduit relâché",Feuillu
+18,49.834364800893,3.2633810482649,"Rue de Paris",10,4,Non,139,,TILCOR,"réduit relâché",Feuillu
+19,49.833487074884,3.2614102693685,"Rue de Paris",11,3,Non,142,,TILCOR,"réduit relâché",Feuillu
+20,49.832747600002,3.2598137438932,"Rue de Paris",11,4,Non,160,,TILCOR,"réduit relâché",Feuillu
+21,49.832666870558,3.2596338762769,"Rue de Paris",10,5,Non,110,,TILCOR,"réduit relâché",Feuillu
+22,49.832574556105,3.259443595753,"Rue de Paris",10,2,Non,125,,TILCOR,"réduit relâché",Feuillu
+23,49.832507828232,3.2593006728614,"Rue de Paris",9,2,Non,138,,TILCOR,"réduit relâché",Feuillu
+24,49.8323356031,3.2589132043395,"Rue de Paris",10,3,Non,125,,TILCOR,"réduit relâché",Feuillu
+25,49.832210664331,3.2586457773704,"Rue de Paris",10,2,Non,115,,TILCOR,"réduit relâché",Feuillu
+26,49.832140134837,3.2585013674586,"Rue de Paris",10,2,Non,150,,TILCOR,"réduit relâché",Feuillu
+27,49.830950085625,3.2555630812274,"Rue de Paris",9,3,Non,130,,TILCOR,"réduit relâché",Feuillu
+28,49.830884412552,3.2553910291613,"Rue de Paris",10,3,Non,150,,TILCOR,"réduit relâché",Feuillu
+29,49.830396840165,3.2540679279877,"Rue de Paris",9,2,Non,105,,TILCOR,"réduit relâché",Feuillu
+30,49.830357140697,3.2539602015529,"Rue de Paris",9,2,Non,120,,TILCOR,"réduit relâché",Feuillu
+31,49.830303178542,3.2538137740894,"Rue de Paris",9,2,Non,140,,TILCOR,"réduit relâché",Feuillu
+32,49.830255058202,3.2536831939149,"Rue de Paris",9,2,Non,140,,TILCOR,"réduit relâché",Feuillu
+33,49.829966940855,3.2529013878239,"Rue de Paris",9,2,Non,130,,TILCOR,"réduit relâché",Feuillu
+34,49.829785222785,3.2524220334375,"Rue de Paris",9,2,Non,140,,TILCOR,"réduit relâché",Feuillu
+35,49.82967930289,3.2521170652401,"Rue de Paris",9,2,Non,110,,TILCOR,"réduit relâché",Feuillu
+36,49.829636096671,3.2520036728054,"Rue de Paris",9,3,Non,115,,TILCOR,"réduit relâché",Feuillu
+37,49.829639608295,3.2516270377732,"Rue de Paris",9,2,Non,165,,TILCOR,"réduit relâché",Feuillu
+38,49.829680015221,3.2517433564758,"Rue de Paris",9,2,Non,115,,TILCOR,"réduit relâché",Feuillu
+39,49.829741445277,3.2519122073761,"Rue de Paris",10,2,Non,140,,TILCOR,"réduit relâché",Feuillu
+40,49.829850356365,3.2522186669138,"Rue de Paris",10,2,Non,130,,TILCOR,"réduit relâché",Feuillu
+41,49.830197204508,3.2531478003458,"Rue de Paris",10,2,Non,130,,TILCOR,"réduit relâché",Feuillu
+42,49.830252037948,3.2532987344495,"Rue de Paris",9,2,Non,125,,TILCOR,"réduit relâché",Feuillu
+43,49.830406385501,3.2537184155127,"Rue de Paris",10,2,Non,150,,TILCOR,"réduit relâché",Feuillu
+44,49.830462637943,3.253873033084,"Rue de Paris",10,2,Non,140,,TILCOR,"réduit relâché",Feuillu
+45,49.830509916766,3.2539989438066,"Rue de Paris",9,2,Non,110,,TILCOR,"réduit relâché",Feuillu
+46,49.830668122739,3.2544362869542,"Rue de Paris",8,3,Non,100,,TILCOR,"réduit relâché",Feuillu
+47,49.831045433077,3.2554637896799,"Rue de Paris",10,3,Non,130,,TILCOR,"réduit relâché",Feuillu
+48,49.831126988938,3.2556795374003,"Rue de Paris",10,3,Non,170,,TILCOR,"réduit relâché",Feuillu
+49,49.831189220384,3.2558604792689,"Rue de Paris",10,3,Non,160,,TILCOR,"réduit relâché",Feuillu
+50,49.831253267442,3.2560200863015,"Rue de Paris",10,3,Non,155,,TILCOR,"réduit relâché",Feuillu
+51,49.831631522769,3.2570042558843,"Rue de Paris",10,3,Non,190,,TILCOR,"réduit relâché",Feuillu
+52,49.831712235387,3.2571952902124,"Rue de Paris",10,4,Non,115,,TILCOR,"réduit relâché",Feuillu
+53,49.831786081467,3.2573699756924,"Rue de Paris",10,2,Non,140,,TILCOR,"réduit relâché",Feuillu
+54,49.831862457683,3.2575403620417,"Rue de Paris",11,3,Non,170,,TILCOR,"réduit relâché",Feuillu
+55,49.831942091898,3.2577168636177,"Rue de Paris",9,5,Non,140,,TILCOR,"réduit relâché",Feuillu
+56,49.832115567217,3.2580993679525,"Rue de Paris",11,3,Non,150,,TILCOR,"réduit relâché",Feuillu
+57,49.832272370062,3.2584451152298,"Rue de Paris",10,5,Non,145,,TILCOR,"réduit relâché",Feuillu
+58,49.832358496141,3.2586345692292,"Rue de Paris",10,5,Non,125,,TILCOR,"réduit relâché",Feuillu
+59,49.832433664572,3.258799383694,"Rue de Paris",10,3,Non,160,,TILTOM,"réduit relâché",Feuillu
+60,49.832517426653,3.2589830415397,"Rue de Paris",10,4,Non,120,,TILCOR,"réduit relâché",Feuillu
+61,49.832605847285,3.2591769156625,"Rue de Paris",9,2,Non,110,,TILCOR,"réduit relâché",Feuillu
+62,49.832674116627,3.259326604723,"Rue de Paris",10,2,Non,120,,TILCOR,"réduit relâché",Feuillu
+63,49.835197987404,3.26486788403,"Rue de Paris",10,3,Non,165,,TILCOR,"réduit relâché",Feuillu
+64,49.835369460255,3.2652461039436,"Rue de Paris",10,5,Non,105,,TILCOR,"réduit relâché",Feuillu
+65,49.835448709792,3.2654249541161,"Rue de Paris",10,3,Non,140,,TILCOR,"réduit relâché",Feuillu
+66,49.835514007562,3.2655664155489,"Rue de Paris",10,2,Non,100,,TILCOR,"réduit relâché",Feuillu
+67,49.835569118673,3.2656865006068,"Rue de Paris",10,3,Non,115,,TILCOR,"réduit relâché",Feuillu
+68,49.835642861694,3.2658510662643,"Rue de Paris",10,2,Non,120,,TILCOR,"réduit relâché",Feuillu
+69,49.83572792708,3.2660387001743,"Rue de Paris",10,4,Non,125,,TILCOR,"réduit relâché",Feuillu
+70,49.835803318719,3.2662055374189,"Rue de Paris",10,4,Non,115,,TILCOR,"réduit relâché",Feuillu
+71,49.835883870038,3.266380990812,"Rue de Paris",10,5,Non,135,,TILCOR,"réduit relâché",Feuillu
+72,49.836038572859,3.2667261528868,"Rue de Paris",11,3,Non,150,,TILCOR,"réduit relâché",Feuillu
+73,49.844624081346,3.2709364034029,"Rue Jean Mermoz",13,4,Non,160,,PLAACE,"réduit relâché",Feuillu
+74,49.844439849296,3.2707460320651,"Rue Jean Mermoz",12,3,Non,160,,PLAACE,"réduit relâché",Feuillu
+75,49.844544668795,3.2706358658718,"Rue Jean Mermoz",12,3,Non,185,,PLAACE,"réduit relâché",Feuillu
+76,49.844625305211,3.2708096607459,"Rue Jean Mermoz",13,4,Non,155,,PLAACE,"réduit relâché",Feuillu
+77,49.844588249597,3.2709507813759,"Rue Jean Mermoz",13,4,Non,155,,PLAACE,"réduit relâché",Feuillu
+78,49.861095921542,3.2995272221703,"Avenue Robert Schuman",9,2,Non,195,,CATBIG,"semi libre",Feuillu
+79,49.861062214562,3.2994513539911,"Avenue Robert Schuman",8,2,Non,120,,CATBIG,"semi libre",Feuillu
+80,49.861026607779,3.2993698668206,"Avenue Robert Schuman",9,2,Non,180,,CATBIG,"semi libre",Feuillu
+81,49.860952050682,3.299175053516,"Avenue Robert Schuman",9,2,Non,190,,CATBIG,"semi libre",Feuillu
+82,49.860906878478,3.299079893018,"Avenue Robert Schuman",10,2,Non,150,,CATBIG,"semi libre",Feuillu
+83,49.860875361274,3.2990072096834,"Avenue Robert Schuman",6,2,Non,115,,CATBIG,"semi libre",Feuillu
+84,49.86080967391,3.2988589093572,"Avenue Robert Schuman",11,2,Non,150,,CATBIG,"semi libre",Feuillu
+85,49.860772211965,3.2987724787773,"Avenue Robert Schuman",11,2,Non,190,,CATBIG,"semi libre",Feuillu
+86,49.860726401757,3.2986692863638,"Avenue Robert Schuman",11,2,Non,175,,CATBIG,"semi libre",Feuillu
+87,49.860661046275,3.2985221794351,"Avenue Robert Schuman",11,2,Non,185,,CATBIG,"semi libre",Feuillu
+88,49.860623164971,3.2984358094087,"Avenue Robert Schuman",11,2,Non,155,,CATBIG,"semi libre",Feuillu
+89,49.861770450112,3.2982475790615,"Ecole primaire Pierre Laroche",13,4,Non,115,,TILCOR,"réduit relâché",Feuillu
+90,49.861742773998,3.2981922626265,"Ecole primaire Pierre Laroche",14,4,Non,110,,TILCOR,"réduit relâché",Feuillu
+91,49.861715822894,3.2981325377453,"Ecole primaire Pierre Laroche",14,4,Non,115,,TILCOR,"réduit relâché",Feuillu
+92,49.86168885776,3.2980783286357,"Ecole primaire Pierre Laroche",13,4,Non,125,,TILCOR,"réduit relâché",Feuillu
+93,49.849927096715,3.2947026927213,"Parc des Champs-Elysées",24,9,Non,245,,ACEPLA,"semi libre",Feuillu
+94,49.861661907494,3.2980186052789,"Ecole primaire Pierre Laroche",14,4,Non,120,,TILCOR,"réduit relâché",Feuillu
+95,49.861633518335,3.2979632847667,"Ecole primaire Pierre Laroche",14,4,Non,150,,TILCOR,"réduit relâché",Feuillu
+96,49.850162689271,3.2936430869696,"Parc des Champs-Elysées",24,11,Non,215,,TILCOR,"semi libre",Feuillu
+97,49.850104927915,3.2937102417681,"Parc des Champs-Elysées",24,12,Non,210,,TILCOR,"semi libre",Feuillu
+98,49.850045440846,3.2937692881634,"Parc des Champs-Elysées",21,13,Non,210,,TILCOR,"semi libre",Feuillu
+99,49.849924700413,3.2938954650667,"Parc des Champs-Elysées",24,13,Non,190,,TILCOR,"semi libre",Feuillu
+100,49.849863480826,3.2939491015913,"Parc des Champs-Elysées",24,13,Non,215,,TILCOR,"semi libre",Feuillu
+101,49.849812648969,3.2940109606474,"Parc des Champs-Elysées",24,12,Non,195,,TILCOR,"semi libre",Feuillu
+102,49.849752476874,3.2940749465957,"Parc des Champs-Elysées",25,13,Non,210,,TILCOR,"semi libre",Feuillu
+103,49.849689334818,3.2941379955172,"Parc des Champs-Elysées",24,14,Non,195,,TILCOR,"semi libre",Feuillu
+104,49.849628561479,3.2942047333728,"Parc des Champs-Elysées",24,14,Non,205,,TILCOR,"semi libre",Feuillu
+105,49.849615306851,3.2942800178505,"Parc des Champs-Elysées",20,14,Non,180,,TILCOR,"semi libre",Feuillu
+106,49.849677856124,3.29421604658,"Parc des Champs-Elysées",23,13,Non,190,,TILCOR,"semi libre",Feuillu
+107,49.84980295546,3.2940881035552,"Parc des Champs-Elysées",24,13,Non,190,,TILCOR,"semi libre",Feuillu
+108,49.849861935325,3.2940259485695,"Parc des Champs-Elysées",24,13,Non,200,,TILCOR,"semi libre",Feuillu
+109,49.849976909813,3.2939071375312,"Parc des Champs-Elysées",24,13,Non,225,,TILCOR,"semi libre",Feuillu
+110,49.850096658102,3.2937800813877,"Parc des Champs-Elysées",24,16,Non,175,,TILCOR,"semi libre",Feuillu
+111,49.850158606825,3.2937188625081,"Parc des Champs-Elysées",24,13,Non,190,,TILCOR,"semi libre",Feuillu
+112,49.850135060283,3.2938731245915,"Parc des Champs-Elysées",19,11,Non,200,,TILCOR,"semi libre",Feuillu
+113,49.849951578822,3.2940623073432,"Parc des Champs-Elysées",23,10,Non,220,,TILCOR,"semi libre",Feuillu
+114,49.84978059005,3.2942451286527,"Parc des Champs-Elysées",25,14,Non,215,,TILCOR,"semi libre",Feuillu
+115,49.849769703248,3.2943241024601,"Parc des Champs-Elysées",24,10,Non,220,,TILCOR,"semi libre",Feuillu
+116,49.849816628627,3.2943326443852,"Parc des Champs-Elysées",24,10,Non,260,,TILCOR,"semi libre",Feuillu
+117,49.849935187955,3.2942055825657,"Parc des Champs-Elysées",23,10,Non,195,,TILCOR,"semi libre",Feuillu
+118,49.850174065857,3.2939624966147,"Parc des Champs-Elysées",24,8,Non,190,,TILCOR,"semi libre",Feuillu
+119,49.850235421813,3.2939003538448,"Parc des Champs-Elysées",18,8,Non,185,,TILCOR,"semi libre",Feuillu
+120,49.850566647342,3.2935565172738,"Parc des Champs-Elysées",20,8,Non,205,,TILCOR,"semi libre",Feuillu
+121,49.850659738358,3.2935923443206,"Parc des Champs-Elysées",25,11,Non,260,,TILCOR,"semi libre",Feuillu
+122,49.850455732566,3.2938161532747,"Parc des Champs-Elysées",23,8,Non,210,,TILCOR,"semi libre",Feuillu
+123,49.8503413488,3.2939360718465,"Parc des Champs-Elysées",25,9,Non,235,,TILCOR,"semi libre",Feuillu
+124,49.85008880189,3.2941801822345,"Parc des Champs-Elysées",22,13,Non,195,,TILCOR,"semi libre",Feuillu
+125,49.850030656303,3.2942416067816,"Parc des Champs-Elysées",25,6,Non,175,,TILCOR,"semi libre",Feuillu
+126,49.849918173548,3.2943615361167,"Parc des Champs-Elysées",20,11,Non,175,,TILCOR,"semi libre",Feuillu
+127,49.84979425782,3.2944916910727,"Parc des Champs-Elysées",25,13,Non,300,,TILCOR,"semi libre",Feuillu
+128,49.849841569308,3.294586071101,"Parc des Champs-Elysées",24,10,Non,250,,TILCOR,"semi libre",Feuillu
+129,49.849958823963,3.2944588184633,"Parc des Champs-Elysées",23,10,Non,170,,ACEPLA,"semi libre",Feuillu
+130,49.850021737641,3.2943915399144,"Parc des Champs-Elysées",25,7,Non,190,,ACEPLA,"semi libre",Feuillu
+131,49.85007128748,3.2943462431722,"Parc des Champs-Elysées",25,9,Non,210,,ACEPLA,"semi libre",Feuillu
+132,49.850134201087,3.2942789657153,"Parc des Champs-Elysées",27,16,Non,260,,ACEPLA,"semi libre",Feuillu
+133,49.850252214812,3.294231118886,"Parc des Champs-Elysées",26,11,Non,225,,ACEPLA,"semi libre",Feuillu
+134,49.849948144828,3.2945499253142,"Parc des Champs-Elysées",26,13,Non,380,,ACEPLA,"semi libre",Feuillu
+135,49.849768026109,3.2947238692018,"Parc des Champs-Elysées",25,8,Non,235,,ACEPLA,"semi libre",Feuillu
+136,49.849806776648,3.2948196704547,"Parc des Champs-Elysées",24,8,Non,200,,ACEPSE,"semi libre",Feuillu
+137,49.84985425515,3.2948449431002,"Parc des Champs-Elysées",24,10,Non,205,,ACEPSE,"semi libre",Feuillu
+138,49.849989979117,3.2946486499151,"Parc des Champs-Elysées",24,8,Non,275,,ACEPLA,"semi libre",Feuillu
+139,49.850155712528,3.2945260872768,"Parc des Champs-Elysées",24,12,Non,310,,ACEPLA,"semi libre",Feuillu
+140,49.850215752351,3.2944676164522,"Parc des Champs-Elysées",25,14,Non,205,,ACEPSE,"semi libre",Feuillu
+141,49.850352217098,3.2942595981863,"Parc des Champs-Elysées",27,9,Non,255,,ACEPLA,"semi libre",Feuillu
+142,49.850598472074,3.2942407014895,"Parc des Champs-Elysées",23,4,Non,255,,ACEPLA,"semi libre",Feuillu
+143,49.85054886372,3.2943283725401,"Parc des Champs-Elysées",22,10,Non,180,,ACEPSE,"semi libre",Feuillu
+144,49.850481036323,3.2944617940067,"Parc des Champs-Elysées",24,8,Non,230,,ACEPSE,"semi libre",Feuillu
+145,49.850508176022,3.29464134601,"Parc des Champs-Elysées",22,13,Non,190,,ACEPSE,"semi libre",Feuillu
+146,49.850444308235,3.2947100902744,"Parc des Champs-Elysées",23,10,Non,245,,ACEPLA,"semi libre",Feuillu
+147,49.850406545796,3.2945981173069,"Parc des Champs-Elysées",24,13,Non,190,,ACEPSE,"semi libre",Feuillu
+148,49.850416221146,3.2945290616858,"Parc des Champs-Elysées",25,9,Non,215,,ACEPSE,"semi libre",Feuillu
+149,49.850428772228,3.2944497297875,"Parc des Champs-Elysées",25,7,Non,175,,ACEPLA,"semi libre",Feuillu
+150,49.850440372975,3.2943703907594,"Parc des Champs-Elysées",25,6,Non,260,,ACEPLA,"semi libre",Feuillu
+151,49.850331871151,3.2944168192253,"Parc des Champs-Elysées",27,10,Non,225,,ACEPSE,"semi libre",Feuillu
+152,49.850320270376,3.2944961566766,"Parc des Champs-Elysées",25,14,Non,210,,ACEPLA,"semi libre",Feuillu
+153,49.850307714668,3.294576960843,"Parc des Champs-Elysées",25,14,Non,235,,ACEPLA,"semi libre",Feuillu
+154,49.850297076041,3.2946518921077,"Parc des Champs-Elysées",25,15,Non,215,,ACEPSE,"semi libre",Feuillu
+155,49.850309181223,3.2948222360831,"Parc des Champs-Elysées",24,7,Non,245,,ACEPLA,"semi libre",Feuillu
+156,49.85021001551,3.2948748986429,"Parc des Champs-Elysées",24,7,Non,285,,ACEPLA,"semi libre",Feuillu
+157,49.85004051205,3.2949842033855,"Parc des Champs-Elysées",22,4,Non,215,,ACEPLA,"semi libre",Feuillu
+158,49.850102478535,3.2949154500095,"Parc des Champs-Elysées",24,7,Non,210,,ACEPLA,"semi libre",Feuillu
+159,49.850156821529,3.2948540047175,"Parc des Champs-Elysées",24,10,Non,315,,ACEPSE,"semi libre",Feuillu
+160,49.850180960831,3.294701217676,"Parc des Champs-Elysées",22,10,Non,195,,ACEPSE,"semi libre",Feuillu
+161,49.850234057747,3.2935780962807,"Parc des Champs-Elysées",25,12,Non,225,,TILCOR,"semi libre",Feuillu
+162,49.850208955805,3.2937367598475,"Parc des Champs-Elysées",25,12,Non,185,,TILCOR,"semi libre",Feuillu
+163,49.85035813964,3.2937743812616,"Parc des Champs-Elysées",24,12,Non,225,,TILCOR,"semi libre",Feuillu
+164,49.850415334685,3.2937129514556,"Parc des Champs-Elysées",24,12,Non,235,,TILCOR,"semi libre",Feuillu
+165,49.850703199817,3.293706887381,"Parc des Champs-Elysées",19,8,Non,215,,ACEPSE,"semi libre",Feuillu
+166,49.85068279223,3.29379132175,"Parc des Champs-Elysées",25,12,Non,270,,ACEPSE,"semi libre",Feuillu
+167,49.850743390843,3.2937971851041,"Parc des Champs-Elysées",25,8,Non,240,,ACEPSE,"semi libre",Feuillu
+168,49.850800397165,3.2938140547129,"Parc des Champs-Elysées",22,10,Non,160,,ACEPSE,"semi libre",Feuillu
+169,49.850827294056,3.2939961812002,"Parc des Champs-Elysées",24,10,Non,170,,ACEPSE,"semi libre",Feuillu
+170,49.850866314744,3.2940791196131,"Parc des Champs-Elysées",25,10,Non,290,,ACEPSE,"semi libre",Feuillu
+171,49.850888061244,3.2939321973182,"Parc des Champs-Elysées",24,9,Non,170,,ACEPSE,"semi libre",Feuillu
+172,49.85090016211,3.29384220113,"Parc des Champs-Elysées",22,6,Non,180,,ACEPSE,"semi libre",Feuillu
+173,49.850953595422,3.2938627272339,"Parc des Champs-Elysées",25,10,Non,260,,ACEPSE,"semi libre",Feuillu
+174,49.85101198087,3.2938005683538,"Parc des Champs-Elysées",25,8,Non,175,,ACEPSE,"semi libre",Feuillu
+175,49.851016932956,3.293717881918,"Parc des Champs-Elysées",25,6,Non,190,,ACEPSE,"semi libre",Feuillu
+176,49.85122474669,3.2932944751513,"Parc des Champs-Elysées",30,13,Non,210,,ACEPLA,"semi libre",Feuillu
+177,49.851180813249,3.2932776813281,"Parc des Champs-Elysées",30,6,Non,270,,ACEPLA,"semi libre",Feuillu
+178,49.851129744933,3.2932626817182,"Parc des Champs-Elysées",28,9,Non,235,,ACEPSE,"semi libre",Feuillu
+179,49.851086005363,3.2931650125136,"Parc des Champs-Elysées",24,11,Non,215,,TILCOR,"semi libre",Feuillu
+180,49.851048194607,3.2930728906946,"Parc des Champs-Elysées",22,11,Non,195,,TILCOR,"réduit relâché",Feuillu
+181,49.851005643416,3.2929752261344,"Parc des Champs-Elysées",21,11,Non,245,,TILCOR,"réduit relâché",Feuillu
+182,49.851151538183,3.2930955411194,"Parc des Champs-Elysées",24,9,Non,180,,TILCOR,"semi libre",Feuillu
+183,49.851082040843,3.2928359692547,"Parc des Champs-Elysées",24,12,Non,240,,TILCOR,"semi libre",Feuillu
+184,49.851094106006,3.2927606750488,"Parc des Champs-Elysées",24,12,Non,275,,TILCOR,"semi libre",Feuillu
+185,49.851103812381,3.2926780167221,"Parc des Champs-Elysées",21,12,Non,195,,TILCOR,"semi libre",Feuillu
+186,49.851197625763,3.2927098033097,"Parc des Champs-Elysées",22,12,Non,265,,TILCOR,"semi libre",Feuillu
+187,49.851189121649,3.29278695435,"Parc des Champs-Elysées",27,12,Non,195,,TILCOR,"semi libre",Feuillu
+188,49.851228120259,3.2928790832995,"Parc des Champs-Elysées",27,12,Non,265,,TILCOR,"semi libre",Feuillu
+189,49.851280119526,3.2925062459715,"Parc des Champs-Elysées",26,6,Non,245,,TILCOR,"semi libre",Feuillu
+190,49.851368046206,3.2924155797149,"Parc des Champs-Elysées",18,4,Non,115,,THUPLIatr,"semi libre",Conifère
+191,49.851392881667,3.2924671892268,"Parc des Champs-Elysées",20,4,Non,150,,THUPLIatr,"semi libre",Conifère
+192,49.85143670606,3.2926284580139,"Parc des Champs-Elysées",12,2,Non,130,,PINNIGnig,"semi libre",Conifère
+193,49.851386248324,3.2928542557115,"Parc des Champs-Elysées",26,10,Non,285,,TILCOR,"semi libre",Feuillu
+194,49.851327867969,3.2929145794006,"Parc des Champs-Elysées",24,8,Non,175,,TILCOR,"semi libre",Feuillu
+195,49.851302526834,3.2930743494456,"Parc des Champs-Elysées",28,9,Non,260,,ACEPLA,"semi libre",Feuillu
+196,49.851297587173,3.2931515218771,"Parc des Champs-Elysées",28,11,Non,220,,ACEPLA,"semi libre",Feuillu
+197,49.851286702013,3.2932304983731,"Parc des Champs-Elysées",29,12,Non,280,,ACEPSE,"semi libre",Feuillu
+198,49.85138645331,3.2932641556516,"Parc des Champs-Elysées",22,7,Non,240,,ACEPLA,"semi libre",Feuillu
+199,49.851454523071,3.2931285262251,"Parc des Champs-Elysées",26,10,Non,290,,ACEPLA,"semi libre",Feuillu
+200,49.851487202904,3.2928824076109,"Parc des Champs-Elysées",26,11,Non,320,,ACEPLA,"semi libre",Feuillu
+201,49.851773706239,3.2928491269021,"Parc des Champs-Elysées",21,10,Non,120,,ACEPSE,"semi libre",Feuillu
+202,49.851816609938,3.2927997438013,"Parc des Champs-Elysées",21,8,Non,115,,ACEPSE,"semi libre",Feuillu
+203,49.851879995632,3.2926346757331,"Parc des Champs-Elysées",23,10,Non,125,,ACEPSE,"semi libre",Feuillu
+204,49.851831144766,3.2926858631973,"Parc des Champs-Elysées",22,8,Non,130,,ACEPSE,"semi libre",Feuillu
+205,49.851788250281,3.2927315700157,"Parc des Champs-Elysées",24,8,Non,160,,ACEPSE,"semi libre",Feuillu
+206,49.851743917715,3.2927789103419,"Parc des Champs-Elysées",23,8,Non,140,,ACEPSE,"semi libre",Feuillu
+207,49.851706438525,3.2928190748454,"Parc des Champs-Elysées",23,8,Non,165,,ACEPSE,"semi libre",Feuillu
+208,49.851678118595,3.2927519192737,"Parc des Champs-Elysées",23,8,Non,175,,ACEPSE,"semi libre",Feuillu
+209,49.851715594576,3.2927126724441,"Parc des Champs-Elysées",23,8,Non,115,,ACEPSE,"semi libre",Feuillu
+210,49.851759618162,3.2926652037089,"Parc des Champs-Elysées",23,8,Non,105,,ACEPSE,"semi libre",Feuillu
+211,49.851804825274,3.2926186596669,"Parc des Champs-Elysées",27,8,Non,195,,ACEPSE,"semi libre",Feuillu
+212,49.851852417268,3.2925675397465,"Parc des Champs-Elysées",23,8,Non,115,,ACEPSE,"semi libre",Feuillu
+213,49.851863383393,3.2924482996362,"Parc des Champs-Elysées",23,6,Non,170,,ACEPSE,"réduit relâché",Feuillu
+214,49.851819360799,3.2924957672811,"Parc des Champs-Elysées",23,10,Non,145,,ACEPSE,"semi libre",Feuillu
+215,49.851773554891,3.292544146106,"Parc des Champs-Elysées",23,10,Non,165,,ACEPSE,"semi libre",Feuillu
+216,49.851728938891,3.2925916100411,"Parc des Champs-Elysées",22,10,Non,140,,ACEPSE,"semi libre",Feuillu
+217,49.851654803765,3.2925765026853,"Parc des Champs-Elysées",21,6,Non,155,,PLAACE,"réduit relâché",Feuillu
+218,49.851593465633,3.2924210565215,"Parc des Champs-Elysées",21,9,Non,170,,ACEPSE,"semi libre",Feuillu
+219,49.851638077896,3.2923754279795,"Parc des Champs-Elysées",25,9,Non,250,,ACEPSE,"semi libre",Feuillu
+220,49.851678528826,3.2923325263417,"Parc des Champs-Elysées",24,9,Non,190,,ACEPSE,"semi libre",Feuillu
+221,49.851758266258,3.2922384578162,"Parc des Champs-Elysées",20,8,Non,180,,ACESAC,"réduit relâché",Feuillu
+222,49.851728174134,3.2921676210771,"Parc des Champs-Elysées",20,6,Non,195,,ACESAC,"réduit relâché",Feuillu
+223,49.851698065981,3.2921032097645,"Parc des Champs-Elysées",20,6,Non,185,,ACESAC,"réduit relâché",Feuillu
+224,49.851666771064,3.2920387900798,"Parc des Champs-Elysées",20,6,Non,175,,ACESAC,"réduit relâché",Feuillu
+225,49.851631929603,3.2919688444556,"Parc des Champs-Elysées",20,6,Non,215,,ACESAC,"réduit relâché",Feuillu
+226,49.851607742215,3.2919099735252,"Parc des Champs-Elysées",20,6,Non,170,,ACESAC,"réduit relâché",Feuillu
+227,49.851714376499,3.2919821648874,"Parc des Champs-Elysées",20,6,Non,160,,ACESAC,"réduit relâché",Feuillu
+228,49.851775774164,3.2921128313504,"Parc des Champs-Elysées",19,8,Non,160,,ACESAC,"réduit relâché",Feuillu
+229,49.85187729061,3.2923400882864,"Parc des Champs-Elysées",19,6,Non,130,,PLAACE,"réduit relâché",Feuillu
+230,49.852016955498,3.2924950661955,"Parc des Champs-Elysées",19,6,Non,175,,ACEPSE,"semi libre",Feuillu
+231,49.851988047083,3.2924251523124,"Parc des Champs-Elysées",21,8,Non,170,,ACEPSE,"semi libre",Feuillu
+232,49.851953801509,3.2923542917786,"Parc des Champs-Elysées",19,8,Non,150,,ACEPSE,"semi libre",Feuillu
+233,49.851923693461,3.2922898800554,"Parc des Champs-Elysées",19,5,Non,120,,PLAACE,"réduit relâché",Feuillu
+234,49.85185048306,3.2921362009687,"Parc des Champs-Elysées",19,8,Non,135,,ACEPSE,"semi libre",Feuillu
+235,49.851817411243,3.2920708541573,"Parc des Champs-Elysées",19,6,Non,150,,ACEPSE,"semi libre",Feuillu
+236,49.85178967789,3.2920055378022,"Parc des Champs-Elysées",19,8,Non,140,,ACEPSE,"semi libre",Feuillu
+237,49.851840771796,3.2919792166622,"Parc des Champs-Elysées",19,7,Non,115,,PLAACE,"réduit relâché",Feuillu
+238,49.85189392446,3.2920841395017,"Parc des Champs-Elysées",22,8,Non,240,,ACEPSE,"semi libre",Feuillu
+239,49.851994244182,3.2923150620934,"Parc des Champs-Elysées",19,8,Non,180,,ACEPSE,"semi libre",Feuillu
+240,49.85202552156,3.2923868240944,"Parc des Champs-Elysées",19,8,Non,130,,ACEPSE,"semi libre",Feuillu
+241,49.852006377126,3.292204088067,"Parc des Champs-Elysées",19,6,Non,140,,PLAACE,"réduit relâché",Feuillu
+242,49.851879606622,3.2919060839805,"Parc des Champs-Elysées",19,7,Non,155,,PLAACE,"réduit relâché",Feuillu
+243,49.851843427005,3.2918275731169,"Parc des Champs-Elysées",19,7,Non,140,,PLAACE,"réduit relâché",Feuillu
+244,49.851773929432,3.2916661553339,"Parc des Champs-Elysées",19,6,Non,145,,PLAACE,"réduit relâché",Feuillu
+245,49.851712946679,3.2915224352368,"Parc des Champs-Elysées",19,7,Non,145,,PLAACE,"réduit relâché",Feuillu
+246,49.851635973274,3.2915054507875,"Parc des Champs-Elysées",19,7,Non,160,,ACEPSE,"semi libre",Feuillu
+247,49.85166646787,3.2915762087278,"Parc des Champs-Elysées",20,8,Non,165,,ACEPSE,"semi libre",Feuillu
+248,49.851699101239,3.2916469794643,"Parc des Champs-Elysées",20,7,Non,150,,ACEPSE,"semi libre",Feuillu
+249,49.851763641206,3.2917940301833,"Parc des Champs-Elysées",19,8,Non,145,,ACEPSE,"semi libre",Feuillu
+250,49.85179767106,3.2918769415219,"Parc des Champs-Elysées",19,6,Non,145,,PLAACE,"réduit relâché",Feuillu
+251,49.851722893189,3.2918368109899,"Parc des Champs-Elysées",19,6,Non,115,,PLAACE,"réduit relâché",Feuillu
+252,49.85168599695,3.2917593974332,"Parc des Champs-Elysées",20,8,Non,165,,ACEPSE,"semi libre",Feuillu
+253,49.851625003358,3.2916200866364,"Parc des Champs-Elysées",20,8,Non,170,,ACEPSE,"semi libre",Feuillu
+254,49.851591666144,3.2915460052762,"Parc des Champs-Elysées",19,8,Non,165,,ACEPSE,"semi libre",Feuillu
+255,49.85161189267,3.2917358137548,"Parc des Champs-Elysées",20,8,Non,190,,ACEPSE,"semi libre",Feuillu
+256,49.851805382212,3.29142597956,"Parc des Champs-Elysées",15,5,Non,208,,ACEPLA,"tête de chat relaché",Feuillu
+257,49.851882401994,3.2913380614108,"Parc des Champs-Elysées",15,4,Non,136,,TILCOR,"tête de chat relaché",Feuillu
+258,49.851523642195,3.2910730463499,"Parc des Champs-Elysées",22,4,Non,149,,PLAACE,"semi libre",Feuillu
+259,49.851496045794,3.2910088371963,"Parc des Champs-Elysées",22,4,Non,130,,PLAACE,"semi libre",Feuillu
+260,49.851467579595,3.2909426039838,"Parc des Champs-Elysées",22,4,Non,126,,PLAACE,"semi libre",Feuillu
+261,49.851436735577,3.2908708407301,"Parc des Champs-Elysées",20,4,Non,150,,PLAACE,"semi libre",Feuillu
+262,49.851405457081,3.2907980655063,"Parc des Champs-Elysées",19,4,Non,130,,PLAACE,"semi libre",Feuillu
+263,49.851277774885,3.2907739365984,"Parc des Champs-Elysées",14,7,Non,105,,PLAACE,"semi libre",Feuillu
+264,49.851266898429,3.2909400379184,"Parc des Champs-Elysées",14,5,Non,100,,PLAACE,"semi libre",Feuillu
+265,49.851314919993,3.2908865209116,"Parc des Champs-Elysées",21,5,Non,158,,PLAACE,"semi libre",Feuillu
+266,49.851304418076,3.2910070044749,"Parc des Champs-Elysées",19,6,Non,136,,PLAACE,"semi libre",Feuillu
+267,49.851379348578,3.2910379071008,"Parc des Champs-Elysées",22,6,Non,214,,ACEPSE,"semi libre",Feuillu
+268,49.851427961721,3.2909847690029,"Parc des Champs-Elysées",21,6,Non,131,,ACEPSE,"semi libre",Feuillu
+269,49.851456707128,3.2910482520844,"Parc des Champs-Elysées",21,10,Non,185,,ACEPSE,"semi libre",Feuillu
+270,49.851408847055,3.2910964375646,"Parc des Champs-Elysées",22,10,Non,238,,ACEPSE,"semi libre",Feuillu
+271,49.849701413638,3.2940163038266,"Parc des Champs-Elysées",16,4,Non,119,,PLAACE,"semi libre",Feuillu
+272,49.851315268229,3.2923328866121,"Parc des Champs-Elysées",16,4,Non,128,,PLAACE,"semi libre",Feuillu
+273,49.851230229752,3.2924215942639,"Parc des Champs-Elysées",16,4,Non,112,,PLAACE,"semi libre",Feuillu
+274,49.851139101374,3.2925166545272,"Parc des Champs-Elysées",16,4,Non,115,,PLAACE,"semi libre",Feuillu
+275,49.851051458616,3.2926080782872,"Parc des Champs-Elysées",16,4,Non,110,,PLAACE,"semi libre",Feuillu
+276,49.850961832714,3.2927015686408,"Parc des Champs-Elysées",16,4,Non,122,,PLAACE,"semi libre",Feuillu
+277,49.850871156606,3.2927961536351,"Parc des Champs-Elysées",16,4,Non,132,,PLAACE,"semi libre",Feuillu
+278,49.850780337089,3.2928908903754,"Parc des Champs-Elysées",16,4,Non,123,,PLAACE,"semi libre",Feuillu
+279,49.850689810451,3.2929853198322,"Parc des Champs-Elysées",16,4,Non,133,,PLAACE,"semi libre",Feuillu
+280,49.85060991575,3.2930686595822,"Parc des Champs-Elysées",16,4,Non,138,,PLAACE,"semi libre",Feuillu
+281,49.850521410803,3.2931609800185,"Parc des Champs-Elysées",16,4,Non,152,,PLAACE,"semi libre",Feuillu
+282,49.850431785339,3.2932544683583,"Parc des Champs-Elysées",16,4,Non,173,,PLAACE,"semi libre",Feuillu
+283,49.850317572233,3.2933736022043,"Parc des Champs-Elysées",16,4,Non,155,,PLAACE,"semi libre",Feuillu
+284,49.850233185544,3.2934616274436,"Parc des Champs-Elysées",16,4,Non,125,,PLAACE,"semi libre",Feuillu
+285,49.850142397921,3.2935563257639,"Parc des Champs-Elysées",16,4,Non,125,,PLAACE,"semi libre",Feuillu
+286,49.850052660354,3.2936499287883,"Parc des Champs-Elysées",16,4,Non,131,,PLAACE,"semi libre",Feuillu
+287,49.849963370708,3.2937430641837,"Parc des Champs-Elysées",16,4,Non,133,,PLAACE,"semi libre",Feuillu
+288,49.849873295857,3.293837019068,"Parc des Champs-Elysées",16,4,Non,121,,PLAACE,"semi libre",Feuillu
+289,49.849794185648,3.2939195376109,"Parc des Champs-Elysées",16,4,Non,121,,PLAACE,"semi libre",Feuillu
+290,49.849615267806,3.2941061572444,"Parc des Champs-Elysées",16,4,Non,118,,PLAACE,"semi libre",Feuillu
+291,49.849525701943,3.2941995813159,"Parc des Champs-Elysées",16,4,Non,144,,PLAACE,"semi libre",Feuillu
+292,49.849523839634,3.2940500772929,"Parc des Champs-Elysées",16,4,Non,146,,PLAACE,"semi libre",Feuillu
+293,49.849614478049,3.2939555359109,"Parc des Champs-Elysées",16,4,Non,131,,PLAACE,"semi libre",Feuillu
+294,49.849699762025,3.2938665794599,"Parc des Champs-Elysées",16,4,Non,129,,PLAACE,"semi libre",Feuillu
+295,49.849787442772,3.2937751217534,"Parc des Champs-Elysées",16,4,Non,146,,PLAACE,"semi libre",Feuillu
+296,49.849875422708,3.293683352663,"Parc des Champs-Elysées",16,4,Non,140,,PLAACE,"semi libre",Feuillu
+297,49.849963215079,3.2935917781739,"Parc des Champs-Elysées",16,4,Non,138,,PLAACE,"semi libre",Feuillu
+298,49.850052803872,3.2934983300537,"Parc des Champs-Elysées",16,4,Non,135,,PLAACE,"semi libre",Feuillu
+299,49.850142766672,3.2934044903333,"Parc des Champs-Elysées",16,4,Non,141,,PLAACE,"semi libre",Feuillu
+300,49.850230597575,3.2933128747554,"Parc des Champs-Elysées",16,4,Non,131,,PLAACE,"semi libre",Feuillu
+301,49.85034132851,3.2931973728858,"Parc des Champs-Elysées",16,4,Non,132,,PLAACE,"semi libre",Feuillu
+302,49.850429645096,3.2931052505631,"Parc des Champs-Elysées",16,4,Non,139,,PLAACE,"semi libre",Feuillu
+303,49.850518934222,3.2930121117324,"Parc des Champs-Elysées",16,4,Non,136,,PLAACE,"semi libre",Feuillu
+304,49.850609233741,3.2929179176756,"Parc des Champs-Elysées",16,4,Non,125,,PLAACE,"semi libre",Feuillu
+305,49.850688682135,3.2928350463844,"Parc des Champs-Elysées",16,4,Non,134,,PLAACE,"semi libre",Feuillu
+306,49.850781600965,3.2927381197496,"Parc des Champs-Elysées",16,4,Non,128,,PLAACE,"semi libre",Feuillu
+307,49.850871674902,3.2926441611103,"Parc des Champs-Elysées",16,4,Non,129,,PLAACE,"semi libre",Feuillu
+308,49.850961599123,3.2925503597473,"Parc des Champs-Elysées",16,4,Non,126,,PLAACE,"semi libre",Feuillu
+309,49.851051412401,3.2924566713983,"Parc des Champs-Elysées",16,4,Non,127,,PLAACE,"semi libre",Feuillu
+310,49.851136772706,3.2923676295535,"Parc des Champs-Elysées",16,4,Non,127,,PLAACE,"semi libre",Feuillu
+311,49.851227904567,3.2922725662585,"Parc des Champs-Elysées",17,4,Non,148,,PLAACE,"semi libre",Feuillu
+312,49.85113873788,3.2919261628857,"Parc des Champs-Elysées",17,4,Non,186,,PLAACE,"semi libre",Feuillu
+313,49.851051671573,3.2920169862727,"Parc des Champs-Elysées",17,4,Non,147,,PLAACE,"semi libre",Feuillu
+314,49.850962326473,3.2921101859861,"Parc des Champs-Elysées",17,4,Non,151,,PLAACE,"semi libre",Feuillu
+315,49.850874385664,3.2922019212206,"Parc des Champs-Elysées",17,4,Non,164,,PLAACE,"semi libre",Feuillu
+316,49.850784229156,3.2922959663913,"Parc des Champs-Elysées",17,4,Non,154,,PLAACE,"semi libre",Feuillu
+317,49.850695634681,3.2923883839533,"Parc des Champs-Elysées",17,4,Non,149,,PLAACE,"semi libre",Feuillu
+318,49.850604543269,3.29248340314,"Parc des Champs-Elysées",17,4,Non,148,,PLAACE,"semi libre",Feuillu
+319,49.850511955459,3.2925799828758,"Parc des Champs-Elysées",17,4,Non,155,,PLAACE,"semi libre",Feuillu
+320,49.850432745199,3.2926626095905,"Parc des Champs-Elysées",17,4,Non,160,,PLAACE,"semi libre",Feuillu
+321,49.850343306719,3.2927559037312,"Parc des Champs-Elysées",17,4,Non,160,,PLAACE,"semi libre",Feuillu
+322,49.850253836611,3.2928492307143,"Parc des Champs-Elysées",17,4,Non,153,,PLAACE,"semi libre",Feuillu
+323,49.850140074603,3.2929678964015,"Parc des Champs-Elysées",17,4,Non,164,,PLAACE,"semi libre",Feuillu
+324,49.85005821214,3.2930532869108,"Parc des Champs-Elysées",17,4,Non,153,,PLAACE,"semi libre",Feuillu
+325,49.849969054568,3.2931462879252,"Parc des Champs-Elysées",17,4,Non,165,,PLAACE,"semi libre",Feuillu
+326,49.849876778973,3.2932425388863,"Parc des Champs-Elysées",17,4,Non,165,,PLAACE,"semi libre",Feuillu
+327,49.84978621686,3.293337003288,"Parc des Champs-Elysées",17,4,Non,156,,PLAACE,"semi libre",Feuillu
+328,49.849695653772,3.2934314659453,"Parc des Champs-Elysées",17,4,Non,166,,PLAACE,"semi libre",Feuillu
+329,49.849617285698,3.29351321064,"Parc des Champs-Elysées",17,4,Non,163,,PLAACE,"semi libre",Feuillu
+330,49.849526632314,3.2936077694376,"Parc des Champs-Elysées",17,4,Non,163,,PLAACE,"semi libre",Feuillu
+331,49.849437883525,3.2937003398556,"Parc des Champs-Elysées",17,4,Non,155,,PLAACE,"semi libre",Feuillu
+332,49.849347580967,3.2937893675843,"Parc des Champs-Elysées",17,4,Non,173,,PLAACE,"semi libre",Feuillu
+333,49.849370009743,3.2936797351199,"Parc des Champs-Elysées",17,4,Non,132,,PLAACE,"semi libre",Feuillu
+334,49.849458951425,3.2935869615543,"Parc des Champs-Elysées",17,4,Non,140,,PLAACE,"semi libre",Feuillu
+335,49.84954339862,3.2934988784917,"Parc des Champs-Elysées",17,4,Non,159,,PLAACE,"semi libre",Feuillu
+336,49.849632652936,3.2934057793899,"Parc des Champs-Elysées",17,4,Non,135,,PLAACE,"semi libre",Feuillu
+337,49.849717975254,3.2933167818599,"Parc des Champs-Elysées",17,4,Non,135,,PLAACE,"semi libre",Feuillu
+338,49.849808039781,3.2932228359921,"Parc des Champs-Elysées",17,4,Non,132,,PLAACE,"semi libre",Feuillu
+339,49.849899283257,3.2931276621142,"Parc des Champs-Elysées",17,4,Non,131,,PLAACE,"semi libre",Feuillu
+340,49.849990245419,3.2930327795858,"Parc des Champs-Elysées",17,4,Non,131,,PLAACE,"semi libre",Feuillu
+341,49.850073323859,3.2929461199938,"Parc des Champs-Elysées",17,4,Non,133,,PLAACE,"semi libre",Feuillu
+342,49.850184429424,3.2928302264086,"Parc des Champs-Elysées",17,4,Non,133,,PLAACE,"semi libre",Feuillu
+343,49.850271397242,3.2927395083703,"Parc des Champs-Elysées",17,4,Non,132,,PLAACE,"semi libre",Feuillu
+344,49.850362708815,3.2926442608006,"Parc des Champs-Elysées",17,4,Non,141,,PLAACE,"semi libre",Feuillu
+345,49.850450499454,3.292552684929,"Parc des Champs-Elysées",17,4,Non,140,,PLAACE,"semi libre",Feuillu
+346,49.850532339903,3.2924673164112,"Parc des Champs-Elysées",17,4,Non,133,,PLAACE,"semi libre",Feuillu
+347,49.850622977004,3.2923727701642,"Parc des Champs-Elysées",17,4,Non,130,,PLAACE,"semi libre",Feuillu
+348,49.850713574367,3.2922782636551,"Parc des Champs-Elysées",17,4,Non,135,,PLAACE,"semi libre",Feuillu
+349,49.85080189112,3.2921861375951,"Parc des Champs-Elysées",17,4,Non,129,,PLAACE,"semi libre",Feuillu
+350,49.850890692747,3.2920935051799,"Parc des Champs-Elysées",17,4,Non,141,,PLAACE,"semi libre",Feuillu
+351,49.850978335107,3.292002082191,"Parc des Champs-Elysées",17,4,Non,125,,PLAACE,"semi libre",Feuillu
+352,49.851069109732,3.2919073890469,"Parc des Champs-Elysées",17,4,Non,146,,PLAACE,"semi libre",Feuillu
+353,49.850986815982,3.2917079963298,"Parc des Champs-Elysées",17,4,Non,145,,PLAACE,"semi libre",Feuillu
+354,49.850896704939,3.2918019970058,"Parc des Champs-Elysées",17,4,Non,128,,PLAACE,"semi libre",Feuillu
+355,49.850811306295,3.2918910794917,"Parc des Champs-Elysées",17,4,Non,131,,PLAACE,"semi libre",Feuillu
+356,49.850722206464,3.2919840232016,"Parc des Champs-Elysées",17,4,Non,138,,PLAACE,"semi libre",Feuillu
+357,49.852552452624,3.2897452103502,"Jardin d'horticulture",27,6,Non,565,,SEQGIG,"semi libre",Conifère
+358,49.848521273429,3.2907283252709,"Square Churchill",20,3,Non,415,,AESHIP,"semi libre",Feuillu
+359,49.847947451496,3.286839616135,"Place Noël Regnier",8,2,Non,120,,PRUSER,"semi libre",Feuillu
+360,49.847900845272,3.2869014923002,"Place Noël Regnier",5,2,Non,125,,PRUSER,"semi libre",Feuillu
+361,49.847850613412,3.286962884158,"Place Noël Regnier",6,2,Non,90,,PRUSER,"semi libre",Feuillu
+362,49.847628470618,3.2867461421486,"Place Noël Regnier",10,4,Non,135,,PINNIGnig,"semi libre",Conifère
+363,49.847678033949,3.2866348473998,"Place Noël Regnier",6,2,Non,135,,PRUSER,"semi libre",Feuillu
+364,49.840902969056,3.2874445242193,"Boulevard Victor Hugo",9,2,Non,80,,CARBETfas,"semi libre",Feuillu
+365,49.841862908941,3.2844932609153,"Boulevard Victor Hugo",9,2,Non,96,,CARBETfas,"semi libre",Feuillu
+366,49.840732990162,3.2941793904574,"Quai Gayant",5,2,Non,24,,QUERUB,"semi libre",Feuillu
+367,49.863751771285,3.2655241034683,"Rue de Lille",7,3,Non,155,,PINNIGnig,"semi libre",Conifère
+368,49.869195452886,3.2722206500909,"Rue du Président John Fitzgerald Kennedy",12,2,Non,130,,ACEPLA,"semi libre",Feuillu
+369,49.86899779175,3.272305862069,"Rue du Président John Fitzgerald Kennedy",13,2,Non,188,,ACEPLA,"semi libre",Feuillu
+370,49.868647286023,3.2724815959489,"Rue du Président John Fitzgerald Kennedy",13,3,Non,162,,ACEPLA,"semi libre",Feuillu
+371,49.868147775283,3.2727392316905,"Rue du Président John Fitzgerald Kennedy",10,2,Non,165,,ACEPLA,"semi libre",Feuillu
+372,49.867964709742,3.2728290609617,"Rue du Président John Fitzgerald Kennedy",10,3,Non,140,,ACEPLA,"semi libre",Feuillu
+373,49.837562511992,3.3259542156461,"Stade Marcel Bienfait",23,2,Non,200,,POPNIGita,"semi libre",Feuillu
+374,49.837609609466,3.3259418367967,"Stade Marcel Bienfait",23,2,Non,170,,POPNIGita,"semi libre",Feuillu
+375,49.837665984004,3.3259273120423,"Stade Marcel Bienfait",20,2,Non,100,,POPNIGita,"semi libre",Feuillu
+376,49.837717005533,3.3259144073219,"Stade Marcel Bienfait",21,2,Non,130,,POPNIGita,"semi libre",Feuillu
+377,49.83776945907,3.3258993046109,"Stade Marcel Bienfait",22,2,Non,200,,POPNIGita,"semi libre",Feuillu
+378,49.837824045305,3.3258864221044,"Stade Marcel Bienfait",21,2,Non,185,,POPNIGita,"semi libre",Feuillu
+379,49.837884344518,3.3258708209243,"Stade Marcel Bienfait",18,2,Non,90,,POPNIGita,"semi libre",Feuillu
+380,49.837931082001,3.3258595404826,"Stade Marcel Bienfait",20,2,Non,180,,POPNIGita,"semi libre",Feuillu
+381,49.837986743576,3.3258450121972,"Stade Marcel Bienfait",20,2,Non,145,,POPNIGita,"semi libre",Feuillu
+382,49.838039189443,3.3258326672396,"Stade Marcel Bienfait",20,2,Non,140,,POPNIGita,"semi libre",Feuillu
+383,49.838086643819,3.3258202891319,"Stade Marcel Bienfait",20,2,Non,200,,POPNIGita,"semi libre",Feuillu
+384,49.838148013512,3.3258041430192,"Stade Marcel Bienfait",20,2,Non,185,,POPNIGita,"semi libre",Feuillu
+385,49.838198676568,3.3257917861476,"Stade Marcel Bienfait",20,2,Non,180,,POPNIGita,"semi libre",Feuillu
+386,49.838251842388,3.3257772397564,"Stade Marcel Bienfait",20,2,Non,200,,POPNIGita,"semi libre",Feuillu
+387,49.838305361791,3.3257632489431,"Stade Marcel Bienfait",20,2,Non,190,,POPNIGita,"semi libre",Feuillu
+388,49.838361380902,3.325748169546,"Stade Marcel Bienfait",20,2,Non,180,,POPNIGita,"semi libre",Feuillu
+389,49.83840919371,3.3257352431692,"Stade Marcel Bienfait",18,2,Non,160,,POPNIGita,"semi libre",Feuillu
+390,49.838471629286,3.3257202062755,"Stade Marcel Bienfait",20,2,Non,150,,POPNIGita,"semi libre",Feuillu
+391,49.838524077563,3.325707307813,"Stade Marcel Bienfait",20,2,Non,155,,POPNIGita,"semi libre",Feuillu
+392,49.838583301385,3.3256933532962,"Stade Marcel Bienfait",20,2,Non,155,,POPNIGita,"semi libre",Feuillu
+393,49.838636464125,3.325679909028,"Stade Marcel Bienfait",20,2,Non,155,,POPNIGita,"semi libre",Feuillu
+394,49.838688911488,3.3256670132534,"Stade Marcel Bienfait",20,2,Non,150,,POPNIGita,"semi libre",Feuillu
+395,49.838793211517,3.3256416930991,"Stade Marcel Bienfait",20,2,Non,140,,POPNIGita,"semi libre",Feuillu
+396,49.838849724267,3.3256285281087,"Stade Marcel Bienfait",20,2,Non,160,,POPNIGita,"semi libre",Feuillu
+397,49.838900334642,3.3256179721332,"Stade Marcel Bienfait",18,2,Non,130,,POPNIGita,"semi libre",Feuillu
+398,49.838954756127,3.3256044999011,"Stade Marcel Bienfait",18,2,Non,170,,POPNIGita,"semi libre",Feuillu
+399,49.839002706881,3.3255930435092,"Stade Marcel Bienfait",18,2,Non,120,,POPNIGita,"semi libre",Feuillu
+400,49.839056556818,3.325580450164,"Stade Marcel Bienfait",18,2,Non,150,,POPNIGita,"semi libre",Feuillu
+401,49.839112687933,3.3255677607072,"Stade Marcel Bienfait",18,2,Non,145,,POPNIGita,"semi libre",Feuillu
+402,49.839165134377,3.3255548632916,"Stade Marcel Bienfait",18,2,Non,150,,POPNIGita,"semi libre",Feuillu
+403,49.839220794358,3.3255408847789,"Stade Marcel Bienfait",19,2,Non,145,,POPNIGita,"semi libre",Feuillu
+404,49.839275740496,3.3255269015017,"Stade Marcel Bienfait",19,2,Non,150,,POPNIGita,"semi libre",Feuillu
+405,49.839330328181,3.3255134677013,"Stade Marcel Bienfait",18,2,Non,135,,POPNIGita,"semi libre",Feuillu
+406,49.839380988127,3.3255022112025,"Stade Marcel Bienfait",20,2,Non,165,,POPNIGita,"semi libre",Feuillu
+407,49.839438072453,3.3254887925072,"Stade Marcel Bienfait",21,2,Non,165,,POPNIGita,"semi libre",Feuillu
+408,49.839495301933,3.3254765230008,"Stade Marcel Bienfait",19,2,Non,195,,POPNIGita,"semi libre",Feuillu
+409,49.839547037839,3.3254630715703,"Stade Marcel Bienfait",21,2,Non,180,,POPNIGita,"semi libre",Feuillu
+410,49.839601749279,3.3254478006727,"Stade Marcel Bienfait",24,2,Non,175,,POPNIGita,"semi libre",Feuillu
+411,49.839660019583,3.3254353072122,"Stade Marcel Bienfait",23,2,Non,240,,POPNIGita,"semi libre",Feuillu
+412,49.839706996252,3.3254236605347,"Stade Marcel Bienfait",22,2,Non,265,,POPNIGita,"semi libre",Feuillu
+413,49.839621464257,3.3254084150599,"Stade Marcel Bienfait",22,2,Non,205,,POPNIGita,"semi libre",Feuillu
+414,49.839572107976,3.3254209634551,"Stade Marcel Bienfait",20,2,Non,200,,POPNIGita,"semi libre",Feuillu
+415,49.839412156299,3.3254576177878,"Stade Marcel Bienfait",20,2,Non,205,,POPNIGita,"semi libre",Feuillu
+416,49.839358045115,3.3254710548313,"Stade Marcel Bienfait",20,2,Non,170,,POPNIGita,"semi libre",Feuillu
+417,49.839301552509,3.3254853963287,"Stade Marcel Bienfait",20,2,Non,180,,POPNIGita,"semi libre",Feuillu
+418,49.839247442066,3.3254979158268,"Stade Marcel Bienfait",19,2,Non,175,,POPNIGita,"semi libre",Feuillu
+419,49.839195110229,3.3255122834564,"Stade Marcel Bienfait",20,2,Non,135,,POPNIGita,"semi libre",Feuillu
+420,49.839146352388,3.3255229992407,"Stade Marcel Bienfait",20,2,Non,190,,POPNIGita,"semi libre",Feuillu
+421,49.839085698246,3.3255382332906,"Stade Marcel Bienfait",20,2,Non,180,,POPNIGita,"semi libre",Feuillu
+422,49.839033370602,3.3255507617164,"Stade Marcel Bienfait",20,2,Non,180,,POPNIGita,"semi libre",Feuillu
+423,49.83897986116,3.3255605284354,"Stade Marcel Bienfait",20,2,Non,150,,POPNIGita,"semi libre",Feuillu
+424,49.838923961152,3.3255757925227,"Stade Marcel Bienfait",20,2,Non,145,,POPNIGita,"semi libre",Feuillu
+425,49.83887461248,3.3255855853941,"Stade Marcel Bienfait",20,2,Non,170,,POPNIGita,"semi libre",Feuillu
+426,49.838817526484,3.3255999212934,"Stade Marcel Bienfait",20,2,Non,165,,POPNIGita,"semi libre",Feuillu
+427,49.838768768628,3.3256106369083,"Stade Marcel Bienfait",20,2,Non,185,,POPNIGita,"semi libre",Feuillu
+428,49.838716439311,3.325624086815,"Stade Marcel Bienfait",20,2,Non,175,,POPNIGita,"semi libre",Feuillu
+429,49.838662917114,3.32563844626,"Stade Marcel Bienfait",20,2,Non,185,,POPNIGita,"semi libre",Feuillu
+430,49.838606423719,3.3256537062244,"Stade Marcel Bienfait",20,2,Non,185,,POPNIGita,"semi libre",Feuillu
+431,49.838547554003,3.325668031525,"Stade Marcel Bienfait",20,2,Non,170,,POPNIGita,"semi libre",Feuillu
+432,49.838433977879,3.3256957921665,"Stade Marcel Bienfait",20,2,Non,195,,POPNIGita,"semi libre",Feuillu
+433,49.838379275683,3.3257073856425,"Stade Marcel Bienfait",20,2,Non,80,,POPNIGita,"semi libre",Feuillu
+434,49.838327888476,3.3257237816714,"Stade Marcel Bienfait",20,2,Non,100,,POPNIGita,"semi libre",Feuillu
+435,49.838223704498,3.3257506813427,"Stade Marcel Bienfait",18,2,Non,75,,POPNIGita,"semi libre",Feuillu
+436,49.838106913263,3.3257800745002,"Stade Marcel Bienfait",20,2,Non,95,,POPNIGita,"semi libre",Feuillu
+437,49.83800772687,3.3258048023944,"Stade Marcel Bienfait",20,2,Non,170,,POPNIGita,"semi libre",Feuillu
+438,49.837960864218,3.3258181004992,"Stade Marcel Bienfait",18,2,Non,80,,POPNIGita,"semi libre",Feuillu
+439,49.837907343778,3.3258324595237,"Stade Marcel Bienfait",18,2,Non,85,,POPNIGita,"semi libre",Feuillu
+440,49.837847926381,3.325847149147,"Stade Marcel Bienfait",20,2,Non,165,,POPNIGita,"semi libre",Feuillu
+441,49.837794650541,3.3258585710703,"Stade Marcel Bienfait",18,2,Non,75,,POPNIGita,"semi libre",Feuillu
+442,49.837742794225,3.3258729396569,"Stade Marcel Bienfait",20,2,Non,100,,POPNIGita,"semi libre",Feuillu
+443,49.837696650739,3.3258836721187,"Stade Marcel Bienfait",20,2,Non,125,,POPNIGita,"semi libre",Feuillu
+444,49.836259331633,3.3202354565656,"Terrain aventure Neuville",24,3,Non,275,,POPTRE,"Semi libre",Feuillu
+445,49.836227036513,3.3203135349261,"Terrain aventure Neuville",22,3,Non,240,,POPTRE,"Semi libre",Feuillu
+446,49.836196519027,3.3203938294011,"Terrain aventure Neuville",23,3,Non,230,,POPTRE,"Semi libre",Feuillu
+447,49.83607635146,3.3206690777293,"Terrain aventure Neuville",24,4,Non,235,,POPTRE,Libre,Feuillu
+448,49.836048832403,3.3207387310728,"Terrain aventure Neuville",23,3,Non,170,,POPTRE,Libre,Feuillu
+449,49.836020708273,3.3208129758704,"Terrain aventure Neuville",22,4,Non,170,,POPTRE,Libre,Feuillu
+450,49.835962099299,3.3209541006263,"Terrain aventure Neuville",25,4,Non,210,,POPTRE,Libre,Feuillu
+451,49.835931552012,3.3210457854674,"Terrain aventure Neuville",25,4,Non,200,,POPTRE,Libre,Feuillu
+452,49.835862861198,3.3211794959933,"Terrain aventure Neuville",23,2,Non,195,,POPTRE,Libre,Feuillu
+453,49.835837112067,3.321253754408,"Terrain aventure Neuville",22,4,Non,220,,POPTRE,Libre,Feuillu
+454,49.835855489459,3.3217222622881,"Terrain aventure Neuville",25,3,Non,220,,POPNIGita,"Semi libre",Feuillu
+455,49.835805094787,3.3216778442574,"Terrain aventure Neuville",26,4,Non,205,,POPNIGita,"Semi libre",Feuillu
+456,49.835773066121,3.3216094697931,"Terrain aventure Neuville",25,4,Non,195,,POPNIGita,"Semi libre",Feuillu
+457,49.835817541673,3.3214647662188,"Terrain aventure Neuville",26,3,Non,205,,POPNIGita,"Semi libre",Feuillu
+458,49.835840336811,3.3213838734132,"Terrain aventure Neuville",24,3,Non,160,,POPNIGita,"Semi libre",Feuillu
+459,49.835871020651,3.3214660212629,"Terrain aventure Neuville",26,3,Non,185,,POPNIGita,"Semi libre",Feuillu
+460,49.835910143391,3.3214127941903,"Terrain aventure Neuville",26,3,Non,200,,POPNIGita,"Semi libre",Feuillu
+461,49.835882067398,3.3213330514639,"Terrain aventure Neuville",25,3,Non,155,,POPNIGita,"Semi libre",Feuillu
+462,49.835884716969,3.3212292467079,"Terrain aventure Neuville",23,3,Non,135,,POPNIGita,"Semi libre",Feuillu
+463,49.835927144834,3.3212754526359,"Terrain aventure Neuville",25,3,Non,185,,POPNIGita,"Semi libre",Feuillu
+464,49.835933301319,3.3211940879196,"Terrain aventure Neuville",25,3,Non,190,,POPNIGita,"Semi libre",Feuillu
+465,49.836803142653,3.3211137427458,"Terrain aventure Neuville",22,2,Non,140,,POPNIGita,"semi libre",Feuillu
+466,49.836830286701,3.3211864984394,"Terrain aventure Neuville",20,2,Non,105,,POPNIGita,"semi libre",Feuillu
+467,49.836804154873,3.3211808200564,"Terrain aventure Neuville",20,6,Non,190,,POPTRE,"semi libre",Feuillu
+468,49.83677632301,3.3211438944009,"Terrain aventure Neuville",20,3,Non,235,,POPTRE,"semi libre",Feuillu
+469,49.836796994182,3.3218689531682,"Terrain aventure Neuville",18,1,Non,275,,POPTRE,Libre,Feuillu
+470,49.836805498209,3.3217991789388,"Terrain aventure Neuville",18,2,Non,220,,POPTRE,Libre,Feuillu
+471,49.836760881287,3.3218172729106,"Terrain aventure Neuville",20,6,Non,230,,POPTRE,Libre,Feuillu
+472,49.836705006007,3.32182335241,"Terrain aventure Neuville",20,6,Non,190,,POPTRE,Libre,Feuillu
+473,49.836655219878,3.321773423119,"Terrain aventure Neuville",20,6,Non,240,,POPTRE,Libre,Feuillu
+474,49.836370293627,3.3220253936324,"Terrain aventure Neuville",24,0,Non,290,,POPNIGita,"semi libre",Feuillu
+475,49.83633602643,3.322033079682,"Terrain aventure Neuville",25,0,Non,215,,POPNIGita,"semi libre",Feuillu
+476,49.83629836319,3.3220415274362,"Terrain aventure Neuville",23,0,Non,210,,POPNIGita,"semi libre",Feuillu
+477,49.836258769379,3.322050407331,"Terrain aventure Neuville",25,0,Non,280,,POPNIGita,"semi libre",Feuillu
+478,49.836189165339,3.3220660183723,"Terrain aventure Neuville",25,0,Non,200,,POPNIGita,"semi libre",Feuillu
+479,49.836153710648,3.3220739704154,"Terrain aventure Neuville",25,0,Non,210,,POPNIGita,"semi libre",Feuillu
+480,49.836114117727,3.3220828516539,"Terrain aventure Neuville",25,0,Non,240,,POPNIGita,"semi libre",Feuillu
+481,49.836079384524,3.3220906416,"Terrain aventure Neuville",25,0,Non,180,,POPNIGita,"semi libre",Feuillu
+482,49.836047979894,3.3220976846756,"Terrain aventure Neuville",25,0,Non,210,,POPNIGita,"semi libre",Feuillu
+483,49.836011524828,3.3221058608577,"Terrain aventure Neuville",25,0,Non,190,,POPNIGita,"semi libre",Feuillu
+484,49.835976173871,3.3221179447309,"Terrain aventure Neuville",25,0,Non,210,,POPNIGita,"semi libre",Feuillu
+485,49.835945736289,3.3221221626032,"Terrain aventure Neuville",25,0,Non,200,,POPNIGita,"semi libre",Feuillu
+486,49.835911485442,3.3221307660532,"Terrain aventure Neuville",25,0,Non,200,,POPNIGita,"semi libre",Feuillu
+487,49.835873430729,3.322139347315,"Terrain aventure Neuville",25,0,Non,200,,POPNIGita,"semi libre",Feuillu
+488,49.83583728265,3.3221457350813,"Terrain aventure Neuville",25,0,Non,230,,POPNIGita,"semi libre",Feuillu
+489,49.835801603897,3.3221550644573,"Terrain aventure Neuville",25,0,Non,200,,POPNIGita,"semi libre",Feuillu
+490,49.8357602189,3.3221643591597,"Terrain aventure Neuville",25,0,Non,190,,POPNIGita,"semi libre",Feuillu
+491,49.83572216732,3.322171469732,"Terrain aventure Neuville",25,0,Non,200,,POPNIGita,"semi libre",Feuillu
+492,49.835685062896,3.3221800557746,"Terrain aventure Neuville",25,0,Non,240,,POPNIGita,"semi libre",Feuillu
+493,49.835613713665,3.3221950406039,"Terrain aventure Neuville",24,0,Non,290,,POPNIGita,"semi libre",Feuillu
+494,49.841291690954,3.2817353817143,"Rue du Colonel Driant",25,3,Non,175,,POPNIGita,"semi libre",Feuillu
+495,49.841266599019,3.28179313217,"Rue du Colonel Driant",25,3,Non,190,,POPNIGita,"semi libre",Feuillu
+496,49.841241208167,3.2818517983755,"Rue du Colonel Driant",25,3,Non,190,,POPNIGita,"semi libre",Feuillu
+497,49.841218206694,3.2819049675343,"Rue du Colonel Driant",25,3,Non,165,,POPNIGita,"semi libre",Feuillu
+498,49.841194309832,3.2819599679389,"Rue du Colonel Driant",26,3,Non,235,,POPNIGita,"semi libre",Feuillu
+499,49.841157699362,3.2819827930728,"Rue du Colonel Driant",26,3,Non,250,,POPNIGita,"semi libre",Feuillu
+500,49.841185419639,3.2819185518579,"Rue du Colonel Driant",25,3,Non,195,,POPNIGita,"semi libre",Feuillu
+501,49.841202817598,3.2818783627282,"Rue du Colonel Driant",25,3,Non,185,,POPNIGita,"semi libre",Feuillu
+502,49.841229009255,3.2818179356396,"Rue du Colonel Driant",25,4,Non,210,,POPNIGita,"semi libre",Feuillu
+503,49.841255006049,3.2817592715186,"Rue du Colonel Driant",25,3,Non,200,,POPNIGita,"semi libre",Feuillu
+504,49.841278138341,3.2817058847429,"Rue du Colonel Driant",25,3,Non,160,,POPNIGita,"semi libre",Feuillu
+505,49.84129649216,3.281663348744,"Rue du Colonel Driant",25,3,Non,120,,POPNIGita,"semi libre",Feuillu
+506,49.841309130936,3.2816251951768,"Rue du Colonel Driant",25,3,Non,165,,POPNIGita,"semi libre",Feuillu
+507,49.841335881174,3.2815694740446,"Rue du Colonel Driant",25,3,Non,160,,POPNIGita,"semi libre",Feuillu
+508,49.841352890252,3.2815328121363,"Rue du Colonel Driant",25,3,Non,140,,POPNIGita,"semi libre",Feuillu
+509,49.841379455678,3.2814750337496,"Rue du Colonel Driant",25,3,Non,160,,POPNIGita,"semi libre",Feuillu
+510,49.841420544533,3.2813864609521,"Rue du Colonel Driant",25,3,Non,195,,POPNIGita,"semi libre",Feuillu
+511,49.841443855081,3.2813377778715,"Rue du Colonel Driant",25,3,Non,160,,POPNIGita,"semi libre",Feuillu
+512,49.841463736993,3.2812923100848,"Rue du Colonel Driant",25,3,Non,165,,POPNIGita,"semi libre",Feuillu
+513,49.841485136347,3.2812480298401,"Rue du Colonel Driant",25,3,Non,165,,POPNIGita,"semi libre",Feuillu
+514,49.841522497549,3.2811267948842,"Rue du Colonel Driant",25,2,Non,310,,POPNIGita,"semi libre",Feuillu
+515,49.841502619224,3.281170791985,"Rue du Colonel Driant",25,2,Non,220,,POPNIGita,"semi libre",Feuillu
+516,49.841484848967,3.2812077431012,"Rue du Colonel Driant",25,3,Non,215,,POPNIGita,"semi libre",Feuillu
+517,49.841464399405,3.2812526182469,"Rue du Colonel Driant",25,3,Non,200,,POPNIGita,"semi libre",Feuillu
+518,49.841442428443,3.2812971926974,"Rue du Colonel Driant",25,3,Non,200,,POPNIGita,"semi libre",Feuillu
+519,49.841421214534,3.2813432408814,"Rue du Colonel Driant",25,3,Non,190,,POPNIGita,"semi libre",Feuillu
+520,49.859648800164,3.2920104014575,"Rue Marconi",30,5,Non,180,,POPCAN,"semi libre",Feuillu
+521,49.84140019121,3.2813892873377,"Rue du Colonel Driant",25,3,Non,190,,POPNIGita,"semi libre",Feuillu
+522,49.841374202866,3.2814441302359,"Rue du Colonel Driant",25,3,Non,190,,POPNIGita,"semi libre",Feuillu
+523,49.841353369709,3.2814895910344,"Rue du Colonel Driant",25,3,Non,180,,POPNIGita,"semi libre",Feuillu
+524,49.841331017657,3.2815344564237,"Rue du Colonel Driant",25,3,Non,170,,POPNIGita,"semi libre",Feuillu
+525,49.841309420728,3.2815819730263,"Rue du Colonel Driant",25,3,Non,165,,POPNIGita,"semi libre",Feuillu
+526,49.84128686907,3.2816309521515,"Rue du Colonel Driant",26,3,Non,225,,POPNIGita,"semi libre",Feuillu
+527,49.835678715445,3.2655423775765,"Stade Gaston Massot",21,9,Non,185,,POPCAN,"semi libre",Feuillu
+528,49.835642049355,3.265460416371,"Stade Gaston Massot",21,9,Non,185,,POPCAN,"semi libre",Feuillu
+529,49.835604796068,3.2653756956887,"Stade Gaston Massot",19,9,Non,165,,POPCAN,"semi libre",Feuillu
+530,49.835572862078,3.2653038657978,"Stade Gaston Massot",19,9,Non,140,,POPCAN,"semi libre",Feuillu
+531,49.835535012331,3.2652200609398,"Stade Gaston Massot",21,9,Non,185,,POPCAN,"semi libre",Feuillu
+532,49.835499532481,3.2651390240382,"Stade Gaston Massot",21,9,Non,165,,POPCAN,"semi libre",Feuillu
+533,49.835463445575,3.2650644170091,"Stade Gaston Massot",21,9,Non,165,,POPCAN,"semi libre",Feuillu
+534,49.835426195249,3.2649778593423,"Stade Gaston Massot",21,9,Non,190,,POPCAN,"semi libre",Feuillu
+535,49.835390126003,3.2648949833973,"Stade Gaston Massot",21,9,Non,145,,POPCAN,"semi libre",Feuillu
+536,49.83535582797,3.2648176299506,"Stade Gaston Massot",21,9,Non,190,,POPCAN,"semi libre",Feuillu
+537,49.835321532233,3.2647384390181,"Stade Gaston Massot",21,9,Non,215,,POPCAN,"semi libre",Feuillu
+538,49.835279529574,3.2646509374329,"Stade Gaston Massot",21,9,Non,185,,POPCAN,"semi libre",Feuillu
+539,49.864888847632,3.2790068667206,"Rue des Anciens Combattants en Afrique du Nord",21,2,Non,220,,POPNIGita,"semi libre",Feuillu
+540,49.864858500118,3.2785566126011,"Rue des Anciens Combattants en Afrique du Nord",18,2,Non,170,,POPNIGita,"semi libre",Feuillu
+541,49.864849775798,3.2784212437696,"Rue des Anciens Combattants en Afrique du Nord",18,2,Non,190,,POPNIGita,"semi libre",Feuillu
+542,49.864839169027,3.2782777764772,"Rue des Anciens Combattants en Afrique du Nord",20,2,Non,170,,POPNIGita,"semi libre",Feuillu
+543,49.864829515846,3.2781328431261,"Rue des Anciens Combattants en Afrique du Nord",20,2,Non,170,,POPNIGita,"semi libre",Feuillu
+544,49.864819855527,3.2779908500635,"Rue des Anciens Combattants en Afrique du Nord",20,2,Non,190,,POPNIGita,"semi libre",Feuillu
+545,49.864810673262,3.2778481253924,"Rue des Anciens Combattants en Afrique du Nord",20,2,Non,230,,POPNIGita,"semi libre",Feuillu
+546,49.86482046285,3.2777238897024,"Rue des Anciens Combattants en Afrique du Nord",6,2,Non,75,,ACENEG,"réduit relâché",Feuillu
+547,49.86304355735,3.2970476226061,"Rue d'Alembert",17,2,Non,255,,POPSIM,réduit,Feuillu
+548,49.863097651664,3.2970396649979,"Rue d'Alembert",17,1,Non,260,,POPSIM,réduit,Feuillu
+549,49.863165420093,3.2970290279887,"Rue d'Alembert",17,2,Non,200,,POPSIM,réduit,Feuillu
+550,49.863223669595,3.2970229313628,"Rue d'Alembert",17,3,Non,225,,POPSIM,réduit,Feuillu
+551,49.86334315385,3.2970052415499,"Rue d'Alembert",16,3,Non,200,,POPSIM,réduit,Feuillu
+552,49.863401412642,3.2969954689987,"Rue d'Alembert",17,3,Non,175,,POPSIM,réduit,Feuillu
+553,49.863463825721,3.2969875588384,"Rue d'Alembert",17,3,Non,205,,POPSIM,réduit,Feuillu
+554,49.866639204435,3.2770659661085,"Stade Paul Debrésie",20,2,Non,190,,POPNIGita,"semi libre",Feuillu
+555,49.866673102405,3.2770540148736,"Stade Paul Debrésie",20,2,Non,160,,POPNIGita,"semi libre",Feuillu
+556,49.866758390506,3.2770208294115,"Stade Paul Debrésie",18,2,Non,150,,POPNIGita,"semi libre",Feuillu
+557,49.866791214308,3.2770110808215,"Stade Paul Debrésie",21,2,Non,190,,POPNIGita,"semi libre",Feuillu
+558,49.86682403852,3.2770007772463,"Stade Paul Debrésie",22,2,Non,150,,POPNIGita,"semi libre",Feuillu
+559,49.866858290796,3.2769899309166,"Stade Paul Debrésie",23,2,Non,210,,POPNIGita,"semi libre",Feuillu
+560,49.866891829733,3.2769796327385,"Stade Paul Debrésie",24,2,Non,200,,POPNIGita,"semi libre",Feuillu
+561,49.866923941406,3.2769687742965,"Stade Paul Debrésie",24,2,Non,180,,POPNIGita,"semi libre",Feuillu
+562,49.866956409184,3.2769590236293,"Stade Paul Debrésie",25,2,Non,205,,POPNIGita,"semi libre",Feuillu
+563,49.866977456912,3.2769536204847,"Stade Paul Debrésie",25,2,Non,215,,POPNIGita,"semi libre",Feuillu
+564,49.867001002557,3.2769476806302,"Stade Paul Debrésie",24,2,Non,180,,POPNIGita,"semi libre",Feuillu
+565,49.867035256124,3.2769362834276,"Stade Paul Debrésie",24,2,Non,190,,POPNIGita,"semi libre",Feuillu
+566,49.867070933364,3.2769254436571,"Stade Paul Debrésie",24,2,Non,170,,POPNIGita,"semi libre",Feuillu
+567,49.867105904664,3.2769123952767,"Stade Paul Debrésie",24,2,Non,175,,POPNIGita,"semi libre",Feuillu
+568,49.867140867262,3.2769026558328,"Stade Paul Debrésie",23,2,Non,200,,POPNIGita,"semi libre",Feuillu
+569,49.8671726225,3.2768923488615,"Stade Paul Debrésie",23,2,Non,200,,POPNIGita,"semi libre",Feuillu
+570,49.867206876063,3.2768809501895,"Stade Paul Debrésie",22,2,Non,160,,POPNIGita,"semi libre",Feuillu
+571,49.867247663003,3.2768706913696,"Stade Paul Debrésie",24,2,Non,205,,POPNIGita,"semi libre",Feuillu
+572,49.867286313739,3.276859317475,"Stade Paul Debrésie",25,2,Non,220,,POPNIGita,"semi libre",Feuillu
+573,49.867325326157,3.2768459231945,"Stade Paul Debrésie",24,2,Non,205,,POPNIGita,"semi libre",Feuillu
+574,49.867362433586,3.2768332525555,"Stade Paul Debrésie",25,2,Non,200,,POPNIGita,"semi libre",Feuillu
+575,49.867401679477,3.2768218819624,"Stade Paul Debrésie",25,2,Non,210,,POPNIGita,"semi libre",Feuillu
+576,49.867442353338,3.276808864199,"Stade Paul Debrésie",25,2,Non,210,,POPNIGita,"semi libre",Feuillu
+577,49.867477676333,3.2767980250296,"Stade Paul Debrésie",25,2,Non,180,,POPNIGita,"semi libre",Feuillu
+578,49.8675122842,3.2767877312292,"Stade Paul Debrésie",25,2,Non,210,,POPNIGita,"semi libre",Feuillu
+579,49.867550462336,3.2767746993309,"Stade Paul Debrésie",25,2,Non,205,,POPNIGita,"semi libre",Feuillu
+580,49.867591494007,3.2767616821161,"Stade Paul Debrésie",25,2,Non,210,,POPNIGita,"semi libre",Feuillu
+581,49.867627648133,3.2767506653549,"Stade Paul Debrésie",23,2,Non,115,,POPNIGita,"semi libre",Feuillu
+582,49.86766261371,3.276739270494,"Stade Paul Debrésie",25,2,Non,190,,POPNIGita,"semi libre",Feuillu
+583,49.867702809437,3.2767280873259,"Stade Paul Debrésie",25,2,Non,170,,POPNIGita,"semi libre",Feuillu
+584,49.867741700991,3.2767156129477,"Stade Paul Debrésie",25,2,Non,235,,POPNIGita,"semi libre",Feuillu
+585,49.867765041644,3.2767211163849,"Stade Paul Debrésie",25,2,Non,220,,POPNIGita,"semi libre",Feuillu
+586,49.867797175107,3.2767536508875,"Stade Paul Debrésie",25,2,Non,195,,POPNIGita,"semi libre",Feuillu
+587,49.867828956839,3.2767839788059,"Stade Paul Debrésie",25,2,Non,230,,POPNIGita,"semi libre",Feuillu
+588,49.867862640024,3.2768143160996,"Stade Paul Debrésie",24,2,Non,205,,POPNIGita,"semi libre",Feuillu
+589,49.86789062576,3.276841680835,"Stade Paul Debrésie",20,2,Non,120,,POPNIGita,"semi libre",Feuillu
+590,49.867920512111,3.2768697921356,"Stade Paul Debrésie",22,2,Non,195,,POPNIGita,"semi libre",Feuillu
+591,49.86794991934,3.2768986337948,"Stade Paul Debrésie",17,2,Non,135,,POPNIGita,"semi libre",Feuillu
+592,49.867958848019,3.2769442835475,"Stade Paul Debrésie",21,2,Non,170,,POPNIGita,"semi libre",Feuillu
+593,49.867967761139,3.2769972857684,"Stade Paul Debrésie",21,2,Non,160,,POPNIGita,"semi libre",Feuillu
+594,49.867990777912,3.2771195004608,"Stade Paul Debrésie",22,2,Non,145,,POPNIGita,"semi libre",Feuillu
+595,49.867997809359,3.2771629321432,"Stade Paul Debrésie",21,2,Non,165,,POPNIGita,"semi libre",Feuillu
+596,49.868006726685,3.2772137298193,"Stade Paul Debrésie",23,2,Non,175,,POPNIGita,"semi libre",Feuillu
+597,49.86801801146,3.2772682157742,"Stade Paul Debrésie",20,2,Non,180,,POPNIGita,"semi libre",Feuillu
+598,49.868036785018,3.2773749644308,"Stade Paul Debrésie",22,2,Non,195,,POPNIGita,"semi libre",Feuillu
+599,49.868046655171,3.2774250303711,"Stade Paul Debrésie",18,2,Non,125,,POPNIGita,"semi libre",Feuillu
+600,49.868055566276,3.277478032764,"Stade Paul Debrésie",20,2,Non,150,,POPNIGita,"semi libre",Feuillu
+601,49.868064476517,3.2775317709832,"Stade Paul Debrésie",21,2,Non,170,,POPNIGita,"semi libre",Feuillu
+602,49.854309009728,3.3100137599786,"Auberge de jeunesse",25,2,Non,250,,POPNIGita,"semi libre",Feuillu
+603,49.854312446141,3.3099476048796,"Auberge de jeunesse",25,2,Non,200,,POPNIGita,"semi libre",Feuillu
+604,49.854317952291,3.3098851380923,"Auberge de jeunesse",25,2,Non,200,,POPNIGita,"semi libre",Feuillu
+605,49.854315156576,3.3098161889321,"Auberge de jeunesse",25,2,Non,205,,POPNIGita,"semi libre",Feuillu
+606,49.854320417515,3.3097335004272,"Auberge de jeunesse",25,2,Non,195,,POPNIGita,"semi libre",Feuillu
+607,49.854322659179,3.3096696363543,"Auberge de jeunesse",23,2,Non,200,,POPNIGita,"semi libre",Feuillu
+608,49.854326416627,3.3095938327423,"Auberge de jeunesse",25,2,Non,290,,POPNIGita,"semi libre",Feuillu
+609,49.837791738536,3.3070585946657,"Place des Girondins",9,3,Non,225,,TILCOR,"réduit relâché",Feuillu
+610,49.837833585816,3.3070064748437,"Place des Girondins",9,3,Non,210,,TILCOR,"réduit relâché",Feuillu
+611,49.837875438298,3.306952700752,"Place des Girondins",9,3,Oui,300,,TILCOR,"réduit relâché",Feuillu
+612,49.83794554414,3.3068643646373,"Place des Girondins",9,3,Oui,210,,TILCOR,"réduit relâché",Feuillu
+613,49.837982030848,3.3068171722506,"Place des Girondins",9,3,Non,205,,TILCOR,"réduit relâché",Feuillu
+614,49.838018871572,3.3067710857448,"Place des Girondins",9,3,Non,165,,TILCOR,"réduit relâché",Feuillu
+615,49.83813981181,3.3068853780379,"Place des Girondins",9,3,Non,270,,TILCOR,"réduit relâché",Feuillu
+616,49.862492979537,3.3065425753971,"Chemin de Morcourt",13,2,Non,57,,CHALAW,cépée,Conifère
+617,49.863443398286,3.3020510987965,"Rue Boileau",30,3,Non,305,,POPNIGita,"semi libre",Feuillu
+618,49.861186777056,3.299269343801,"Avenue Robert Schuman",7,2,Non,140,,PRUSER,"semi libre",Feuillu
+619,49.861163134115,3.2992177277994,"Avenue Robert Schuman",7,2,Non,140,,PRUSER,"semi libre",Feuillu
+620,49.861048782491,3.2989592131248,"Avenue Robert Schuman",6,2,Non,160,,PRUSER,"semi libre",Feuillu
+621,49.861004476978,3.2988523241598,"Avenue Robert Schuman",6,2,Non,140,,PRUSER,"semi libre",Feuillu
+622,49.860967248471,3.2987670767996,"Avenue Robert Schuman",6,2,Non,155,,PRUSER,"semi libre",Feuillu
+623,49.85881258302,3.2917372736486,"Avenue Robert Schuman",22,2,Non,245,,POPNIGita,"semi libre",Feuillu
+624,49.860255281309,3.2981103808411,"Avenue Robert Schuman",13,3,Non,185,,CATBIG,"semi libre",Feuillu
+625,49.860294895798,3.2981919624809,"Avenue Robert Schuman",13,3,Non,170,,CATBIG,"semi libre",Feuillu
+626,49.860345724539,3.298304863532,"Avenue Robert Schuman",12,3,Non,170,,CATBIG,"semi libre",Feuillu
+627,49.860389175195,3.2983970369803,"Avenue Robert Schuman",14,2,Non,165,,CATBIG,"semi libre",Feuillu
+628,49.860429956441,3.2984878189208,"Avenue Robert Schuman",14,3,Non,140,,CATBIG,"semi libre",Feuillu
+629,49.860471927846,3.2985772300353,"Avenue Robert Schuman",12,3,Non,145,,CATBIG,"semi libre",Feuillu
+630,49.860511527714,3.2986647855361,"Avenue Robert Schuman",12,2,Non,125,,CATBIG,"semi libre",Feuillu
+631,49.860554979246,3.2987565034597,"Avenue Robert Schuman",12,3,Non,155,,CATBIG,"semi libre",Feuillu
+632,49.860633591119,3.29892931828,"Avenue Robert Schuman",11,2,Non,135,,CATBIG,"semi libre",Feuillu
+633,49.860660191737,3.2989860069445,"Avenue Robert Schuman",14,2,Non,145,,CATBIG,"semi libre",Feuillu
+634,49.860701880131,3.2990698987204,"Avenue Robert Schuman",14,2,Non,160,,CATBIG,"semi libre",Feuillu
+635,49.860734983976,3.2991408739432,"Avenue Robert Schuman",14,3,Non,170,,CATBIG,"semi libre",Feuillu
+636,49.860766898357,3.2992118406192,"Avenue Robert Schuman",6,2,Oui,195,,CATBIG,"semi libre",Feuillu
+637,49.861555144899,3.2993806971467,"Rue Geoffroy Saint-Hilaire",30,7,Non,250,,POPCAN,"semi libre",Feuillu
+638,49.86153954963,3.2993431000258,"Rue Geoffroy Saint-Hilaire",30,7,Non,235,,POPCAN,"semi libre",Feuillu
+639,49.859505556459,3.2910778798038,"Rue Marconi",29,4,Non,200,,POPCAN,"semi libre",Feuillu
+640,49.859488930735,3.2910726383631,"Rue Marconi",29,4,Non,200,,POPCAN,"semi libre",Feuillu
+641,49.859483156132,3.2911020189425,"Rue Marconi",30,4,Non,180,,POPCAN,"semi libre",Feuillu
+642,49.85949890852,3.2912741845214,"Rue Marconi",35,5,Non,175,,POPCAN,"semi libre",Feuillu
+643,49.85947703577,3.2912762645372,"Rue Marconi",35,5,Non,165,,POPCAN,"semi libre",Feuillu
+644,49.859474064477,3.2913262525189,"Rue Marconi",35,5,Non,160,,POPCAN,"semi libre",Feuillu
+645,49.859482070169,3.2913579191391,"Rue Marconi",35,5,Non,125,,POPCAN,"semi libre",Feuillu
+646,49.859503875362,3.2913845165249,"Rue Marconi",33,5,Non,165,,POPCAN,"semi libre",Feuillu
+647,49.859498524249,3.2914352246885,"Rue Marconi",20,3,Non,85,,POPALB,"semi libre",Feuillu
+648,49.859541528409,3.291542834372,"Rue Marconi",34,5,Non,180,,POPCAN,"semi libre",Feuillu
+649,49.859505841505,3.2915566017586,"Rue Marconi",33,5,Non,110,,POPCAN,"semi libre",Feuillu
+650,49.859514330029,3.2915853299604,"Rue Marconi",34,5,Non,170,,POPCAN,"semi libre",Feuillu
+651,49.859498571492,3.2916146525615,"Rue Marconi",33,4,Non,155,,POPCAN,"semi libre",Feuillu
+652,49.859651254074,3.2919780597741,"Rue Marconi",30,4,Non,160,,POPCAN,"semi libre",Feuillu
+653,49.859714054802,3.2922060138313,"Rue Marconi",23,3,Non,140,,POPCAN,"semi libre",Feuillu
+654,49.859661342238,3.2922025500154,"Rue Marconi",30,3,Non,150,,POPCAN,"semi libre",Feuillu
+655,49.859663798213,3.2922691157449,"Rue Marconi",30,5,Non,190,,POPCAN,"semi libre",Feuillu
+656,49.859625689328,3.2925990754287,"Rue Marconi",33,3,Non,180,,POPNIGita,"semi libre",Feuillu
+657,49.859633676319,3.292638830618,"Rue Marconi",28,4,Non,125,,POPNIGita,"semi libre",Feuillu
+658,49.859649170285,3.292620535025,"Rue Marconi",32,3,Non,140,,POPNIGita,"semi libre",Feuillu
+659,49.859731614438,3.2928338961511,"Rue Marconi",26,3,Non,145,,POPCAN,"semi libre",Feuillu
+660,49.859733433326,3.2928681004766,"Rue Marconi",26,4,Non,175,,POPCAN,"semi libre",Feuillu
+661,49.859778805371,3.2928797584105,"Rue Marconi",26,4,Non,190,,POPCAN,"semi libre",Feuillu
+662,49.859798686172,3.2928162629547,"Rue Marconi",26,4,Non,170,,POPCAN,"semi libre",Feuillu
+663,49.860289990297,3.2932052455104,"Rue Hertz",9,2,Non,115,,ROBPSE,"semi libre",Feuillu
+664,49.860285444719,3.2931184465889,"Rue Hertz",11,2,Non,170,,ROBPSE,"semi libre",Feuillu
+665,49.860260757566,3.2927079661056,"Rue Hertz",15,2,Non,185,,ROBPSE,"semi libre",Feuillu
+666,49.860252152197,3.2925299572036,"Rue Hertz",15,2,Non,185,,ROBPSE,"semi libre",Feuillu
+667,49.860233478184,3.2921886378245,"Rue Hertz",14,2,Non,210,,ROBPSE,"semi libre",Feuillu
+668,49.860229395545,3.2921069875488,"Rue Hertz",14,2,Non,185,,ROBPSE,"semi libre",Feuillu
+669,49.860220771912,3.2919355972336,"Rue Hertz",8,2,Non,110,,ROBPSE,"semi libre",Feuillu
+670,49.860212617213,3.2917671497648,"Rue Hertz",13,2,Non,200,,ROBPSE,"semi libre",Feuillu
+671,49.860197553958,3.2915060069298,"Rue Hertz",13,2,Non,185,,ROBPSE,"semi libre",Feuillu
+672,49.860188440162,3.291340496699,"Rue Hertz",13,2,Non,165,,ROBPSE,"semi libre",Feuillu
+673,49.860183410297,3.2912573709531,"Rue Hertz",11,2,Non,150,,ROBPSE,"semi libre",Feuillu
+674,49.860238975496,3.2952158873818,"Rue Hertz",37,4,Non,280,,POPNIGita,"semi libre",Feuillu
+675,49.860237896706,3.2952930968897,"Rue Hertz",37,4,Non,230,,POPNIGita,"semi libre",Feuillu
+676,49.860259381377,3.2953777894145,"Rue Hertz",37,4,Oui,305,,POPNIGita,"semi libre",Feuillu
+677,49.85990777258,3.2942365731477,"Rue Berthollet",26,4,Non,240,,POPCAN,"semi libre",Feuillu
+678,49.859930120659,3.29428413344,"Rue Berthollet",26,4,Non,155,,POPCAN,"semi libre",Feuillu
+679,49.859901899863,3.2943065828588,"Rue Berthollet",26,4,Non,150,,POPCAN,"semi libre",Feuillu
+680,49.85986451921,3.2951791367307,"Rue Berthollet",33,2,Non,290,,POPNIGita,"semi libre",Feuillu
+681,49.861533246447,3.3015782949681,"Square des Marronniers",27,12,Non,310,,POPALB,"semi libre",Feuillu
+682,49.861427900502,3.3015011904403,"Square des Marronniers",27,8,Non,375,,POPALB,"semi libre",Feuillu
+683,49.861191590304,3.3021841168685,"Square des Marronniers",26,6,Non,330,,AESHIP,"semi libre",Feuillu
+684,49.86135934908,3.3023976357742,"Square des Marronniers",26,6,Non,285,,AESHIP,"semi libre",Feuillu
+685,49.861317829368,3.3024628401795,"Square des Marronniers",26,8,Non,270,,AESHIP,"semi libre",Feuillu
+686,49.862518830014,3.3027423135955,"Rue du Capitaine Dumont",20,3,Non,190,,POPALB,"semi libre",Feuillu
+687,49.862520746812,3.3024481629284,"Rue du Capitaine Dumont",17,3,Non,225,,POPALB,"semi libre",Feuillu
+688,49.8576789881,3.3053179031517,"Avenue de la Résistance",22,2,Non,200,,POPTRE,"semi libre",Feuillu
+689,49.857665389162,3.3052428177052,"Avenue de la Résistance",20,3,Non,185,,POPTRE,"semi libre",Feuillu
+690,49.857567981482,3.3054143038043,"Avenue de la Résistance",22,3,Non,190,,POPTRE,"semi libre",Feuillu
+691,49.855891960715,3.3047844472326,"Rue Jacky Tabar",6,2,Non,22,,BETPEN,"semi libre",Feuillu
+692,49.865287083657,3.3014970887467,"Terrain aventure Europe",31,4,Non,152,,POPNIGita,"semi libre",Feuillu
+693,49.865263879462,3.3015089034942,"Terrain aventure Europe",30,4,Non,90,,POPNIGita,"semi libre",Feuillu
+694,49.865235351977,3.3015105725051,"Terrain aventure Europe",31,4,Non,129,,POPNIGita,"semi libre",Feuillu
+695,49.865231101328,3.301547320988,"Terrain aventure Europe",24,4,Non,71,,POPNIGita,"semi libre",Feuillu
+696,49.865256675492,3.3015382789263,"Terrain aventure Europe",28,4,Non,70,,POPNIGita,"semi libre",Feuillu
+697,49.865306023052,3.30152753725,"Terrain aventure Europe",28,4,Non,92,,POPNIGita,"semi libre",Feuillu
+698,49.865281583461,3.3015586496905,"Terrain aventure Europe",28,4,Non,76,,POPNIGita,"semi libre",Feuillu
+699,49.86525481133,3.3015713618459,"Terrain aventure Europe",25,4,Non,73,,POPNIGita,"semi libre",Feuillu
+700,49.865254153667,3.3015970986458,"Terrain aventure Europe",15,4,Non,57,,POPNIGita,"semi libre",Feuillu
+701,49.865279687137,3.3016046049423,"Terrain aventure Europe",25,4,Non,60,,POPNIGita,"semi libre",Feuillu
+702,49.865291526054,3.3016230608583,"Terrain aventure Europe",26,4,Non,66,,POPNIGita,"semi libre",Feuillu
+703,49.865305172827,3.3016314148657,"Terrain aventure Europe",26,4,Non,74,,POPNIGita,"semi libre",Feuillu
+704,49.865320640722,3.3016241522293,"Terrain aventure Europe",29,4,Non,92,,POPNIGita,"semi libre",Feuillu
+705,49.865336100075,3.3016205656129,"Terrain aventure Europe",31,4,Non,120,,POPNIGita,"semi libre",Feuillu
+706,49.865340919933,3.3015939349845,"Terrain aventure Europe",31,4,Non,131,,POPNIGita,"semi libre",Feuillu
+707,49.865316335603,3.3016467413513,"Terrain aventure Europe",24,4,Non,74,,POPNIGita,"semi libre",Feuillu
+708,49.865300618982,3.3016587828776,"Terrain aventure Europe",24,4,Non,50,,POPNIGita,"semi libre",Feuillu
+709,49.865299842672,3.3016841517809,"Terrain aventure Europe",30,4,Non,110,,POPNIGita,"semi libre",Feuillu
+710,49.865280677827,3.3016487364242,"Terrain aventure Europe",25,4,Non,75,,POPNIGita,"semi libre",Feuillu
+711,49.865262132269,3.3016508339056,"Terrain aventure Europe",24,4,Non,76,,POPNIGita,"semi libre",Feuillu
+712,49.865250285716,3.30168330606,"Terrain aventure Europe",26,4,Non,83,,POPNIGita,"semi libre",Feuillu
+713,49.865232480012,3.3016749278703,"Terrain aventure Europe",26,4,Non,95,,POPNIGita,"semi libre",Feuillu
+714,49.865223665392,3.3016351615684,"Terrain aventure Europe",24,4,Non,105,,POPNIGita,"semi libre",Feuillu
+715,49.865210220617,3.3015926115112,"Terrain aventure Europe",30,4,Non,155,,POPNIGita,"semi libre",Feuillu
+716,49.864887702041,3.2997244232727,"Espace de glisse",32,4,Non,152,,POPNIGita,"semi libre",Feuillu
+717,49.864884479261,3.2998264468111,"Espace de glisse",35,2,Non,175,,POPNIGita,"semi libre",Feuillu
+718,49.864811890893,3.2998641712184,"Espace de glisse",33,4,Non,195,,POPNIGita,"semi libre",Feuillu
+719,49.864766442044,3.2999811148875,"Espace de glisse",35,4,Non,210,,POPNIGita,"semi libre",Feuillu
+720,49.865016771715,3.2999168545633,"Espace de glisse",33,3,Non,128,,POPNIGita,"semi libre",Feuillu
+721,49.864998821018,3.2999673124648,"Espace de glisse",35,4,Non,199,,POPNIGita,"semi libre",Feuillu
+722,49.865059890004,3.3000228280059,"Espace de glisse",30,3,Non,144,,POPNIGita,"semi libre",Feuillu
+723,49.865152450079,3.3000318309258,"Espace de glisse",35,4,Non,181,,POPNIGita,"semi libre",Feuillu
+724,49.862832372955,3.3067961316524,"Chemin de Morcourt",30,6,Non,178,,POPNIGita,"semi libre",Feuillu
+725,49.862813714523,3.3068434524713,"Chemin de Morcourt",27,4,Non,111,,POPNIGita,"semi libre",Feuillu
+726,49.86278455103,3.3068145973669,"Chemin de Morcourt",30,6,Non,165,,POPNIGita,"semi libre",Feuillu
+727,49.862744591563,3.3068253877035,"Chemin de Morcourt",30,6,Non,152,,POPNIGita,"semi libre",Feuillu
+728,49.862696687502,3.3067813434056,"Chemin de Morcourt",30,3,Non,265,,POPNIGita,"semi libre",Feuillu
+729,49.862709406491,3.3068277490362,"Chemin de Morcourt",30,3,Non,180,,POPNIGita,"semi libre",Feuillu
+730,49.862727819204,3.3068786033023,"Chemin de Morcourt",30,3,Non,116,,POPNIGita,"semi libre",Feuillu
+731,49.862727696858,3.3069271400439,"Chemin de Morcourt",30,3,Non,173,,POPNIGita,"semi libre",Feuillu
+732,49.854110427759,3.2950944106598,"Groupe scolaire Camille Desmoulins",21,3,Non,280,,TILTOM,"réduit relâché",Feuillu
+733,49.860151566791,3.3041544214751,"Rue Laplace",24,4,Non,200,,POPEURrob,réduit,Feuillu
+734,49.860198933355,3.3041363310079,"Rue Laplace",24,5,Non,185,,POPEURrob,réduit,Feuillu
+735,49.860178089612,3.3040343185727,"Rue Laplace",22,4,Non,190,,POPEURrob,réduit,Feuillu
+736,49.850539214759,3.2921749103555,"Parc des Champs-Elysées",17,4,Non,134,,PLAACE,"semi libre",Feuillu
+737,49.850458757257,3.2922588387561,"Parc des Champs-Elysées",17,4,Non,134,,PLAACE,"semi libre",Feuillu
+738,49.85037160143,3.2923497529234,"Parc des Champs-Elysées",17,4,Non,135,,PLAACE,"semi libre",Feuillu
+739,49.850185017037,3.2925443840432,"Parc des Champs-Elysées",17,4,Non,143,,PLAACE,"semi libre",Feuillu
+740,49.850096888374,3.292636310591,"Parc des Champs-Elysées",17,4,Non,133,,PLAACE,"semi libre",Feuillu
+741,49.849983947749,3.2927541192187,"Parc des Champs-Elysées",17,4,Non,131,,PLAACE,"semi libre",Feuillu
+742,49.849899786866,3.2928419085047,"Parc des Champs-Elysées",17,4,Non,131,,PLAACE,"semi libre",Feuillu
+743,49.849809337751,3.2929362561754,"Parc des Champs-Elysées",17,4,Non,128,,PLAACE,"semi libre",Feuillu
+744,49.849719412274,3.2930300560147,"Parc des Champs-Elysées",17,4,Non,125,,PLAACE,"semi libre",Feuillu
+745,49.849630571103,3.2931227246162,"Parc des Champs-Elysées",17,4,Non,127,,PLAACE,"semi libre",Feuillu
+746,49.849544088822,3.2932129334075,"Parc des Champs-Elysées",17,4,Non,137,,PLAACE,"semi libre",Feuillu
+747,49.84945509787,3.2933057561802,"Parc des Champs-Elysées",17,4,Non,140,,PLAACE,"semi libre",Feuillu
+748,49.849368655101,3.2933959242414,"Parc des Champs-Elysées",17,4,Non,125,,PLAACE,"semi libre",Feuillu
+749,49.849281309959,3.2934870306838,"Parc des Champs-Elysées",17,4,Non,134,,PLAACE,"semi libre",Feuillu
+750,49.849208553695,3.2934745699807,"Parc des Champs-Elysées",17,4,Non,171,,PLAACE,"semi libre",Feuillu
+751,49.849298407436,3.2933808465836,"Parc des Champs-Elysées",17,4,Non,155,,PLAACE,"semi libre",Feuillu
+752,49.849386983811,3.293288455577,"Parc des Champs-Elysées",17,4,Non,142,,PLAACE,"semi libre",Feuillu
+753,49.849477394466,3.2931941494577,"Parc des Champs-Elysées",17,4,Non,145,,PLAACE,"semi libre",Feuillu
+754,49.849557029695,3.2931110814176,"Parc des Champs-Elysées",17,4,Non,150,,PLAACE,"semi libre",Feuillu
+755,49.849645794236,3.2930184945117,"Parc des Champs-Elysées",17,4,Non,158,,PLAACE,"semi libre",Feuillu
+756,49.849738039912,3.2929222739942,"Parc des Champs-Elysées",17,4,Non,150,,PLAACE,"semi libre",Feuillu
+757,49.849829948386,3.2928264028836,"Parc des Champs-Elysées",17,4,Non,145,,PLAACE,"semi libre",Feuillu
+758,49.849915606477,3.2927370542138,"Parc des Champs-Elysées",17,4,Non,148,,PLAACE,"semi libre",Feuillu
+759,49.850002016268,3.2926469185551,"Parc des Champs-Elysées",17,4,Non,160,,PLAACE,"semi libre",Feuillu
+760,49.850114879266,3.2925291898211,"Parc des Champs-Elysées",17,4,Non,162,,PLAACE,"semi libre",Feuillu
+761,49.850295401754,3.2923408841106,"Parc des Champs-Elysées",17,4,Non,157,,PLAACE,"semi libre",Feuillu
+762,49.850386375883,3.2922459869197,"Parc des Champs-Elysées",17,4,Non,152,,PLAACE,"semi libre",Feuillu
+763,49.850469077842,3.2921597193379,"Parc des Champs-Elysées",17,4,Non,150,,PLAACE,"semi libre",Feuillu
+764,49.850556608502,3.292068411995,"Parc des Champs-Elysées",17,4,Non,159,,PLAACE,"semi libre",Feuillu
+765,49.850650163087,3.2919708205362,"Parc des Champs-Elysées",17,4,Non,154,,PLAACE,"semi libre",Feuillu
+766,49.850741882351,3.2918751449684,"Parc des Champs-Elysées",17,4,Non,152,,PLAACE,"semi libre",Feuillu
+767,49.850828589809,3.2917846951949,"Parc des Champs-Elysées",17,4,Non,161,,PLAACE,"semi libre",Feuillu
+768,49.850916906167,3.2916925694214,"Parc des Champs-Elysées",17,4,Non,155,,PLAACE,"semi libre",Feuillu
+769,49.850997325393,3.2916086780175,"Parc des Champs-Elysées",17,4,Non,189,,PLAACE,"semi libre",Feuillu
+770,49.850830484145,3.2913455334717,"Parc des Champs-Elysées",16,4,Non,158,,PLAACE,"semi libre",Feuillu
+771,49.850740485161,3.2914394169884,"Parc des Champs-Elysées",16,4,Non,135,,PLAACE,"semi libre",Feuillu
+772,49.850652934269,3.2915307465287,"Parc des Champs-Elysées",16,4,Non,140,,PLAACE,"semi libre",Feuillu
+773,49.850566535068,3.2916184243022,"Parc des Champs-Elysées",16,4,Non,138,,PLAACE,"semi libre",Feuillu
+774,49.8504735101,3.2917179118161,"Parc des Champs-Elysées",16,4,Non,137,,PLAACE,"semi libre",Feuillu
+775,49.850384594278,3.2918106630215,"Parc des Champs-Elysées",16,4,Non,140,,PLAACE,"semi libre",Feuillu
+776,49.850302766911,3.2918960227191,"Parc des Champs-Elysées",16,4,Non,127,,PLAACE,"semi libre",Feuillu
+777,49.850213702213,3.2919889281242,"Parc des Champs-Elysées",16,4,Non,132,,PLAACE,"semi libre",Feuillu
+778,49.850120247651,3.2920864136026,"Parc des Champs-Elysées",16,4,Non,131,,PLAACE,"semi libre",Feuillu
+779,49.850030535592,3.2921799943889,"Parc des Champs-Elysées",16,4,Non,132,,PLAACE,"semi libre",Feuillu
+780,49.849941619387,3.2922727439203,"Parc des Champs-Elysées",16,4,Non,149,,PLAACE,"semi libre",Feuillu
+781,49.849829257813,3.2923899502301,"Parc des Champs-Elysées",16,4,Non,136,,PLAACE,"semi libre",Feuillu
+782,49.849742536334,3.2924804095264,"Parc des Champs-Elysées",16,4,Non,137,,PLAACE,"semi libre",Feuillu
+783,49.849654172435,3.2925725828448,"Parc des Champs-Elysées",16,4,Non,136,,PLAACE,"semi libre",Feuillu
+784,49.849562861791,3.2926678291783,"Parc des Champs-Elysées",16,4,Non,141,,PLAACE,"semi libre",Feuillu
+785,49.849475742571,3.2927587022488,"Parc des Champs-Elysées",16,4,Non,134,,PLAACE,"semi libre",Feuillu
+786,49.849388872964,3.2928493150873,"Parc des Champs-Elysées",16,4,Non,142,,PLAACE,"semi libre",Feuillu
+787,49.849302505364,3.2929394036329,"Parc des Champs-Elysées",16,4,Non,131,,PLAACE,"semi libre",Feuillu
+788,49.849214737817,3.2930309517837,"Parc des Champs-Elysées",16,4,Non,139,,PLAACE,"semi libre",Feuillu
+789,49.849126110254,3.2931233982404,"Parc des Champs-Elysées",16,4,Non,139,,PLAACE,"semi libre",Feuillu
+790,49.849034158546,3.2930665194599,"Parc des Champs-Elysées",16,4,Non,152,,PLAACE,"semi libre",Feuillu
+791,49.849122548089,3.2929743247085,"Parc des Champs-Elysées",16,4,Non,136,,PLAACE,"semi libre",Feuillu
+792,49.849210416555,3.2928826701688,"Parc des Champs-Elysées",16,4,Non,133,,PLAACE,"semi libre",Feuillu
+793,49.849303297625,3.2927857866394,"Parc des Champs-Elysées",16,4,Non,138,,PLAACE,"semi libre",Feuillu
+794,49.849382634205,3.2927030306871,"Parc des Champs-Elysées",16,4,Non,142,,PLAACE,"semi libre",Feuillu
+795,49.849472371043,3.2926094272094,"Parc des Champs-Elysées",16,4,Non,120,,PLAACE,"semi libre",Feuillu
+796,49.849560687205,3.2925173040693,"Parc des Champs-Elysées",16,4,Non,130,,PLAACE,"semi libre",Feuillu
+797,49.849648815795,3.2924253783119,"Parc des Champs-Elysées",16,4,Non,128,,PLAACE,"semi libre",Feuillu
+798,49.849736944314,3.292333450834,"Parc des Champs-Elysées",16,4,Non,130,,PLAACE,"semi libre",Feuillu
+799,49.849824436373,3.292242186645,"Parc des Champs-Elysées",16,4,Non,143,,PLAACE,"semi libre",Feuillu
+800,49.849938795291,3.2921228951186,"Parc des Champs-Elysées",16,4,Non,126,,PLAACE,"semi libre",Feuillu
+801,49.850028758794,3.2920290531061,"Parc des Champs-Elysées",16,4,Non,129,,PLAACE,"semi libre",Feuillu
+802,49.850116063118,3.2919379827691,"Parc des Champs-Elysées",16,4,Non,128,,PLAACE,"semi libre",Feuillu
+803,49.850211451939,3.2918384798599,"Parc des Champs-Elysées",16,4,Non,129,,PLAACE,"semi libre",Feuillu
+804,49.850290522808,3.29175599875,"Parc des Champs-Elysées",16,4,Non,126,,PLAACE,"semi libre",Feuillu
+805,49.850381982314,3.2916605930767,"Parc des Champs-Elysées",16,4,Non,126,,PLAACE,"semi libre",Feuillu
+806,49.850476739915,3.2915617485868,"Parc des Champs-Elysées",16,4,Non,122,,PLAACE,"semi libre",Feuillu
+807,49.850563366017,3.2914713830842,"Parc des Champs-Elysées",16,4,Non,132,,PLAACE,"semi libre",Feuillu
+808,49.850652183317,3.2913787318465,"Parc des Champs-Elysées",16,4,Non,132,,PLAACE,"semi libre",Feuillu
+809,49.850739283396,3.2912878735083,"Parc des Champs-Elysées",16,4,Non,128,,PLAACE,"semi libre",Feuillu
+810,49.850821067935,3.2912025576717,"Parc des Champs-Elysées",16,4,Non,159,,PLAACE,"semi libre",Feuillu
+811,49.848810262413,3.2934283395939,"Parc des Champs-Elysées",22,5,Non,224,,PLAACE,"semi libre",Feuillu
+812,49.848781174833,3.2933486624622,"Parc des Champs-Elysées",22,6,Non,292,,PLAACE,"semi libre",Feuillu
+813,49.848697932097,3.2934120664379,"Parc des Champs-Elysées",26,5,Non,395,,SEQGIG,"semi libre",Conifère
+814,49.848678304716,3.2935167839136,"Parc des Champs-Elysées",19,3,Non,230,,CEDATL,"semi libre",Conifère
+815,49.848454571642,3.2937320403132,"Parc des Champs-Elysées",16,2,Non,129,,CEDATL,"semi libre",Conifère
+816,49.848366256513,3.2938470575619,"Parc des Champs-Elysées",11,3,Non,86,,BETPEN,"semi libre",Feuillu
+817,49.848325789598,3.2937046089774,"Parc des Champs-Elysées",14,4,Non,159,,FRAEXC,"semi libre",Feuillu
+818,49.848185438299,3.2938400298766,"Parc des Champs-Elysées",15,2,Non,102,,CUP,"semi libre",Conifère
+819,49.848206802055,3.2938459667957,"Parc des Champs-Elysées",15,2,Non,125,,CUP,"semi libre",Conifère
+820,49.84825290304,3.2939532818033,"Parc des Champs-Elysées",20,3,Non,205,,ACEPLA,"semi libre",Feuillu
+821,49.848101132181,3.2940396779563,"Parc des Champs-Elysées",16,3,Non,153,,PAUTOM,"semi libre",Feuillu
+822,49.848087728212,3.2941939803049,"Parc des Champs-Elysées",18,5,Non,156,,PINNIGnig,"semi libre",Conifère
+823,49.848084994769,3.294237157579,"Parc des Champs-Elysées",17,5,Non,108,,PINNIGnig,"semi libre",Conifère
+824,49.848056480188,3.294211395277,"Parc des Champs-Elysées",17,5,Non,141,,PINNIGnig,"semi libre",Conifère
+825,49.848269331273,3.294269891064,"Parc des Champs-Elysées",14,3,Non,120,,TILCOR,"tête de chat relaché",Feuillu
+826,49.848249172755,3.2942917383536,"Parc des Champs-Elysées",14,3,Non,118,,TILCOR,"tête de chat relaché",Feuillu
+827,49.848203701809,3.294341017749,"Parc des Champs-Elysées",14,3,Non,112,,TILCOR,"tête de chat relaché",Feuillu
+828,49.848180887448,3.2943657424481,"Parc des Champs-Elysées",14,3,Non,105,,TILCOR,"tête de chat relaché",Feuillu
+829,49.848158183067,3.2943903468204,"Parc des Champs-Elysées",14,3,Non,116,,TILCOR,"tête de chat relaché",Feuillu
+830,49.848135541782,3.2944148848098,"Parc des Champs-Elysées",14,3,Non,109,,TILCOR,"tête de chat relaché",Feuillu
+831,49.848114182431,3.2944380331295,"Parc des Champs-Elysées",14,3,Non,107,,TILCOR,"tête de chat relaché",Feuillu
+832,49.848091651122,3.2944624507714,"Parc des Champs-Elysées",14,3,Non,111,,TILCOR,"tête de chat relaché",Feuillu
+833,49.848069975334,3.2944859419665,"Parc des Champs-Elysées",14,3,Non,89,,TILCOR,"tête de chat relaché",Feuillu
+834,49.848047381809,3.2945104273199,"Parc des Champs-Elysées",14,3,Non,102,,TILCOR,"tête de chat relaché",Feuillu
+835,49.8480255789,3.2945340553577,"Parc des Champs-Elysées",14,3,Non,104,,TILCOR,"tête de chat relaché",Feuillu
+836,49.847999981549,3.2945617955996,"Parc des Champs-Elysées",14,3,Non,121,,TILCOR,"tête de chat relaché",Feuillu
+837,49.848060753243,3.2946133499957,"Parc des Champs-Elysées",4,1,Non,132,,PRUSER,"semi libre",Feuillu
+838,49.848000541456,3.2947023094942,"Parc des Champs-Elysées",6,4,Non,71,,BETPEN,"semi libre",Feuillu
+839,49.847993525661,3.2946874542556,"Parc des Champs-Elysées",6,4,Non,70,,BETPEN,"semi libre",Feuillu
+840,49.847959713141,3.2942784795402,"Parc des Champs-Elysées",18,4,Non,291,,ROBPSE,"semi libre",Feuillu
+841,49.847929039342,3.2941410165698,"Parc des Champs-Elysées",8,0,Non,47,,QUEROBfas,"semi libre",Feuillu
+842,49.84795897858,3.2944065124513,"Parc des Champs-Elysées",18,1,Non,141,,CUP,"semi libre",Conifère
+843,49.847934962446,3.2944336351449,"Parc des Champs-Elysées",13,1,Non,60,,CUP,"semi libre",Conifère
+844,49.847877132967,3.2943549530141,"Parc des Champs-Elysées",21,3,Non,123,,BETPEN,"semi libre",Feuillu
+845,49.847850416528,3.2943489101271,"Parc des Champs-Elysées",17,3,Non,79,,BETPEN,"semi libre",Feuillu
+846,49.847866265009,3.2943023107247,"Parc des Champs-Elysées",17,5,Non,59,,BETPEN,"semi libre",Feuillu
+847,49.847889967488,3.2944805825045,"Parc des Champs-Elysées",19,6,Non,309,,FAGSYLpur,"semi libre",Feuillu
+848,49.847828284109,3.2944591329738,"Parc des Champs-Elysées",20,4,Non,330,,FAGSYL,"semi libre",Feuillu
+849,49.847642065834,3.294392008081,"Parc des Champs-Elysées",20,5,Non,243,,FAGSYL,"semi libre",Feuillu
+850,49.847817636938,3.2945242318596,"Parc des Champs-Elysées",21,4,Non,264,,FAGSYL,"semi libre",Feuillu
+851,49.847753566176,3.2945036578224,"Parc des Champs-Elysées",21,4,Non,318,,FAGSYL,"semi libre",Feuillu
+852,49.84763377528,3.2944599113444,"Parc des Champs-Elysées",20,4,Non,184,,FAGSYL,"semi libre",Feuillu
+853,49.847576262902,3.2944376263311,"Parc des Champs-Elysées",20,4,Non,199,,FAGSYL,"semi libre",Feuillu
+854,49.847598287731,3.2945079651603,"Parc des Champs-Elysées",19,5,Non,193,,CEDATL,"semi libre",Conifère
+855,49.847633784048,3.294676068177,"Parc des Champs-Elysées",20,6,Non,270,,PLAACE,"semi libre",Feuillu
+856,49.847713205435,3.2947384679825,"Parc des Champs-Elysées",24,5,Non,304,,SEQGIG,"semi libre",Conifère
+857,49.847700814831,3.2948429523973,"Parc des Champs-Elysées",18,7,Non,91,,PINSYL,"semi libre",Conifère
+858,49.847685682753,3.2948748470243,"Parc des Champs-Elysées",3,3,Non,48,,BETPEN,étêté,Feuillu
+859,49.847719550674,3.2948903848945,"Parc des Champs-Elysées",12,2,Non,65,,BETPEN,"semi libre",Feuillu
+860,49.847700418893,3.2949189769903,"Parc des Champs-Elysées",12,3,Non,80,,BETPEN,"semi libre",Feuillu
+861,49.847721008098,3.2949347423872,"Parc des Champs-Elysées",9,3,Non,79,,BETPEN,"semi libre",Feuillu
+862,49.847773874116,3.2950249908497,"Parc des Champs-Elysées",14,1,Non,122,,CUP,"semi libre",Conifère
+863,49.847754570962,3.2950577252102,"Parc des Champs-Elysées",11,1,Non,84,,CUP,"semi libre",Conifère
+864,49.84778706068,3.2950850383739,"Parc des Champs-Elysées",15,3,Non,184,,FAGSYL,"semi libre",Feuillu
+865,49.847771753988,3.295138086485,"Parc des Champs-Elysées",14,4,Non,167,,AESHIP,"semi libre",Feuillu
+866,49.847797588684,3.2951790674077,"Parc des Champs-Elysées",10,2,Non,44,,ACENEG,"semi libre",Feuillu
+867,49.847833272202,3.2951797672203,"Parc des Champs-Elysées",12,3,Non,85,,ACENEG,"semi libre",Feuillu
+868,49.847860988912,3.2952088273169,"Parc des Champs-Elysées",14,3,Non,154,,CUPARI,"semi libre",Conifère
+869,49.847794968686,3.2952084483609,"Parc des Champs-Elysées",10,2,Non,84,,ACENEG,"semi libre",Feuillu
+870,49.847807215606,3.2952381245017,"Parc des Champs-Elysées",14,2,Non,87,,CUP,"semi libre",Conifère
+871,49.847808711762,3.2952731070136,"Parc des Champs-Elysées",12,2,Non,94,,CUP,"semi libre",Conifère
+872,49.847826003719,3.2952679275963,"Parc des Champs-Elysées",12,2,Non,75,,CUP,"semi libre",Conifère
+873,49.847863574009,3.2953284556384,"Parc des Champs-Elysées",13,2,Non,115,,PINNIGnig,"semi libre",Conifère
+874,49.847874654637,3.2953553468589,"Parc des Champs-Elysées",4,1,Non,95,,TAXBAC,"semi libre",Conifère
+875,49.847881108119,3.2952938461728,"Parc des Champs-Elysées",9,2,Non,69,,BETPEN,"semi libre",Feuillu
+876,49.847991437861,3.2954794764214,"Parc des Champs-Elysées",26,0,Non,443,,SEQGIG,"semi libre",Conifère
+877,49.848149148644,3.2952945645668,"Parc des Champs-Elysées",9,2,Non,84,,PAUTOM,"semi libre",Feuillu
+878,49.848176395595,3.2951210720131,"Parc des Champs-Elysées",17,2,Non,186,,CUPARI,"semi libre",Conifère
+879,49.848161709221,3.2950843581751,"Parc des Champs-Elysées",16,2,Non,109,,CUP,"semi libre",Conifère
+880,49.848147654148,3.2950575907997,"Parc des Champs-Elysées",14,4,Non,94,,BETPEN,"semi libre",Feuillu
+881,49.848244521652,3.2950136750639,"Parc des Champs-Elysées",7,2,Non,125,,TILCOR,"tête de chat relaché",Feuillu
+882,49.848285276183,3.2949695081779,"Parc des Champs-Elysées",4,2,Non,94,,TILCOR,"tête de chat",Feuillu
+883,49.848312330467,3.2949401889153,"Parc des Champs-Elysées",4,2,Non,120,,TILCOR,"tête de chat",Feuillu
+884,49.848338550849,3.2949117725356,"Parc des Champs-Elysées",4,2,Non,112,,TILCOR,"tête de chat",Feuillu
+885,49.848364373655,3.2948837889299,"Parc des Champs-Elysées",4,2,Non,113,,TILCOR,"tête de chat",Feuillu
+886,49.848385224642,3.2948611910081,"Parc des Champs-Elysées",4,2,Non,87,,TILCOR,"tête de chat",Feuillu
+887,49.848402755368,3.2948421923166,"Parc des Champs-Elysées",4,2,Non,104,,TILCOR,"tête de chat",Feuillu
+888,49.848422733683,3.2948205415376,"Parc des Champs-Elysées",4,2,Non,131,,TILCOR,"tête de chat",Feuillu
+889,49.848484623077,3.2947534693553,"Parc des Champs-Elysées",4,2,Non,84,,TILCOR,"tête de chat",Feuillu
+890,49.848504601378,3.2947318171138,"Parc des Champs-Elysées",4,2,Non,87,,TILCOR,"tête de chat",Feuillu
+891,49.848539520516,3.2947959683272,"Parc des Champs-Elysées",17,7,Non,85,,BETPEN,"semi libre",Feuillu
+892,49.848512229651,3.294816404536,"Parc des Champs-Elysées",17,6,Non,90,,BETPEN,cépée,Feuillu
+893,49.848478073751,3.2950929991889,"Parc des Champs-Elysées",19,4,Non,139,,PINNIGnig,"semi libre",Conifère
+894,49.848458849704,3.2950871037548,"Parc des Champs-Elysées",17,4,Non,100,,PINNIGnig,"semi libre",Conifère
+895,49.848465677755,3.295124766093,"Parc des Champs-Elysées",16,4,Non,164,,PINNIGnig,"semi libre",Conifère
+896,49.848365063188,3.2950927703141,"Parc des Champs-Elysées",16,4,Non,200,,CATBIG,"semi libre",Feuillu
+897,49.848312177557,3.2951877622425,"Parc des Champs-Elysées",17,4,Non,234,,ACEPSE,"semi libre",Feuillu
+898,49.848275995309,3.2955082531957,"Parc des Champs-Elysées",6,2,Non,34,,MAGGRA,"semi libre",Feuillu
+899,49.848429965421,3.2954461577258,"Parc des Champs-Elysées",11,6,Non,109,,PAUTOM,"semi libre",Feuillu
+900,49.84859318058,3.2953014597246,"Parc des Champs-Elysées",13,5,Non,111,,CEDATL,"semi libre",Conifère
+901,49.848722494221,3.2951130442972,"Parc des Champs-Elysées",24,3,Non,287,,CEDATL,"semi libre",Conifère
+902,49.848705982774,3.295442755157,"Parc des Champs-Elysées",27,6,Non,247,,PSEMEN,"semi libre",Conifère
+903,49.848783008275,3.295479224635,"Parc des Champs-Elysées",21,6,Non,137,,BETPEN,"semi libre",Feuillu
+904,49.848774007461,3.2954164980323,"Parc des Champs-Elysées",21,6,Non,157,,BETPEN,"semi libre",Feuillu
+905,49.848815440179,3.2954412296197,"Parc des Champs-Elysées",21,8,Non,133,,BETPEN,"semi libre",Feuillu
+906,49.848937396467,3.2953663602082,"Parc des Champs-Elysées",19,6,Non,166,,PINNIGnig,"semi libre",Conifère
+907,49.848923531921,3.295316416774,"Parc des Champs-Elysées",19,6,Non,118,,PINNIGnig,"semi libre",Conifère
+908,49.848953297499,3.295313322826,"Parc des Champs-Elysées",19,6,Non,147,,PINNIGnig,"semi libre",Conifère
+909,49.84934399259,3.2953371385797,"Parc des Champs-Elysées",23,6,Non,224,,FAGSYLpur,"semi libre",Feuillu
+910,49.849297520088,3.2953137071241,"Parc des Champs-Elysées",23,6,Non,146,,FAGSYLpur,"semi libre",Feuillu
+911,49.849252509393,3.2952910103042,"Parc des Champs-Elysées",23,7,Non,169,,FAGSYLpur,"semi libre",Feuillu
+912,49.849207616313,3.2952683754117,"Parc des Champs-Elysées",23,7,Non,220,,FAGSYLpur,"semi libre",Feuillu
+913,49.849157019677,3.2952428614684,"Parc des Champs-Elysées",19,6,Non,214,,FAGSYLpur,"semi libre",Feuillu
+914,49.848959034631,3.2951430323117,"Parc des Champs-Elysées",21,5,Non,188,,FAGSYLpur,"semi libre",Feuillu
+915,49.848895321195,3.2951109076379,"Parc des Champs-Elysées",21,6,Non,225,,FAGSYLpur,"semi libre",Feuillu
+916,49.848840391171,3.2950832100611,"Parc des Champs-Elysées",21,7,Non,190,,FAGSYLpur,"semi libre",Feuillu
+917,49.848781574955,3.2950535537459,"Parc des Champs-Elysées",21,7,Non,218,,FAGSYLpur,"semi libre",Feuillu
+918,49.848724137031,3.295024592644,"Parc des Champs-Elysées",20,5,Non,131,,FAGSYLpur,"semi libre",Feuillu
+919,49.848669813073,3.29499720201,"Parc des Champs-Elysées",21,5,Non,182,,FAGSYLpur,"semi libre",Feuillu
+920,49.848614033586,3.2949690769023,"Parc des Champs-Elysées",21,5,Non,225,,FAGSYLpur,"semi libre",Feuillu
+921,49.84856007327,3.2949418693278,"Parc des Champs-Elysées",21,5,Non,166,,FAGSYLpur,"semi libre",Feuillu
+922,49.848505742107,3.2949144746625,"Parc des Champs-Elysées",21,4,Non,255,,FAGSYLpur,"semi libre",Feuillu
+923,49.848577942793,3.294859578954,"Parc des Champs-Elysées",21,5,Non,226,,FAGSYLpur,"semi libre",Feuillu
+924,49.848635867433,3.2948887846297,"Parc des Champs-Elysées",21,6,Non,176,,FAGSYLpur,"semi libre",Feuillu
+925,49.848796811861,3.2949699360707,"Parc des Champs-Elysées",21,6,Non,290,,FAGSYLpur,"semi libre",Feuillu
+926,49.848854130371,3.2949988380368,"Parc des Champs-Elysées",21,11,Non,152,,FAGSYLpur,"semi libre",Feuillu
+927,49.848910558145,3.2950272883964,"Parc des Champs-Elysées",21,5,Non,230,,FAGSYLpur,"semi libre",Feuillu
+928,49.84897071046,3.2950576201853,"Parc des Champs-Elysées",21,10,Non,203,,FAGSYLpur,"semi libre",Feuillu
+929,49.849051670183,3.2950984412554,"Parc des Champs-Elysées",21,8,Non,244,,FAGSYLpur,"semi libre",Feuillu
+930,49.849221356547,3.295184001423,"Parc des Champs-Elysées",21,6,Non,299,,FAGSYLpur,"semi libre",Feuillu
+931,49.849272399462,3.2952097390993,"Parc des Champs-Elysées",21,7,Non,259,,FAGSYLpur,"semi libre",Feuillu
+932,49.849316685563,3.2952320672061,"Parc des Champs-Elysées",21,7,Non,203,,FAGSYLpur,"semi libre",Feuillu
+933,49.84935870172,3.2952532540694,"Parc des Champs-Elysées",21,7,Non,208,,FAGSYLpur,"semi libre",Feuillu
+934,49.849445733063,3.2952971378692,"Parc des Champs-Elysées",21,6,Non,241,,FAGSYLpur,"semi libre",Feuillu
+935,49.84949629018,3.2953226295341,"Parc des Champs-Elysées",21,6,Non,247,,FAGSYLpur,"semi libre",Feuillu
+936,49.849578765088,3.2952374754903,"Parc des Champs-Elysées",30,6,Non,441,,SEQGIG,"semi libre",Conifère
+937,49.849677041874,3.2951887286121,"Parc des Champs-Elysées",20,4,Non,214,,PLAACE,"semi libre",Feuillu
+938,49.849501845266,3.2950949323971,"Parc des Champs-Elysées",4,15,Non,218,,PAUTOM,Libre,Feuillu
+939,49.849536427544,3.2950558746997,"Parc des Champs-Elysées",20,6,Non,191,,PLAACE,"semi libre",Feuillu
+940,49.849534084218,3.2949068140415,"Parc des Champs-Elysées",20,6,Non,208,,PLAACE,"semi libre",Feuillu
+941,49.849489913415,3.2948099128529,"Parc des Champs-Elysées",20,8,Non,178,,PLAACE,"semi libre",Feuillu
+942,49.849446694729,3.2948576325861,"Parc des Champs-Elysées",20,8,Non,206,,PLAACE,"semi libre",Feuillu
+943,49.849413445982,3.2946466783769,"Parc des Champs-Elysées",20,6,Non,213,,PLAACE,"semi libre",Feuillu
+944,49.849346413949,3.2945056434433,"Parc des Champs-Elysées",20,8,Non,172,,PLAACE,"semi libre",Feuillu
+945,49.849314292133,3.2944380613149,"Parc des Champs-Elysées",20,7,Non,172,,PLAACE,"semi libre",Feuillu
+946,49.849282335735,3.2943708250906,"Parc des Champs-Elysées",20,6,Non,155,,PLAACE,"semi libre",Feuillu
+947,49.849252410337,3.294307862758,"Parc des Champs-Elysées",20,6,Non,231,,PLAACE,"semi libre",Feuillu
+948,49.849241483478,3.2945705386602,"Parc des Champs-Elysées",31,7,Non,515,,SEQGIG,"semi libre",Conifère
+949,49.849109409232,3.2946796512562,"Parc des Champs-Elysées",9,3,Non,109,,THUPLIatr,"semi libre",Conifère
+950,49.847803246969,3.2950944539715,"Parc des Champs-Elysées",5,2,Non,98,,CORKOU,"semi libre",Feuillu
+951,49.848965495223,3.294847841534,"Parc des Champs-Elysées",11,5,Non,127,,TILCOR,"semi libre",Feuillu
+952,49.849106083209,3.2949479864709,"Parc des Champs-Elysées",20,4,Non,328,,FAGSYLpen,"semi libre",Feuillu
+953,49.852951530932,3.2911899217718,"Boulevard Gambetta",7,1,Non,63,,LIRTUL,"semi libre",Feuillu
+954,49.85288986618,3.2912909025645,"Boulevard Gambetta",8,2,Non,58,,LIRTUL,"semi libre",Feuillu
+955,49.852830498702,3.29138923251,"Boulevard Gambetta",8,2,Non,50,,LIRTUL,"semi libre",Feuillu
+956,49.852770771617,3.291478107354,"Boulevard Gambetta",8,2,Non,56,,LIRTUL,"semi libre",Feuillu
+957,49.852701757872,3.291586642918,"Boulevard Gambetta",5,2,Non,52,,LIRTUL,"semi libre",Feuillu
+958,49.852644045333,3.2916824248125,"Boulevard Gambetta",8,2,Non,56,,LIRTUL,"semi libre",Feuillu
+959,49.85258248528,3.2917830656943,"Boulevard Gambetta",6,2,Non,50,,LIRTUL,"semi libre",Feuillu
+960,49.852511105459,3.2918895840116,"Boulevard Gambetta",6,2,Non,35,,LIRTUL,"semi libre",Feuillu
+961,49.852454959728,3.2919810222123,"Boulevard Gambetta",8,2,Non,62,,LIRTUL,"semi libre",Feuillu
+962,49.852387805945,3.292087630468,"Boulevard Gambetta",9,2,Non,60,,LIRTUL,"semi libre",Feuillu
+963,49.852329372094,3.2921797401115,"Boulevard Gambetta",6,2,Non,51,,LIRTUL,"semi libre",Feuillu
+964,49.852265370499,3.292277923467,"Boulevard Gambetta",8,2,Non,51,,LIRTUL,"semi libre",Feuillu
+965,49.852197587452,3.292384752419,"Boulevard Gambetta",8,2,Non,59,,LIRTUL,"semi libre",Feuillu
+966,49.852120590884,3.2925045440136,"Boulevard Gambetta",8,2,Non,55,,LIRTUL,"semi libre",Feuillu
+967,49.85205776703,3.292604787313,"Boulevard Gambetta",8,2,Non,54,,LIRTUL,"semi libre",Feuillu
+968,49.851975452674,3.2927341784586,"Boulevard Gambetta",8,2,Non,60,,LIRTUL,"semi libre",Feuillu
+969,49.851913332725,3.2928303971133,"Boulevard Gambetta",8,2,Non,53,,LIRTUL,"semi libre",Feuillu
+970,49.851841373807,3.2929452144013,"Boulevard Gambetta",8,3,Non,60,,LIRTUL,"semi libre",Feuillu
+971,49.851784253584,3.2930406044448,"Boulevard Gambetta",8,3,Non,65,,LIRTUL,"semi libre",Feuillu
+972,49.851694571251,3.2931760140428,"Boulevard Gambetta",8,3,Non,49,,LIRTUL,"semi libre",Feuillu
+973,49.851633225112,3.2932779524931,"Boulevard Gambetta",8,2,Non,54,,LIRTUL,"semi libre",Feuillu
+974,49.851563512414,3.2933863189381,"Boulevard Gambetta",8,2,Non,46,,LIRTUL,"semi libre",Feuillu
+975,49.85149845033,3.293485008722,"Boulevard Gambetta",8,2,Non,65,,LIRTUL,"semi libre",Feuillu
+976,49.851433833843,3.2935935051731,"Boulevard Gambetta",7,2,Non,58,,LIRTUL,"semi libre",Feuillu
+977,49.851366005387,3.2936960712047,"Boulevard Gambetta",8,2,Non,52,,LIRTUL,"semi libre",Feuillu
+978,49.851307623987,3.293793288723,"Boulevard Gambetta",8,2,Non,63,,LIRTUL,"semi libre",Feuillu
+979,49.85124253928,3.2938969246226,"Boulevard Gambetta",8,2,Non,55,,LIRTUL,"semi libre",Feuillu
+980,49.851164034088,3.2940157291577,"Boulevard Gambetta",7,2,Non,49,,LIRTUL,"semi libre",Feuillu
+981,49.851105152084,3.2941185131172,"Boulevard Gambetta",7,2,Non,55,,LIRTUL,"semi libre",Feuillu
+982,49.851042583054,3.2942187524225,"Boulevard Gambetta",8,2,Non,53,,LIRTUL,"semi libre",Feuillu
+983,49.850979785526,3.2943168599095,"Boulevard Gambetta",8,2,Non,50,,LIRTUL,"semi libre",Feuillu
+984,49.850909993744,3.2944258959523,"Boulevard Gambetta",7,2,Non,51,,LIRTUL,"semi libre",Feuillu
+985,49.850819377284,3.2945674630969,"Boulevard Gambetta",10,2,Non,62,,LIRTUL,"semi libre",Feuillu
+986,49.850753737191,3.294670011832,"Boulevard Gambetta",7,2,Non,63,,LIRTUL,"semi libre",Feuillu
+987,49.850689186675,3.2947707634132,"Boulevard Gambetta",10,2,Non,54,,LIRTUL,"semi libre",Feuillu
+988,49.850632291024,3.2948595374438,"Boulevard Gambetta",10,2,Non,62,,LIRTUL,"semi libre",Feuillu
+989,49.850562384983,3.2949580204961,"Boulevard Gambetta",10,2,Non,55,,LIRTUL,"semi libre",Feuillu
+990,49.850485086466,3.2950376905164,"Boulevard Gambetta",7,2,Non,59,,LIRTUL,"semi libre",Feuillu
+991,49.850412787491,3.2950966295419,"Boulevard Gambetta",10,2,Non,66,,LIRTUL,"semi libre",Feuillu
+992,49.850324401554,3.2951416853803,"Boulevard Gambetta",10,2,Non,62,,LIRTUL,"semi libre",Feuillu
+993,49.850242110089,3.295169652989,"Boulevard Gambetta",7,2,Non,48,,LIRTUL,"semi libre",Feuillu
+994,49.850156470374,3.2951987586066,"Boulevard Gambetta",9,2,Non,50,,LIRTUL,"semi libre",Feuillu
+995,49.850065784443,3.2952295787743,"Boulevard Gambetta",9,2,Non,53,,LIRTUL,"semi libre",Feuillu
+996,49.849637566793,3.2953801004942,"Boulevard Gambetta",8,2,Non,47,,LIRTUL,"semi libre",Feuillu
+997,49.849477184569,3.295438694171,"Boulevard Gambetta",6,2,Non,39,,LIRTUL,"semi libre",Feuillu
+998,49.849377685688,3.2954760760416,"Boulevard Gambetta",6,2,Non,40,,LIRTUL,"semi libre",Feuillu
+999,49.849292497331,3.2955076249036,"Boulevard Gambetta",8,2,Non,53,,LIRTUL,"semi libre",Feuillu
+1000,49.849192521523,3.2955394503049,"Boulevard Gambetta",12,2,Non,53,,LIRTUL,"semi libre",Feuillu
