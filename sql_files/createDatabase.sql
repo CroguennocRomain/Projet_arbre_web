@@ -17,7 +17,7 @@ DROP TABLE IF EXISTS arbre CASCADE;
 CREATE TABLE public.users(
     id         SERIAL NOT NULL ,
     username   VARCHAR (20) NOT NULL ,
-    password   VARCHAR (20) NOT NULL  ,
+    pwd   VARCHAR (20) NOT NULL  ,
     CONSTRAINT users_PK PRIMARY KEY (id)
 ) WITHOUT OIDS;
 
