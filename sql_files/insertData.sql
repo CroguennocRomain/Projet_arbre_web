@@ -4,9 +4,9 @@
 ------------------------------------------------------------
 
 -- user
-INSERT INTO public.users (username, password) VALUES ('test1', 'test');
-INSERT INTO public.users (username, password) VALUES ('test2', 'test');
-INSERT INTO public.users (username, password) VALUES ('test3', 'test');
+INSERT INTO public.users (username, pwd) VALUES ('test1', 'test');
+INSERT INTO public.users (username, pwd) VALUES ('test2', 'test');
+INSERT INTO public.users (username, pwd) VALUES ('test3', 'test');
 
 -- clc_secteur
 INSERT INTO public.clc_secteur (secteur) VALUES ('Quai Gayant');

@@ -1,7 +1,6 @@
 <?php
 #ini_set('display_errors',1);
 #error_reporting(E_ALL);
-
 #require_once 'add.php';
 require_once 'database.php';
 
@@ -33,6 +32,9 @@ switch ($requestRessource)
         break;
     case 'afficher_all_variable':
         afficher_all_variable($requestMethod);
+        break;
+    case 'login':
+        login($requestMethod);
         break;
 
 }
@@ -649,4 +651,32 @@ function afficher_all_variable($requestMethod){
         }
         exit();
     }
+}
+
+function login($requestMethod){
+    $db = dbConnect();
+    $request = "SELECT username, pwd FROM users";
+   
+    $statement = $db->prepare($request);
+    $statement->execute();
+    $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+    if($requestMethod == "POST"){
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+    }
+    foreach($result as $res){
+        if($res['username'] == $username && $res['pwd'] == $password){
+            $_SESSION['username'] = $username;
+            echo "identifiants corrects";
+            exit();
+        }
+    }
+    echo "identifiants incorrects";
+    exit();   
+
+        
+    
+    
+    
 }

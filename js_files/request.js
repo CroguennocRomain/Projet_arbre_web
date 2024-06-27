@@ -97,6 +97,18 @@ $('#bouton_tempete_pred').on("click", () => {
     }
 })
 
+$('#bouton_valider').on("click", () => {
+    let username = $('#username').val();
+    let password = $('#password').val();
+    ajaxRequest(
+        'POST',
+        '../php_files/test_request.php/login',
+        login,
+        'username='+username+'&password='+password
+    );
+    
+})
+
 function cluster_pred(data){
     data = JSON.parse(data);
     console.log(data);
@@ -121,8 +133,17 @@ function tempete_pred(data){
     //window.location.href = "tempete_arbre.html" + queryString;
 }
 
+function login(data){
+    console.log(data);
+    switch(data){
+        case "identifiants corrects":
+            window.location.href = "ajout_arbre.html";
+            break;
+    }
+        
 
-
+    
+}
 
 // Requête afficher arbres dans tableau
 
@@ -131,6 +152,7 @@ let segments = url.split("/");
 //quand on est sur la page visualisation
 if (segments[3] == 'visual_arbre_BDD.html')
 {
+    
     ajaxRequest(
         'GET',
         '../php_files/test_request.php/afficher_arbres',
@@ -160,11 +182,17 @@ if (segments[3] == 'age_arbre.html')
 }
 if (segments[3] == 'ajout_arbre.html')
 {
-    ajaxRequest(
-        'GET',
-        '../php_files/test_request.php/afficher_all_variable',
-        afficher_all_variables
-    );
+    if (sessionStorage.getItem('username')) {
+        ajaxRequest(
+            'GET',
+            '../php_files/test_request.php/afficher_all_variable',
+            afficher_all_variables
+        );
+    }
+    else{
+        window.location.href = "authentification.html";
+    
+    }
 }
 
 console.log(segments[3]);
