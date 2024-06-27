@@ -366,6 +366,8 @@ function cluster_pred($requestMethod)
             $statement->execute();
             
             $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+            
+            //Model_0
             $csvFileName = '../clusters.csv';
             $csvFile = fopen($csvFileName, 'w');
             
@@ -386,7 +388,7 @@ function cluster_pred($requestMethod)
            
             foreach($result as $i){
                 // Commande python script1
-                $command = "../../venv/myenv/bin/python3.11 ../py_files/script_fonc1.py ".floatval($i['haut_tot'])." ".floatval($i['haut_tronc'])." "."'".strval($i['stadedev'])."'"." "."'".strval($i['nomtech'])."'"." "."'".strval($i['feuillage'])."'";
+                $command = "../../venv/myenv/bin/python3.11 ../py_files/script_fonc1.py ".floatval($i['haut_tot'])." ".floatval($i['haut_tronc'])." "."'".strval($i['stadedev'])."'"." "."'".strval($i['nomtech'])."'"." "."'".strval($i['feuillage'])."'"." ".intval(0);
                 $output = shell_exec($command);
                 $jsonString = get_first_line_json_file('../py_files/JSON/script1_result.json');
                 
@@ -407,6 +409,50 @@ function cluster_pred($requestMethod)
             }
             
             fclose($csvFile);
+
+            //Model_1
+            $csvFileName = '../clusters2.csv';
+            $csvFile = fopen($csvFileName, 'w');
+            
+
+            $header = array(
+                'id',
+                'latitude',
+                'longitude',
+                'haut_tot',
+                'haut_tronc',
+                'fk_stadedev',
+                'fk_nomtech',
+                'feuillage',
+                'cluster'
+            );
+
+            fputcsv($csvFile, $header);
+           
+            foreach($result as $i){
+                // Commande python script1
+                $command = "../../venv/myenv/bin/python3.11 ../py_files/script_fonc1.py ".floatval($i['haut_tot'])." ".floatval($i['haut_tronc'])." "."'".strval($i['stadedev'])."'"." "."'".strval($i['nomtech'])."'"." "."'".strval($i['feuillage'])."'"." ".intval(1);
+                $output = shell_exec($command);
+                $jsonString = get_first_line_json_file('../py_files/JSON/script1_result.json');
+                
+                // Décoder le JSON en un tableau associatif
+                $cluster = json_decode($jsonString, true);
+                $row = array(
+                    $i['id'],
+                    $i['latitude'],
+                    $i['longitude'],
+                    $i['haut_tot'],
+                    $i['haut_tronc'],
+                    $i['stadedev'],
+                    $i['nomtech'],
+                    $i['feuillage'],
+                    $cluster
+                );
+                fputcsv($csvFile, $row);
+            }
+            
+            fclose($csvFile);
+
             
             $request = "
             SELECT a.haut_tot, a.haut_tronc, s.stadedev, n.nomtech, f.feuillage 
@@ -424,11 +470,13 @@ function cluster_pred($requestMethod)
             $tab_max_range = [];
             $tab_max_range[] = $id;
             
-            $command = "../../venv/myenv/bin/python3.11 ../py_files/script_fonc1.py ".floatval($result[0]['haut_tot'])." ".floatval($result[0]['haut_tronc'])." "."'".strval($result[0]['stadedev'])."'"." "."'".strval($result[0]['nomtech'])."'"." "."'".strval($result[0]['feuillage'])."'";
-            $output = shell_exec($command);
-            $jsonString = get_first_line_json_file('../py_files/JSON/script1_result.json');
-            $cluster = json_decode($jsonString, true);
-            $tab_max_range[] = $cluster;
+            for ($i = 0; $i < 2; $i++) {
+                $command = "../../venv/myenv/bin/python3.11 ../py_files/script_fonc1.py ".floatval($result[0]['haut_tot'])." ".floatval($result[0]['haut_tronc'])." "."'".strval($result[0]['stadedev'])."'"." "."'".strval($result[0]['nomtech'])."'"." "."'".strval($result[0]['feuillage'])."'"." ".intval($i);
+                $output = shell_exec($command);
+                $jsonString = get_first_line_json_file('../py_files/JSON/script1_result.json');
+                $cluster = json_decode($jsonString, true);
+                $tab_max_range[] = $cluster;
+            }
 
             echo json_encode($tab_max_range);
 
