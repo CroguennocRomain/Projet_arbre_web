@@ -109,11 +109,14 @@ $('#bouton_valider').on("click", () => {
 })
 
 function cluster_pred(data){
-    data = JSON.parse(data);
     console.log(data);
+    data = JSON.parse(data);
     // Construire l'URL avec les données en tant que paramètres de requête GET
-    //var queryString = "?data=" + encodeURIComponent(JSON.stringify(data));
-    //window.location.href = "taille_arbre.html" + queryString;
+    if(data[0] != 0){
+        var queryString = "?data=" + encodeURIComponent(JSON.stringify(data));
+        console.log("yoo");
+        window.location.href = "taille_arbre.html" + queryString;
+    }
 }
 function age_pred(data){
     data = JSON.parse(data);
@@ -216,6 +219,23 @@ if (segments[3] == 'tempete_arbre.html')
                 '../php_files/test_request.php/afficher_all_variable',
                 afficher_all_variables
             );
+        }
+    }
+    if (segments(3) == 'taille_arbre.html') {
+        var dataString = getQueryVariable('data');
+        if (dataString) {
+            var data = JSON.parse(dataString);
+            
+            // Manipuler les éléments dans la page
+            var id_arbre = document.getElementById('id_arbre_1');
+            id_arbre.innerHTML += data[0]+' a';
+            var id_arbre = document.getElementById('id_arbre_2');
+            id_arbre.innerHTML += data[0]+' a';
+            var model_0 = document.getElementById('model_0');
+            model_0.innerHTML += data[1];
+            /*var model_1 = document.getElementById('model_1');
+            model_1.innerHTML += data[2];*/
+
         }
     }
 console.log(segments[3]);
