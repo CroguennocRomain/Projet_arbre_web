@@ -233,8 +233,8 @@ if (segments[3] == 'tempete_arbre.html')
             id_arbre.innerHTML += data[0];
             var model_0 = document.getElementById('model_0');
             model_0.innerHTML += data[1];
-            /*var model_1 = document.getElementById('model_1');
-            model_1.innerHTML += data[2];*/
+            var model_1 = document.getElementById('model_1');
+            model_1.innerHTML += data[2];
 
         }
     }
