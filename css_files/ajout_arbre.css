@@ -72,6 +72,7 @@ body {
     font-weight: bold;
     align-items: center;
     justify-content: center;
+    box-shadow: 5px 13px 19px rgba(0, 0, 0, 0.2);
 }
 .custom-textbox {
     background-color: #198D6D; 

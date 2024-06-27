@@ -29,6 +29,10 @@ body {
     font-weight: bold;
 }
 /*------------------------------------------*/
+.title{
+    box-shadow: 5px 13px 19px rgba(0, 0, 0, 0.2);
+
+}
 .container {
     padding-right: 10%;
     display: inline-block; /* Pour centrer le bouton */
