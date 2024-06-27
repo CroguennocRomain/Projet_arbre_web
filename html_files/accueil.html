@@ -12,6 +12,39 @@
    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
   <script src="../js_files/ajax.js" defer></script>
   <script src="../js_files/request.js" defer></script>
+
+  <style>
+    .container-flex {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+    }
+    .row-flex {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    .col-flex {
+        flex: 1;
+    }
+    .content-area {
+        margin-bottom: 1rem;
+    }
+    
+    .image {
+        width: 100%;
+        height: auto;
+    }
+
+    .bouton-accueil{
+      width: 100%;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+
+</style>
+
  </head>
  <body>
     <header class="header mb-4">
@@ -19,42 +52,56 @@
         <a href="accueil.html" class="btn btn-accueil btn-actual">Accueil</a>
       </div>
     </header>    
-    <div class="container-fluid px-5">
-      <div class="row mb-4">
-        <div class="col-md-7">
-          <div class="content-area title">
-            <h2>Bienvenue !</h2>
-            <p>
-             <br>
-              Ce site web est la finalité du projet suivant : <br>
-              Concevoir et développer une application de gestion du patrimoine arboré pour la ville de Saint-Quentin (Aisne).<br>
-              <br>
-              Précédemment, nous avons analysé et nettoyé les données puis nous avons entrainé ces données sur différents modèles de machine learning.<br>
-              <br>
-              Ce site permet ainsi de visualiser les données et prédictions de manière simple et interactive. <br>
-              <br>
-              Ce projet nous a permis de nous rendre compte de la relation entre les parties base de données, 
-              intelligence artificielle et développement web. Cela nous a permis de perfectionner nos compétences en les mettant en pratique dans un projet concret.
-            </p>
-          </div>
+
+
+    <div class="container-flex">
+        <div class="row-flex">
+
+            <div class="col-flex">
+
+                <div class="content-area title">
+                    <h2>Bienvenue !</h2>
+                    <p>
+                        <br>
+                        Ce site web est la finalité du projet suivant : <br>
+                        Concevoir et développer une application de gestion du patrimoine arboré pour la ville de Saint-Quentin (Aisne).<br><br>
+                        Précédemment, nous avons analysé et nettoyé les données puis nous avons entrainé ces données sur différents modèles de machine learning.<br><br>
+                        Ce site permet ainsi de visualiser les données et prédictions de manière simple et interactive. <br><br>
+                        Ce projet nous a permis de nous rendre compte de la relation entre les parties base de données, intelligence artificielle et développement web. Cela nous a permis de perfectionner nos compétences en les mettant en pratique dans un projet concret.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="col-flex">
+
+              <div class="row-flex bouton-accueil">
+                <a href="visual_arbre_BDD.html" class="w-100">
+                    <button class="action-button">Visualiser mes arbres</button>
+                </a>
+              </div>
+
+
+              <div class="row-flex bouton-accueil">
+                <a href="ajout_arbre.html" class="w-100">
+                    <button class="action-button add-arbre">Ajouter un arbre</button>
+                </a>
+              </div>
+
+            </div>
+
         </div>
-        <div class="col-md-5">
-          <a href="visual_arbre_BDD.html">
-            <button class="action-button">Visualiser mes arbres</button>
-          </a>
+
+        <div class="row-flex">
+          
+            <div class="col-flex">
+                <img src="../image_test.jpg" alt="image_site" class="image img-fluid">
+            </div>
+
         </div>
-      </div>
-      <div class="row mb-4">
-        <div class="col-md-7">
-          <img src="../image_test.jpg" alt="image_site" class="image img-fluid">
-        </div>
-        <div class="col-md-5">
-          <a href="ajout_arbre.html" class="lien">
-            <button class="action-button add-arbre">Ajouter un arbre</button>
-          </a>
-        </div>
-      </div>
+
     </div>
+  
     
   
       <footer class="footer">
