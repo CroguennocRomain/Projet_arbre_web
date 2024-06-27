@@ -221,7 +221,7 @@ if (segments[3] == 'tempete_arbre.html')
             );
         }
     }
-    if (segments(3) == 'taille_arbre.html') {
+    if (segments[3] == 'taille_arbre.html') {
         var dataString = getQueryVariable('data');
         if (dataString) {
             var data = JSON.parse(dataString);
