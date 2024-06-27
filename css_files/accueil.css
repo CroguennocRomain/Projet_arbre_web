@@ -28,6 +28,36 @@ body {
 .header .btn-actual {
     font-weight: bold;
 }
+
+.container-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+}
+.row-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.col-flex {
+    flex: 1;
+}
+.content-area {
+    margin-bottom: 1rem;
+}
+
+.image {
+    height: 20%;
+    width: auto;
+}
+
+.bouton-accueil{
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
 /*------------------------------------------*/
 .title{
     box-shadow: 5px 13px 19px rgba(0, 0, 0, 0.2);
