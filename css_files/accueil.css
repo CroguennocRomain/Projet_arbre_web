@@ -39,6 +39,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
+    justify-content: center;
 }
 .col-flex {
     flex: 1;
@@ -48,8 +49,7 @@ body {
 }
 
 .image {
-    height: 20%;
-    width: auto;
+    width: 100%;
 }
 
 .bouton-accueil{
