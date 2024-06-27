@@ -441,7 +441,7 @@ function age_pred($requestMethod)
             $tab_max_range[] = $id;
             // Commande python script2
             for ($i = 0; $i < 4; $i++) {
-                $command = "../../venv/myenv/bin/python3.11 ../py_files/script_fonc2.py ".floatval($result[0]['haut_tot'])." ".floatval($result[0]['haut_tronc'])." ".floatval($result[0]['tronc_diam'])." ".strval($result[0]['stadedev'])." ".strval($result[0]['nomtech']." ".intval($i));
+                $command = "../../venv/myenv/bin/python3.11 ../py_files/script_fonc2.py ".floatval($result[0]['haut_tot'])." ".floatval($result[0]['haut_tronc'])." ".floatval($result[0]['tronc_diam'])." ".strval($result[0]['stadedev'])." ".strval($result[0]['nomtech'])." ".intval($i);
                 
                 // Exécuter la commande
                 $output = shell_exec($command);
@@ -486,19 +486,72 @@ function tempete_pred($requestMethod)
         try {
             $db = dbConnect();
             $request = "
-                SELECT a.haut_tot, a.haut_tronc, a.latitude, a.longitude, s.stadedev, c.secteur
+                SELECT a.haut_tot, a.haut_tronc, a.latitude, a.longitude, s.stadedev, c.secteur, p.port, r.revetement
                 FROM arbre a
                 JOIN fk_stadedev s on s.id_stadedev = a.id_stadedev
                 JOIN clc_secteur c on c.id_secteur = a.id_secteur
+                JOIN fk_port p on p.id_port = a.id_port
+                JOIN fk_revetement r on r.id_revetement = a.id_revetement
                 WHERE a.id = :id
                 ";
-                
-                $statement = $db->prepare($request);
-                $statement->bindParam(':id', $id);
-                $statement->execute();
+            
+            $statement = $db->prepare($request);
+            $statement->bindParam(':id', $id, PDO::PARAM_INT);
+             
+            $statement->execute();
+
+            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+            $tab_max_range = [];
+            $tab_max_range[] = $id;
+            // Commande python script3
+            //méthode 0:
+            $command = "../../venv/myenv/bin/python3.11 ../py_files/script_fonc3.py ".floatval($result[0]['haut_tronc'])." ".floatval($result[0]['latitude'])." ".floatval($result[0]['longitude'])." ".strval($result[0]['stadedev'])." ".strval($result[0]['haut_tot'])." ".strval($result[0]['secteur'])." ".intval(0);
+            $output = shell_exec($command);
+            echo $output;
+
+            $jsonString = get_first_line_json_file('../py_files/JSON/script3_result.json');
+            $data = json_decode($jsonString, true);
+
+            $bool_value = 'NON';
+            if (isset($data[0]) && $data[0] === 1) {
+                $bool_value = 'OUI';
+            }
+
+            $tab_max_range[] =$bool_value;
+
+            //méthode 1:
+            $command = "../../venv/myenv/bin/python3.11 ../py_files/script_fonc3.py ".floatval($result[0]['latitude'])." ".floatval($result[0]['longitude'])." ".floatval($result[0]['secteur'])." ".strval($result[0]['port'])." ".intval(1);
+            $output = shell_exec($command);
+
+            $jsonString = get_first_line_json_file('../py_files/JSON/script3_result.json');
+            $data = json_decode($jsonString, true);
+
+            $bool_value = 'NON';
+            if (isset($data[0]) && $data[0] === 1) {
+                $bool_value = 'OUI';
+            }
+
+            $tab_max_range[] =$bool_value;
+
+            //méthode 2:
+            $command = "../../venv/myenv/bin/python3.11 ../py_files/script_fonc3.py ".floatval($result[0]['haut_tot'])." ".floatval($result[0]['revevetement'])." ".intval(2);
+            $output = shell_exec($command);
+
+            $jsonString = get_first_line_json_file('../py_files/JSON/script3_result.json');
+            $data = json_decode($jsonString, true);
+
+            $bool_value = 'NON';
+            if (isset($data[0]) && $data[0] === 1) {
+                $bool_value = 'OUI';
+            }
+
+            $tab_max_range[] =$bool_value;
+   
+            echo json_encode($tab_max_range);
 
         } catch (\Throwable $th) {
-            echo 'cluster_non_prédit';
+            //echo 'cluster_non_prédit';
             //echo ("Insertion failed: " . $e->getMessage());
         }
         exit();

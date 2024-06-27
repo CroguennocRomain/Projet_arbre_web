@@ -98,8 +98,11 @@ $('#bouton_tempete_pred').on("click", () => {
 })
 
 function cluster_pred(data){
+    data = JSON.parse(data);
     console.log(data);
-    $('#alert-erreur-connexion').toggleClass('d-none');
+    // Construire l'URL avec les données en tant que paramètres de requête GET
+    //var queryString = "?data=" + encodeURIComponent(JSON.stringify(data));
+    //window.location.href = "taille_arbre.html" + queryString;
 }
 function age_pred(data){
     data = JSON.parse(data);
@@ -111,7 +114,11 @@ function age_pred(data){
 
 function tempete_pred(data){
     console.log(data);
-    $('#alert-erreur-connexion').toggleClass('d-none');
+    data = JSON.parse(data);
+    console.log(data);
+    // Construire l'URL avec les données en tant que paramètres de requête GET
+    //var queryString = "?data=" + encodeURIComponent(JSON.stringify(data));
+    //window.location.href = "tempete_arbre.html" + queryString;
 }
 
 
