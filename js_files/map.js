@@ -1,5 +1,5 @@
 d3.csv(
-	"../py_files/Data_arbre.csv",
+	"https://raw.githubusercontent.com/plotly/datasets/master/2015_06_30_precipitation.csv",
 	function(err, rows) {
 		function unpack(rows, key) {
 			return rows.map(function(row) {
@@ -11,8 +11,8 @@ d3.csv(
 			{
 				type: "scattermapbox",
 				text: unpack(rows, "Globvalue"),
-				lon: unpack(rows, "longitude"),
-				lat: unpack(rows, "latitude"),
+				lon: unpack(rows, "Lon"),
+				lat: unpack(rows, "Lat"),
 				marker: { color: "red", size: 4 }
 			}
 		];
@@ -26,7 +26,6 @@ d3.csv(
 		Plotly.newPlot("MAP_arbres", data, layout);
 	}
 );
-
 
 
 d3.csv(
