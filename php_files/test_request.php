@@ -548,7 +548,7 @@ function tempete_pred($requestMethod)
 
             $tab_max_range[] =$bool_value;
    
-            echo json_encode($tab_max_range);
+            //echo json_encode($tab_max_range);
 
         } catch (\Throwable $th) {
             //echo 'cluster_non_prédit';

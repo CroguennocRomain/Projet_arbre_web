@@ -52,7 +52,9 @@ def predire_tempete(method):
         categorical_columns = [colonne for colonne in new_data_df if new_data_df[colonne].dtype == 'object']
         with open(ord_path, 'rb') as file:
             encoder = pickle.load(file)
+        print('TRO')
         new_data_df[categorical_columns] = encoder.transform(new_data_df[categorical_columns])
+        print('TRO')
 
         base_path = os.path.dirname(os.path.abspath(__file__))
         scal_path = os.path.join(base_path, 'Scaler', 'scaler3.pkl')
