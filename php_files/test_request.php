@@ -386,7 +386,7 @@ function cluster_pred($requestMethod)
            
             foreach($result as $i){
                 // Commande python script1
-                $command = "../../venv/myenv/bin/python3.11 ../py_files/script_fonc1.py ".floatval($result[$i]['haut_tot'])." ".floatval($result[$i]['haut_tronc'])." ".strval($result[$i]['stadedev'])." ".strval($result[$i]['nomtech'])." ".strval($result[$i]['feuillage']);
+                $command = "../../venv/myenv/bin/python3.11 ../py_files/script_fonc1.py ".floatval($i['haut_tot'])." ".floatval($i['haut_tronc'])." "."'".strval($i['stadedev'])."'"." "."'".strval($i['nomtech'])."'"." "."'".strval($i['feuillage'])."'";
                 $output = shell_exec($command);
                 $jsonString = get_first_line_json_file('../py_files/JSON/script1_result.json');
                 
@@ -424,7 +424,7 @@ function cluster_pred($requestMethod)
             $tab_max_range = [];
             $tab_max_range[] = $id;
             
-            $command = "../../venv/myenv/bin/python3.11 ../py_files/script_fonc1.py ".floatval($result[0]['haut_tot'])." ".floatval($result[0]['haut_tronc'])." ".strval($result[0]['stadedev'])." ".strval($result[0]['nomtech'])." ".strval($result[0]['feuillage']);
+            $command = "../../venv/myenv/bin/python3.11 ../py_files/script_fonc1.py ".floatval($result[0]['haut_tot'])." ".floatval($result[0]['haut_tronc'])." "."'".strval($result[0]['stadedev'])."'"." "."'".strval($result[0]['nomtech'])."'"." "."'".strval($result[0]['feuillage'])."'";
             $output = shell_exec($command);
             $jsonString = get_first_line_json_file('../py_files/JSON/script1_result.json');
             $cluster = json_decode($jsonString, true);
@@ -434,7 +434,7 @@ function cluster_pred($requestMethod)
 
                 
         } catch (\Throwable $th) {
-            echo 'cluster_non_prédit';
+            //echo 'cluster_non_prédit';
             //echo ("Insertion failed: " . $e->getMessage());
         }
         exit();
