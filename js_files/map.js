@@ -109,7 +109,7 @@ d3.csv(
 
 
 d3.csv(
-	"../clusters.csv",
+	"../clusters2.csv",
 	function(err, rows) {
 		function unpack(rows, key) {
 			return rows.map(function(row) {
