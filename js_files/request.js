@@ -1,18 +1,5 @@
 'use strict';
 
-$('#btn_add_tree').click(() => {
-    ajaxRequest('GET', '../php_files/request.php/arbres', displayArbres);
-});
-
-
-// Fonctions d'affichage
-function displayArbres(){
-    document.getElementsByClassName("test").innerHTML = "OK";
-}
-
-
-
-  
 $('#bouton_ajout_arbre').on("click", () => {
 let haut_tot = $('#haut_tot').val();
 let haut_tronc = $('#haut_tronc').val();
