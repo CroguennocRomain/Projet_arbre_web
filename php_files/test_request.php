@@ -1,8 +1,10 @@
 <?php
+session_start();
 #ini_set('display_errors',1);
 #error_reporting(E_ALL);
 #require_once 'add.php';
 require_once 'database.php';
+
 
 
 $requestMethod = $_SERVER['REQUEST_METHOD'];
@@ -664,12 +666,12 @@ function login($requestMethod){
     foreach($result as $res){
         if($res['username'] == $username && $res['pwd'] == $password){
             $_SESSION['username'] = $username;
-            echo "identifiants corrects";
+            echo $_SESSION['username'];
             exit();
         }
     }
     echo "identifiants incorrects";
-    exit();   
+    exit();
 
         
     

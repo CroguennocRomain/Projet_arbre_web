@@ -135,7 +135,11 @@ function tempete_pred(data){
 function login(data){
     console.log(data);
     switch(data){
-        case "identifiants corrects":
+        case "identifiants incorrects":
+            window.location.href = "authentification.html";
+            break;
+        default:
+            sessionStorage.setItem('username', data);
             window.location.href = "ajout_arbre.html";
             break;
     }
@@ -198,21 +202,19 @@ if (segments[3] == 'tempete_arbre.html')
             // Ajouter d'autres manipulations si nécessaire
         }
     }
-if (segments[3] == 'ajout_arbre.html')
-{
-    if (sessionStorage.getItem('username')) {
-        ajaxRequest(
-            'GET',
-            '../php_files/test_request.php/afficher_all_variable',
-            afficher_all_variables
-        );
+    if (segments[3] == 'ajout_arbre.html') {
+        if (!sessionStorage.getItem('username')) {
+            // Redirection vers la page d'authentification si l'utilisateur n'est pas connecté
+            window.location.href = "authentification.html";
+        } else {
+            // L'utilisateur est connecté, continuer avec les opérations nécessaires
+            ajaxRequest(
+                'GET',
+                '../php_files/test_request.php/afficher_all_variable',
+                afficher_all_variables
+            );
+        }
     }
-    else{
-        window.location.href = "authentification.html";
-    
-    }
-}
-
 console.log(segments[3]);
 
 function afficher_all_arbres(data){
