@@ -21,9 +21,12 @@ def predire_tempete(method):
 
     # Lecture des données depuis un fichier CSV
     data = pd.read_csv(data_path)
-
+    print(method)
+    print(len(sys.argv))
+    print(sys.argv[1]+' '+sys.argv[2]+' '+sys.argv[3]+' '+sys.argv[4]+' '+sys.argv[5]+' '+sys.argv[6]+' '+sys.argv[7])
     # Si la méthode est '0' et que le nombre d'arguments est correct
     if method == '0' and len(sys.argv) == 8:
+        print('TRO')
         # Création d'un nouveau DataFrame avec les données fournies en argument
         new_data = {
             'haut_tronc': [float(sys.argv[1])],
@@ -52,7 +55,7 @@ def predire_tempete(method):
         categorical_columns = [colonne for colonne in new_data_df if new_data_df[colonne].dtype == 'object']
         with open(ord_path, 'rb') as file:
             encoder = pickle.load(file)
-        print('TRO')
+        print(new_data_df)
         new_data_df[categorical_columns] = encoder.transform(new_data_df[categorical_columns])
         print('TRO')
 

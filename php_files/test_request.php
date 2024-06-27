@@ -504,9 +504,13 @@ function tempete_pred($requestMethod)
 
             $tab_max_range = [];
             $tab_max_range[] = $id;
+            $i = 0;
             // Commande python script3
+            echo floatval($result[0]['haut_tronc'])." ".floatval($result[0]['latitude'])." ".floatval($result[0]['longitude'])." ".strval($result[0]['stadedev'])." ".floatval($result[0]['haut_tot'])." ".strval($result[0]['secteur'])." ".intval($i);
+            echo gettype(floatval($result[0]['haut_tronc']))." ".gettype(floatval($result[0]['latitude']))." ".gettype(floatval($result[0]['longitude']))." ".gettype(strval($result[0]['stadedev']))." ".gettype(floatval($result[0]['haut_tot']))." ".gettype(strval($result[0]['secteur']))." ".gettype(intval($i));
             //méthode 0:
-            $command = "../../venv/myenv/bin/python3.11 ../py_files/script_fonc3.py ".floatval($result[0]['haut_tronc'])." ".floatval($result[0]['latitude'])." ".floatval($result[0]['longitude'])." ".strval($result[0]['stadedev'])." ".strval($result[0]['haut_tot'])." ".strval($result[0]['secteur'])." ".intval(0);
+            $command = "../../venv/myenv/bin/python3.11 ../py_files/script_fonc3.py ".floatval($result[0]['haut_tronc'])." ".floatval($result[0]['latitude'])." ".floatval($result[0]['longitude'])." "."'".strval($result[0]['stadedev'])."'"." ".floatval($result[0]['haut_tot'])." "."'".strval($result[0]['secteur'])."'". " ".intval($i);
+            //$command = '../../venv/myenv/bin/python3.11 ../py_files/script_fonc3.py 2.1 49.2 3.2 "Adulte" 15.1 "Quai Gayant" 0';
             $output = shell_exec($command);
             echo $output;
 
