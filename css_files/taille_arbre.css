@@ -46,34 +46,6 @@ body {
     padding-top: 40px;
     padding-left: 20px;
 }
-.label {
-    padding-left: 20px;
-}
-.selection-container {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-.selection-container input {
-    margin-left: 10px;
-    padding: 5px;
-    flex: 1;
-}
-.selection-container label {
-    font-weight: bold;
-    color:#F2EFC5;
-}
-.custom-bg-color {
-    background-color: #198D6D;
-    color: white;
-}
-
-.plc-btn {
-    padding-top: 10px;
-    padding-left: 15px;
-}
 .btn{
     background-color: #2d6a4f; /* Green background for button */
     color: white;
