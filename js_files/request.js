@@ -125,12 +125,11 @@ function age_pred(data){
 }
 
 function tempete_pred(data){
-    console.log(data);
     data = JSON.parse(data);
     console.log(data);
     // Construire l'URL avec les données en tant que paramètres de requête GET
-    //var queryString = "?data=" + encodeURIComponent(JSON.stringify(data));
-    //window.location.href = "tempete_arbre.html" + queryString;
+    var queryString = "?data=" + encodeURIComponent(JSON.stringify(data));
+    window.location.href = "tempete_arbre.html" + queryString;
 }
 
 function login(data){
@@ -180,6 +179,25 @@ if (segments[3] == 'age_arbre.html')
         // Ajouter d'autres manipulations si nécessaire
     }
 }
+if (segments[3] == 'tempete_arbre.html')
+    {
+        var dataString = getQueryVariable('data');
+        if (dataString) {
+            var data = JSON.parse(dataString);
+            
+            // Manipuler les éléments dans la page
+            var id_arbre = document.getElementById('id_arbre');
+            id_arbre.innerHTML += data[0]+' v';
+            var model_0 = document.getElementById('model_0');
+            model_0.innerHTML += data[1];
+            var model_1 = document.getElementById('model_1');
+            model_1.innerHTML += data[2];
+            var model_2 = document.getElementById('model_2');
+            model_2.innerHTML += data[3];
+            
+            // Ajouter d'autres manipulations si nécessaire
+        }
+    }
 if (segments[3] == 'ajout_arbre.html')
 {
     if (sessionStorage.getItem('username')) {

@@ -56,7 +56,6 @@ def predire_tempete(method):
 
         new_data_df[categorical_columns] = encoder.transform(new_data_df[categorical_columns])
 
-
         base_path = os.path.dirname(os.path.abspath(__file__))
         scal_path = os.path.join(base_path, 'Scaler', 'scaler3.pkl')
 
@@ -90,16 +89,22 @@ def predire_tempete(method):
             if colonne not in new_data_df.columns:
                 new_data_df[colonne] = data[colonne][0]
         new_data_df = new_data_df[data.columns]
-        print('YOO')
+
+        base_path = os.path.dirname(os.path.abspath(__file__))
+        ord_path = os.path.join(base_path, 'OrdinalEncoder', 'ordinal_encoder3.pkl')
+
         # Encoder les colonnes catégorielles de la nouvelle ligne de données
         categorical_columns = [colonne for colonne in new_data_df if new_data_df[colonne].dtype == 'object']
-        with open('OrdinalEncoder/ordinal_encoder3.pkl', 'rb') as file:
+        with open(ord_path, 'rb') as file:
             encoder = pickle.load(file)
-        print('YOO')
+
         new_data_df[categorical_columns] = encoder.transform(new_data_df[categorical_columns])
-        print('YOO')
+
+        base_path = os.path.dirname(os.path.abspath(__file__))
+        scal_path = os.path.join(base_path, 'Scaler', 'scaler3.pkl')
+
         # Charger le scaler depuis le fichier (pour normaliser)
-        with open("Scaler/scaler3.pkl", "rb") as file:
+        with open(scal_path, "rb") as file:
             scaler = pickle.load(file)
         new_data_df = scaler.transform(new_data_df)
         new_data_df = pd.DataFrame(new_data_df, columns=data.columns)
@@ -126,23 +131,28 @@ def predire_tempete(method):
             if colonne not in new_data_df.columns:
                 new_data_df[colonne] = data[colonne][0]
         new_data_df = new_data_df[data.columns]
-        print('YOO')
+       
+        base_path = os.path.dirname(os.path.abspath(__file__))
+        ord_path = os.path.join(base_path, 'OrdinalEncoder', 'ordinal_encoder3.pkl')
+
         # Encoder les colonnes catégorielles de la nouvelle ligne de données
         categorical_columns = [colonne for colonne in new_data_df if new_data_df[colonne].dtype == 'object']
-        with open('OrdinalEncoder/ordinal_encoder3.pkl', 'rb') as file:
+        with open(ord_path, 'rb') as file:
             encoder = pickle.load(file)
-        print('YOO')
+
         new_data_df[categorical_columns] = encoder.transform(new_data_df[categorical_columns])
-        print('YOO')
+
+        base_path = os.path.dirname(os.path.abspath(__file__))
+        scal_path = os.path.join(base_path, 'Scaler', 'scaler3.pkl')
+
         # Charger le scaler depuis le fichier (pour normaliser)
-        with open("Scaler/scaler3.pkl", "rb") as file:
+        with open(scal_path, "rb") as file:
             scaler = pickle.load(file)
         new_data_df = scaler.transform(new_data_df)
         new_data_df = pd.DataFrame(new_data_df, columns=data.columns)
 
         # Sélectionner les colonnes nécessaires pour le modèle
         X = new_data_df[['haut_tot', 'fk_revetement']]
-
         base_path = os.path.dirname(os.path.abspath(__file__))
         model2_path = os.path.join(base_path, 'models', 'svm_model.pkl')
 
