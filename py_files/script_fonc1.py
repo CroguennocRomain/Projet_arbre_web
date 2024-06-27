@@ -9,10 +9,12 @@ import pickle
 
 def main():
     #vérifier qu'il y a bien le bon nombre d'argument
-    if len(sys.argv) != 6:
-        print('Usage: python script_fonc1.py <haut_tot> <haut_tronc> <fk_stadedev> <fk_nomtech> <feuillage> ----> Exemple: python script_fonc1.py 15.1 2.1 "Adulte" "PINNIGnig" "Conifère"')
+    if len(sys.argv) != 7:
+        print('Usage: python script_fonc1.py <haut_tot> <haut_tronc> <fk_stadedev> <fk_nomtech> <feuillage> <méthode>----> Exemple: python script_fonc1.py 15.1 2.1 "Adulte" "PINNIGnig" "Conifère" 0')
         sys.exit(1)
 
+    nb_methode = int(sys.argv[6])
+    
     base_path = os.path.dirname(os.path.abspath(__file__))
     ord_path = os.path.join(base_path, 'OrdinalEncoder', 'ordinal_encoder1.pkl')
 
@@ -62,10 +64,14 @@ def main():
     new_data_df = scaler.transform(new_data_df)
     new_data_df = pd.DataFrame(new_data_df, columns=data.columns)
 
-    base_path = os.path.dirname(os.path.abspath(__file__))
-    centroids_path = os.path.join(base_path, 'centroids.csv')
-
     # Charger les centroids
+    if(nb_methode == 0):
+        base_path = os.path.dirname(os.path.abspath(__file__))
+        centroids_path = os.path.join(base_path, 'centroids.csv')
+    if(nb_methode == 1):
+        base_path = os.path.dirname(os.path.abspath(__file__))
+        centroids_path = os.path.join(base_path, 'centroids2.csv')
+
     centroids_data = pd.read_csv(centroids_path)
 
     # Les colonnes utilisées pour les centroids
@@ -95,7 +101,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
-
