@@ -28,12 +28,12 @@ if((!isNaN(parseFloat(haut_tot)) && isFinite(haut_tot)) && (!isNaN(parseFloat(ha
 function ajouter_arbre(data)
 {
   switch (data){
-      case 'arbre_ajouté':
-          window.location.href = "../html_files/visual_arbre_BDD.html";
-          break;
-      case 'arbre_non_ajouté':
-          $('#alert-erreur-connexion').toggleClass('d-none');
-          break;
+    case 'arbre_non_ajouté':
+        $('#alert-erreur-connexion').toggleClass('d-none');
+        break;
+    default:
+        window.location.href = "../html_files/visual_arbre_BDD.html";
+        break;
   }
 }
 
