@@ -128,7 +128,7 @@ def predire_age(values, method):
 
     with open(json_path, 'w') as json_file:
         json.dump(json_data, json_file)
-
+        
     # Renvoie les données en format json
     return json.dumps(json_data)
 

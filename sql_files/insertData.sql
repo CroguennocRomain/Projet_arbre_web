@@ -310,8 +310,8 @@ INSERT INTO public.clc_secteur (secteur) VALUES ('Rue Georges Danton');
 -- fk_stadedev
 INSERT INTO public.fk_stadedev (stadedev) VALUES ('Jeune');
 INSERT INTO public.fk_stadedev (stadedev) VALUES ('Adulte');
-INSERT INTO public.fk_stadedev (stadedev) VALUES ('Vieux');
-INSERT INTO public.fk_stadedev (stadedev) VALUES ('Senescent');
+INSERT INTO public.fk_stadedev (stadedev) VALUES ('vieux');
+INSERT INTO public.fk_stadedev (stadedev) VALUES ('senescent');
 
 -- fk_port
 INSERT INTO public.fk_port (port) VALUES

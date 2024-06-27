@@ -24,6 +24,7 @@ def predire_tempete(method):
 
     # Si la méthode est '0' et que le nombre d'arguments est correct
     if method == '0' and len(sys.argv) == 8:
+
         # Création d'un nouveau DataFrame avec les données fournies en argument
         new_data = {
             'haut_tronc': [float(sys.argv[1])],
@@ -52,7 +53,9 @@ def predire_tempete(method):
         categorical_columns = [colonne for colonne in new_data_df if new_data_df[colonne].dtype == 'object']
         with open(ord_path, 'rb') as file:
             encoder = pickle.load(file)
+
         new_data_df[categorical_columns] = encoder.transform(new_data_df[categorical_columns])
+
 
         base_path = os.path.dirname(os.path.abspath(__file__))
         scal_path = os.path.join(base_path, 'Scaler', 'scaler3.pkl')
@@ -87,13 +90,14 @@ def predire_tempete(method):
             if colonne not in new_data_df.columns:
                 new_data_df[colonne] = data[colonne][0]
         new_data_df = new_data_df[data.columns]
-
+        print('YOO')
         # Encoder les colonnes catégorielles de la nouvelle ligne de données
         categorical_columns = [colonne for colonne in new_data_df if new_data_df[colonne].dtype == 'object']
         with open('OrdinalEncoder/ordinal_encoder3.pkl', 'rb') as file:
             encoder = pickle.load(file)
+        print('YOO')
         new_data_df[categorical_columns] = encoder.transform(new_data_df[categorical_columns])
-
+        print('YOO')
         # Charger le scaler depuis le fichier (pour normaliser)
         with open("Scaler/scaler3.pkl", "rb") as file:
             scaler = pickle.load(file)
@@ -122,13 +126,14 @@ def predire_tempete(method):
             if colonne not in new_data_df.columns:
                 new_data_df[colonne] = data[colonne][0]
         new_data_df = new_data_df[data.columns]
-
+        print('YOO')
         # Encoder les colonnes catégorielles de la nouvelle ligne de données
         categorical_columns = [colonne for colonne in new_data_df if new_data_df[colonne].dtype == 'object']
         with open('OrdinalEncoder/ordinal_encoder3.pkl', 'rb') as file:
             encoder = pickle.load(file)
+        print('YOO')
         new_data_df[categorical_columns] = encoder.transform(new_data_df[categorical_columns])
-
+        print('YOO')
         # Charger le scaler depuis le fichier (pour normaliser)
         with open("Scaler/scaler3.pkl", "rb") as file:
             scaler = pickle.load(file)
@@ -168,7 +173,7 @@ def predire_tempete(method):
 def main():
     method = sys.argv[-1]
     tempete = predire_tempete(method)
-    print(tempete)
+    #print(tempete)
     return tempete
 
 if __name__ == "__main__":

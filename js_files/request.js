@@ -26,12 +26,17 @@ let clc_secteur = $('#clc_secteur').val();
 let fk_port = $('#fk_port').val();
 let fk_revetement = $('#fk_revetement').val();
 
-ajaxRequest(
-    'POST',
-    '../php_files/test_request.php/ajouter_arbre',
-    ajouter_arbre,
-    'haut_tot='+haut_tot+'&haut_tronc='+haut_tronc+'&tronc_diam='+tronc_diam+'&fk_nomtech='+fk_nomtech+'&feuillage='+feuillage+'&fk_stadedev='+fk_stadedev+'&latitude='+latitude+'&longitude='+longitude+'&clc_secteur='+clc_secteur+'&fk_port='+fk_port+'&fk_revetement='+fk_revetement
-);
+
+if((!isNaN(parseFloat(haut_tot)) && isFinite(haut_tot)) && (!isNaN(parseFloat(haut_tronc)) && isFinite(haut_tronc)) && (!isNaN(parseFloat(tronc_diam)) && isFinite(tronc_diam)) && (!isNaN(parseFloat(latitude)) && isFinite(latitude)) && (!isNaN(parseFloat(longitude)) && isFinite(longitude))){
+    console.log('YUI');
+    ajaxRequest(
+        'POST',
+        '../php_files/test_request.php/ajouter_arbre',
+        ajouter_arbre,
+        'haut_tot='+haut_tot+'&haut_tronc='+haut_tronc+'&tronc_diam='+tronc_diam+'&fk_nomtech='+fk_nomtech+'&feuillage='+feuillage+'&fk_stadedev='+fk_stadedev+'&latitude='+latitude+'&longitude='+longitude+'&clc_secteur='+clc_secteur+'&fk_port='+fk_port+'&fk_revetement='+fk_revetement
+    );
+}
+
 })
 
 function ajouter_arbre(data)
@@ -58,37 +63,46 @@ $('#bouton_ajout_csv').on("click", () => {
 $('#bouton_cluster_pred').on("click", () => {
     let id = $('#ligne_value').val();
 
-    ajaxRequest(
-        'GET',
-        '../php_files/test_request.php/cluster_pred',
-        cluster_pred,
-        'id='+id
-    );
+    if(!(id === null || id === undefined || id.trim() === '')){
+        ajaxRequest(
+            'GET',
+            '../php_files/test_request.php/cluster_pred',
+            cluster_pred,
+            'id='+id
+        );
+    }
 })
 $('#bouton_age_pred').on("click", () => {
     let id = $('#ligne_value').val();
 
-    ajaxRequest(
-        'GET',
-        '../php_files/test_request.php/age_pred',
-        age_pred,
-        'id='+id
-    );
+    if(!(id === null || id === undefined || id.trim() === '')){
+        ajaxRequest(
+            'GET',
+            '../php_files/test_request.php/age_pred',
+            age_pred,
+            'id='+id
+        );
+    }
 })
 $('#bouton_tempete_pred').on("click", () => {
     let id = $('#ligne_value').val();
 
-    ajaxRequest(
-        'GET',
-        '../php_files/test_request.php/tempete_pred',
-        tempete_pred,
-        'id='+id
-    );
+    if(!(id === null || id === undefined || id.trim() === '')){
+        ajaxRequest(
+            'GET',
+            '../php_files/test_request.php/tempete_pred',
+            tempete_pred,
+            'id='+id
+        );
+    }
 })
 
 function cluster_pred(data){
+    data = JSON.parse(data);
     console.log(data);
-    $('#alert-erreur-connexion').toggleClass('d-none');
+    // Construire l'URL avec les données en tant que paramètres de requête GET
+    //var queryString = "?data=" + encodeURIComponent(JSON.stringify(data));
+    //window.location.href = "taille_arbre.html" + queryString;
 }
 function age_pred(data){
     data = JSON.parse(data);
@@ -100,7 +114,11 @@ function age_pred(data){
 
 function tempete_pred(data){
     console.log(data);
-    $('#alert-erreur-connexion').toggleClass('d-none');
+    data = JSON.parse(data);
+    console.log(data);
+    // Construire l'URL avec les données en tant que paramètres de requête GET
+    //var queryString = "?data=" + encodeURIComponent(JSON.stringify(data));
+    //window.location.href = "tempete_arbre.html" + queryString;
 }
 
 
@@ -182,16 +200,24 @@ function afficher_all_arbres(data){
 
 function afficher_all_variables(data) {
     data = JSON.parse(data);
+    console.log(data);
+    var nom_colonne = ['fk_nomtech','feuillage','fk_stadedev','clc_secteur','fk_port','fk_revetement']
 
-    var selectElement = document.getElementById('fk_nomtech');
-    var html = '';
-
-    data.forEach((value) => {
-        html += '<option value="' + value + '">' + value + '</option>';
+    // Parcourir chaque colonne dans les données
+    Object.keys(data).forEach((colonne) => {
+        console.log(nom_colonne[colonne]);
+        var selectElement = document.getElementById(nom_colonne[colonne]); // Utiliser la clé comme ID
+        var html = '';
+        
+        // Parcourir chaque valeur dans la colonne
+        data[colonne].forEach((value) => {
+            console.log(value);
+            html += '<option value="' + value + '">' + value + '</option>';
+        });
+        console.log(html);
+        // Mettre à jour le contenu HTML de l'élément select
+        selectElement.innerHTML = html;
     });
-
-    // Insérer les options générées dans le select
-    selectElement.innerHTML = html;
 }
 
 
