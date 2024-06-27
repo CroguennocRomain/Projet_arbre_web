@@ -108,8 +108,9 @@ thead{ /* Scroll du tableau */
     margin-bottom: 20px;
 }
 
-.map-container {
-    margin-bottom: 20px;
+.carte {
+    box-shadow: 5px 13px 19px rgba(0, 0, 0, 0.2);
+
 }
 .action-buttons button {
     background-color: #347a48;
