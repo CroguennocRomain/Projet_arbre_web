@@ -1,11 +1,11 @@
-id,latitude,longitude,clc_secteur,haut_tot,haut_tronc,fk_revetement,tronc_diam,stade_dev,fk_nomtech,fk_port,feuillage
-1,49.840500205123,3.2932636093639,"Quai Gayant",6,2,Non,37,,QUERUB,"semi libre",Feuillu
-2,49.861408713361,3.273379794709,"Stade Cepy",13,1,Non,160,,PINNIGnig,"semi libre",Conifère
-3,49.844513106607,3.2890678246635,"Rue Villebois Mareuil",12,3,Non,116,,ACEPSE,"semi libre",Feuillu
-4,49.86177771715,3.302386877651,"Square des Marronniers",16,3,Non,150,,ACEPLA,"semi libre",Feuillu
-5,49.858446202457,3.304047240893,"Avenue Buffon",5,2,Non,170,,SALBAB,réduit,Feuillu
-6,49.860928158752,3.3055374576904,"Rue Laplace",8,3,Oui,103,,ACEPLA,"réduit relâché",Feuillu
-7,49.837897171031,3.2712644773158,"Rue de Paris",6,3,Non,100,,TILCOR,réduit,Feuillu
-8,49.837590022083,3.2705420227986,"Rue de Paris",9,4,Non,135,,TILCOR,"réduit relâché",Feuillu
-9,49.837513824511,3.2703639865278,"Rue de Paris",9,4,Non,121,,TILCOR,"réduit relâché",Feuillu
-10,49.837363346687,3.2699987322142,"Rue de Paris",9,2,Non,107,,TILCOR,"réduit relâché",Feuillu
+id,latitude,longitude,clc_secteur,haut_tot,haut_tronc,fk_revetement,tronc_diam,fk_stadedev,fk_nomtech,fk_port,feuillage
+1,49.84050020512298,3.2932636093638927,"Quai Gayant",6,2,Non,37,Jeune,QUERUB,"semi libre",Feuillu
+2,49.840732990162316,3.2941793904574377,"Quai Gayant",5,2,Non,24,Jeune,QUERUB,"semi libre",Feuillu
+3,49.84100958969832,3.2952675830733034,"Quai Gayant",5,2,Non,33,Jeune,QUERUB,"semi libre",Feuillu
+4,49.861408713361236,3.273379794709001,"Stade Cepy",13,1,Non,160,Adulte,PINNIGNIG,"semi libre",Conifère
+5,49.848521273429114,3.2907283252709028,"Square Churchill",20,3,Non,415,vieux,AESHIP,"semi libre",Feuillu
+6,49.85068279223022,3.293791321750049,"Parc des Champs-Elysées",25,12,Non,270,senescent,ACEPSE,"semi libre",Feuillu
+7,49.858067271741916,3.291366616898525,"Rue Gaston Bonnier",6,3,Non,150,Adulte,TILTOM,architecturé,Feuillu
+8,49.83446986476363,3.306323332859688,"Rue de la Fère",8,2,Non,79,Jeune,ACEPLAPUR,architecturé,Feuillu
+9,49.848650142069836,3.290181032030339,"Square Churchill",11,2,Non,80,Jeune,GINBIL,"semi libre",Conifère
+10,49.83234813665718,3.3073750877552475,"Rue de la Fère",5,4,Oui,140,Adulte,TILCOR,"tête de chat",Feuillu
