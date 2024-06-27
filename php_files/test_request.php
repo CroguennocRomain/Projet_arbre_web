@@ -506,8 +506,8 @@ function tempete_pred($requestMethod)
             $tab_max_range[] = $id;
             // Commande python script3
             //méthode 0:
-            //$command = "../../venv/myenv/bin/python3.11 ../py_files/script_fonc3.py ".floatval($result[0]['haut_tronc'])." ".floatval($result[0]['latitude'])." ".floatval($result[0]['longitude'])." "."'".strval($result[0]['stadedev'])."'"." ".floatval($result[0]['haut_tot'])." "."'".strval($result[0]['secteur'])."'". " ".intval(0);
-            //$output = shell_exec($command);
+            $command = "../../venv/myenv/bin/python3.11 ../py_files/script_fonc3.py ".floatval($result[0]['haut_tronc'])." ".floatval($result[0]['latitude'])." ".floatval($result[0]['longitude'])." "."'".strval($result[0]['stadedev'])."'"." ".floatval($result[0]['haut_tot'])." "."'".strval($result[0]['secteur'])."'". " ".intval(0);
+            $output = shell_exec($command);
 
             $jsonString = get_first_line_json_file('../py_files/JSON/script3_result.json');
             $data = json_decode($jsonString, true);
@@ -521,9 +521,7 @@ function tempete_pred($requestMethod)
 
             //méthode 1:
             $command = "../../venv/myenv/bin/python3.11 ../py_files/script_fonc3.py ".floatval($result[0]['latitude'])." ".floatval($result[0]['longitude'])." "."'".strval($result[0]['secteur'])."'"." "."'".strval($result[0]['port'])."'"." ".intval(1);
-            //$command = '../../venv/myenv/bin/python3.11 ../py_files/script_fonc3.py 49 3 "Quai Gayant" "réduit relâché" 1';
             $output = shell_exec($command);
-            echo $output;
 
             $jsonString = get_first_line_json_file('../py_files/JSON/script3_result.json');
             $data = json_decode($jsonString, true);
@@ -536,10 +534,8 @@ function tempete_pred($requestMethod)
             $tab_max_range[] =$bool_value;
 
             //méthode 2:
-            //$command = "../../venv/myenv/bin/python3.11 ../py_files/script_fonc3.py ".floatval($result[0]['haut_tot'])." "."'".strval($result[0]['revevetement'])."'"." ".intval(2);
-            //$command = '../../venv/myenv/bin/python3.11 ../py_files/script_fonc3.py 15.1 "Non" 2';
-            //$output = shell_exec($command);
-            //echo $output;
+            $command = "../../venv/myenv/bin/python3.11 ../py_files/script_fonc3.py ".floatval($result[0]['haut_tot'])." "."'".strval($result[0]['revetement'])."'"." ".intval(2);
+            $output = shell_exec($command);
 
             $jsonString = get_first_line_json_file('../py_files/JSON/script3_result.json');
             $data = json_decode($jsonString, true);
@@ -551,7 +547,7 @@ function tempete_pred($requestMethod)
 
             $tab_max_range[] =$bool_value;
    
-            //echo json_encode($tab_max_range);
+            echo json_encode($tab_max_range);
 
         } catch (\Throwable $th) {
             //echo 'cluster_non_prédit';

@@ -141,7 +141,7 @@ def predire_tempete(method):
             encoder = pickle.load(file)
 
         new_data_df[categorical_columns] = encoder.transform(new_data_df[categorical_columns])
-        
+
         base_path = os.path.dirname(os.path.abspath(__file__))
         scal_path = os.path.join(base_path, 'Scaler', 'scaler3.pkl')
 
@@ -153,7 +153,6 @@ def predire_tempete(method):
 
         # Sélectionner les colonnes nécessaires pour le modèle
         X = new_data_df[['haut_tot', 'fk_revetement']]
-
         base_path = os.path.dirname(os.path.abspath(__file__))
         model2_path = os.path.join(base_path, 'models', 'svm_model.pkl')
 
