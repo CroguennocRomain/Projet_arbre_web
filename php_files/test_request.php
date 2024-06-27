@@ -376,7 +376,7 @@ function cluster_pred($requestMethod)
                 'longitude',
                 'haut_tot',
                 'haut_tronc',
-                'stade_dev',
+                'fk_stadedev',
                 'fk_nomtech',
                 'feuillage',
                 'cluster'
@@ -398,7 +398,7 @@ function cluster_pred($requestMethod)
                     $i['longitude'],
                     $i['haut_tot'],
                     $i['haut_tronc'],
-                    $i['stade_dev'],
+                    $i['stadedev'],
                     $i['nomtech'],
                     $i['feuillage'],
                     $cluster
@@ -487,7 +487,7 @@ function afficher_arbres($requestMethod){
                     'haut_tronc',
                     'fk_revetement',
                     'tronc_diam',
-                    'stade_dev',
+                    'fk_stadedev',
                     'fk_nomtech',
                     'fk_port',
                     'feuillage'
@@ -507,7 +507,7 @@ function afficher_arbres($requestMethod){
                         $arbre['haut_tronc'],
                         $arbre['revetement'],
                         $arbre['tronc_diam'],
-                        $arbre['stade_dev'],
+                        $arbre['stadedev'],
                         $arbre['nomtech'],
                         $arbre['port'],
                         $arbre['feuillage']
