@@ -31,40 +31,40 @@ Aperçu de l'arborescence :
             - test_request.php (fichier .php contenant toutes nos requetes php du site)
         - sql_files (dossier contenant tous nos fichiers .sql)
             - createDatabase.sql (fichier .sql permettant de partir d'une base vierge avec les bonnes tables)
-            - demo.sql (fichier .sql pour avoir une base spécifique pour la démonstration)
+            - demo.sql (fichier .sql pour avoir une base spécifique de 10 arbres pour la démonstration)
             - insertData.sql (fichier .sql pour remplir la database avec nos données)
-        - py_files (dossier contenant tout nos fichier lié à notre python)
-            - JSON (dossier avec nos sortie de l'exécutions des scripts python)
-                    - script1_result.json
-                    - script2_result.json
-                    - script3_result.json
-            - models (dossier contenant tout nos fichiers .pkl pour les models de prédictions)
-                - age_neigh.pkl
-                - age_SGD.pkl
-                - age_SVM.pkl
-                - age_tree.pkl
-                - knn_model.pkl
-                - rf_model.pkl
-                - svm_model.pkl
-            - OrdinalEncoder (dossier contenant nos fichier .pkl pour les différents encoder)
-                - ordinal_encoder1.pkl
-                - ordinal_encoder2.pkl
-                - ordinal_encoder3.pkl
-            - Scaler (dossier contenant nos fichier .pkl pour les différentes normalisations)
-                - scaler1.pkl
-                - scaler2.pkl
-                - scaler3.pkl
-            - centroids.csv
-            - centroids2.csv
-            - Data_Arbre.csv
-            - script_fonc1.py
-            - script_fonc2.py
-            - script_fonc3.py
-        - arbres.csv
-        - clusters.csv
-        - clusters2.csv
-        - panorama_art.jpg
-        - README.md
+        - py_files (dossier contenant tous nos fichiers liés à python)
+            - JSON (dossier avec nos sorties de l'exécution des scripts python)
+                    - script1_result.json (sortie du script de prédiction de la taille)
+                    - script2_result.json (sortie du script de prédiction de l'age)
+                    - script3_result.json (sortie du script de prédiction du déracinement)
+            - models (dossier contenant tous nos fichiers .pkl pour les modèles de prédiction)
+                - age_neigh.pkl (modèle K-Nearest Neighbors pour l'âge)
+                - age_SGD.pkl (modèle Stochastic Gradient Descent pour l'âge)
+                - age_SVM.pkl (modèle Support Vector Machines pour l'âge)
+                - age_tree.pkl (modèle DecisionTree pour l'âge)
+                - knn_model.pkl (modèle K-Nearest Neighbors pour le déracinement)
+                - rf_model.pkl (modèle Random Forest pour le déracinement)
+                - svm_model.pkl (modèle Support Vector Machines pour le déracinement)
+            - OrdinalEncoder (dossier contenant nos fichiers .pkl pour les différents encoders)
+                - ordinal_encoder1.pkl (encoder lié au script1)
+                - ordinal_encoder2.pkl (encoder lié au script2)
+                - ordinal_encoder3.pkl (encoder lié au script3)
+            - Scaler (dossier contenant nos fichiers .pkl pour les différentes normalisations)
+                - scaler1.pkl (normalisation liée au script1)
+                - scaler2.pkl (normalisation liée au script2)
+                - scaler3.pkl (normalisation liée au script3)
+            - centroids.csv (centroids utilisés pour l'exécution du script de prédiction de taille)
+            - centroids2.csv (centroids utilisés pour l'exécution du script de prédiction de taille)
+            - Data_Arbre.csv (tableau de données initial contenant 7409 arbres)
+            - script_fonc1.py (script python pour la prédiction de la taille)
+            - script_fonc2.py (script python pour la prédiction de l'âge)
+            - script_fonc3.py (script python pour la prédiction du déracinement)
+        - arbres.csv (tableau des arbres stockés dans la base de données)
+        - clusters.csv (clusters utilisés pour l'affichage sur carte)
+        - clusters2.csv (clusters utilisés pour l'affichage sur carte)
+        - panorama_art.jpg (image de la page d'accueil)
+        - README.md (notice explicative de l'application web)
             
 
 ---------------------------------------------------------------------------------------------------------------------------------
