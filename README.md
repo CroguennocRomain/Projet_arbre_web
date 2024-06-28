@@ -59,8 +59,8 @@
             - script_fonc2.py       (script python pour la prédiction de l'âge)
             - script_fonc3.py       (script python pour la prédiction du déracinement)
         - arbres.csv        (tableau des arbres stockés dans la base de données)
-        - clusters.csv      (clusters utilisés pour l'affichage sur carte)
-        - clusters2.csv     (clusters utilisés pour l'affichage sur carte)
+        - clusters.csv      (clusters utilisés pour l'affichage sur carte du modèle K-means)
+        - clusters2.csv     (clusters utilisés pour l'affichage sur carte du modèle Agglomerative Clustering)
         - panorama_art.jpg  (image de la page d'accueil)
         - README.md         (notice explicative de l'application web)
             
