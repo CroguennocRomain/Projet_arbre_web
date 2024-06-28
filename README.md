@@ -1,5 +1,11 @@
 # Projet Web - Groupe 14
 
+**Lien de notre dépot Git :** "https://github.com/CroguennocRomain/Projet_arbre_web.git"
+
+**Addresse de notre machine virtuelle :** 10.30.51.133
+**Mot de passe de la machine virtuelle :** vm_web
+
+
 ### Aperçu de l'arborescence : 
 
         - css_files                     (dossier contenant tous nos fichiers .css avec un fichier par page html)
@@ -67,40 +73,106 @@
 
 ---------------------------------------------------------------------------------------------------------------------------------
 
-### Ouverture du site
+### déployer le site sur un environnement
 
-**Afin de faire fonctionner le code sur votre environnement, vous devez réaliser les étapes suivantes :**
+**Installation de apache2 :**
+```bash
+sudo apt-get install apache2
+sudo service apache2 start
 
-Si vous êtes sur la machine virtuelle, vous devez d'abord vous assurer que vous avez lancé **apache2** et **postgresql** avec les commandes suivantes dans votre terminal :
+sudo apt install php libapache2-mod-php
 
-    sudo service apache2 restart
-    sudo service postgresql restart
+#(changez username par le vôtre, qui est avant "@" dans votre terminal)
+sudo chown -R username .
 
-Puis vous devez vous assurer que les fichiers **arbres.csv**, **clusters.csv** et **clusters2.csv** appartiennent au propriétaire **www-data** avec la commande :  
-    
-    ls -all /var/www/html/Projet_arbre_web/
+sudo service apache2 restart
+```
 
-Si ce n'est pas le cas, exécutez ces commandes puis revérifiez avec la commande précédente que le changement a bien été fait :
-    
-    sudo chown www-data /var/www/html/Projet_arbre_web/arbres.csv
-    sudo chown www-data /var/www/html/Projet_arbre_web/clusters.csv
-    sudo chown www-data /var/www/html/Projet_arbre_web/clusters2.csv
-        
-Puis vous devez vous assurer que les fichiers **script1_result.json**, **script2_result.json** et **script3_result.json** appartiennent au propriétaire **www-data** avec la commande :  
+**!!!** Vous devez tout d'abord copier le dossier **Projet_arbre_web** à l'emplacement **/var/www/html**
 
-    ls -all /var/www/html/Projet_arbre_web/py_files/JSON/
+**Installation de postgreSQL :**
+```bash
+sudo apt-get update
+sudo apt-get install postgresql
+sudo apt-get install php-pgsql
+sudo service postgresql start
 
-Si ce n'est pas le cas, exécutez cette commande puis revérifier avec la commande précédente que le changement a bien été fait :
+sudo -u postgres psql
+```
+```postgresql
+create database projet_web_arbres;
+ALTER USER postgres WITH PASSWORD 'isen44';
+\q
+```
 
-    sudo chown www-data /var/www/html/Projet_arbre_web/py_files/JSON/ -R
+```bash
+sudo service postgresql restart
+```
+
+**Installation de python et de ses package grâce à venv :**
+```bash
+cd /var/www/html
+sudo mkdir venv
+
+cd /var/www/html/venv
+sudo apt-get install python3-venv
+python3 -m venv myenv
+
+cd /var/www/html/venv
+source myenv/bin/activate
+
+cd /var/www/html/venv/myenv/bin
+pip install numpy pandas scikit-learn
+```
+
+**Changer le propriétaire des fichiers :**
+```bash
+sudo chown www-data /var/www/html/Projet_arbre_web/arbres.csv
+sudo chown www-data /var/www/html/Projet_arbre_web/clusters.csv
+sudo chown www-data /var/www/html/Projet_arbre_web/clusters2.csv
+
+sudo chmod 777 /var/www/html/Projet_arbre_web/arbres.csv
+sudo chmod 777 /var/www/html/Projet_arbre_web/clusters.csv
+sudo chmod 777 /var/www/html/Projet_arbre_web/clusters2.csv
+
+sudo chown www-data /var/www/html/Projet_arbre_web/py_files/JSON/ -R
+sudo chmod 777 /var/www/html/Projet_arbre_web/py_files/JSON/ -R
+```
+
+**Paramétrer la base de données :**
+```bash
+sudo -u postgres psql
+```
+```postgresql
+\connect projet_web_arbres
+\i /var/www/html/Projet_arbre_web/sql_files/createDatabase.sql
+\i /var/www/html/Projet_arbre_web/sql_files/insertData.sql
+\i /var/www/html/Projet_arbre_web/sql_files/demo.sql
+\q
+```
+
+**Si vous voulez mettre le site sur une machine virtuelle :**
+
+Copier toutes les commande ci-dessus en ssh :
+
+```bash
+#(changez username par le vôtre, qui est avant "@" dans votre terminal et '10.30.51.133' par l'ip de la machine virtuelle)
+ssh username@10.30.51.133
+```
+
+**Copier le dossier 'Projet_arbre_web' sur la machine virtuelle (10.30.51.133) :**
+```bash
+#(changez chemin/vers/ par le chemin vers votre dossier Projet_arbre_web sur votre machine locale)
+sudo scp -r chemin/vers/Projet_arbre_web isen@10.30.51.133:/var/www/html
+```
 
 **Pour atterrir directement sur la page d'accueil du site, tapez cette URL :**
 
     http://10.30.51.133/Projet_arbre_web/html_files/accueil.html
+
 
 **Pour l'authentification :**
 Vous pouvez vous connecter avec ces utilisateurs : **test1**, **test2** ou **test3**
 Pour chaque utilisateur, entrez le mot de passe : **test**
 
 
-**Si vous êtes sur votre propre environnement, vous devez exécuter les commandes suivantes et vous assurer que les changements ont bien été fait :**
